@@ -173,28 +173,12 @@ img { max-width: 100%; display: block; }
 .portfolio-item.large { grid-column: span 2; }
 .portfolio-thumb {
   position: relative; border-radius: 12px; overflow: hidden;
-  padding-bottom: 60%; cursor: pointer;
+  padding-bottom: 60%;
 }
 .portfolio-item.large .portfolio-thumb { padding-bottom: 40%; }
 .port-img {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
-  transition: transform 0.5s;
 }
-.portfolio-thumb:hover .port-img { transform: scale(1.05); }
-.portfolio-overlay {
-  position: absolute; inset: 0; padding: 32px;
-  display: flex; flex-direction: column; justify-content: flex-end;
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
-  color: #fff; opacity: 0; transition: opacity 0.3s;
-}
-.portfolio-thumb:hover .portfolio-overlay { opacity: 1; }
-.portfolio-genre {
-  font-size: 11px; letter-spacing: 2px; font-weight: 600;
-  background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px;
-  width: fit-content; margin-bottom: 8px; backdrop-filter: blur(4px);
-}
-.portfolio-overlay h3 { font-size: 22px; font-weight: 700; }
-.portfolio-overlay p { font-size: 14px; color: rgba(255,255,255,0.7); }
 
 /* === CTA === */
 .section-cta {
@@ -354,9 +338,6 @@ img { max-width: 100%; display: block; }
   .portfolio-grid { grid-template-columns: 1fr; gap: 16px; }
   .portfolio-item.large { grid-column: span 1; }
   .portfolio-thumb, .portfolio-item.large .portfolio-thumb { padding-bottom: 65%; }
-  .portfolio-overlay { opacity: 1; background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 60%, transparent 100%); }
-  .portfolio-overlay h3 { font-size: 18px; }
-  .portfolio-overlay { padding: 20px; }
 
   /* CTA mobile */
   .section-cta h2 { font-size: 26px; }
