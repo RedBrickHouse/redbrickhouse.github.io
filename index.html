@@ -61,7 +61,6 @@
     <div class="nav-links" id="navLinks">
       <a href="#about" data-i18n="navAbout">소개</a>
       <a href="#services" data-i18n="navServices">서비스</a>
-      <a href="#criteria" data-i18n="navCriteria">기준</a>
       <a href="#portfolio" data-i18n="navPortfolio">포트폴리오</a>
       <a href="#contact" class="nav-cta" data-i18n="navContact">문의</a>
     </div>
@@ -280,33 +279,6 @@
   </div>
 </section>
 
-<!-- Investment Criteria -->
-<section class="section section-criteria" id="criteria">
-  <div class="container">
-    <div class="section-label" data-i18n="critLabel">우리가 찾는 게임</div>
-    <h2 class="section-title" data-i18n="critTitle">투자 기준</h2>
-    <p class="section-sub" data-i18n="critSub"></p>
-    <div class="criteria-chips">
-      <div class="crit-chip">
-        <span class="crit-tag" data-i18n="crit1Tag">STAGE</span>
-        <p data-i18n="crit1Desc"></p>
-      </div>
-      <div class="crit-chip">
-        <span class="crit-tag" data-i18n="crit2Tag">CAPITAL</span>
-        <p data-i18n="crit2Desc"></p>
-      </div>
-      <div class="crit-chip">
-        <span class="crit-tag" data-i18n="crit3Tag">GENRE</span>
-        <p data-i18n="crit3Desc"></p>
-      </div>
-      <div class="crit-chip">
-        <span class="crit-tag" data-i18n="crit4Tag">REGION</span>
-        <p data-i18n="crit4Desc"></p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Portfolio -->
 <section class="section" id="portfolio">
   <div class="container">
@@ -316,7 +288,16 @@
     <div class="portfolio-grid">
       <div class="portfolio-item large">
         <div class="portfolio-thumb">
-          <img src="img/game-1.svg" alt="" class="port-img">
+          <a href="https://store.steampowered.com/app/3438920/" target="_blank" rel="noopener">
+            <img src="img/void-diver.jpg" alt="VOID DIVER" class="port-img">
+          </a>
+        </div>
+        <div class="portfolio-caption">
+          <h3>VOID DIVER</h3>
+          <div class="portfolio-links">
+            <a href="https://store.steampowered.com/app/3438920/" target="_blank" rel="noopener">Steam</a>
+            <a href="https://voiddiver.net/" target="_blank" rel="noopener" data-i18n="portVdSite">공식 사이트</a>
+          </div>
         </div>
       </div>
       <div class="portfolio-item">
@@ -393,7 +374,6 @@
       <div class="footer-links">
         <a href="#about" data-i18n="navAbout">소개</a>
         <a href="#services" data-i18n="navServices">서비스</a>
-        <a href="#criteria" data-i18n="navCriteria">기준</a>
         <a href="#portfolio" data-i18n="portLabel">우리의 게임</a>
         <a href="#contact" data-i18n="contactLabel">문의하기</a>
       </div>
@@ -436,8 +416,8 @@
         </div>
       </div>
       <div class="modal-group">
-        <label for="inqMsg" data-i18n="modalMsg">문의사항</label>
-        <textarea id="inqMsg" name="문의사항 (Message)" rows="5" required></textarea>
+        <label for="inqMsg" data-i18n="modalMsg">제안사항</label>
+        <textarea id="inqMsg" name="제안사항 (Proposal)" rows="5" required></textarea>
       </div>
       <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button type="submit" class="btn btn-primary" id="inquirySend" data-i18n="modalSend">보내기</button>
@@ -446,7 +426,7 @@
   </div>
 </div>
 
-<script src="i18n.js?v=20260707-2"></script>
-<script src="script.js?v=20260707-2"></script>
+<script src="i18n.js?v=20260707-3"></script>
+<script src="script.js?v=20260707-3"></script>
 </body>
 </html>

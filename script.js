@@ -95,7 +95,7 @@ inquiryForm.addEventListener('submit', (e) => {
   fd.append('회사 (Company)', document.getElementById('inqCompany').value.trim());
   const inqSource = document.getElementById('inqSource');
   fd.append('알게 된 경로 (Source)', inqSource.value ? inqSource.options[inqSource.selectedIndex].text : '');
-  fd.append('문의사항 (Message)', message);
+  fd.append('제안사항 (Proposal)', message);
   fd.append('_honey', inquiryForm.querySelector('.hp-field').value);
   fd.append('_subject', '[RED BRICK HOUSE] Website Inquiry');
   fd.append('_template', 'table');

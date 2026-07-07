@@ -480,44 +480,26 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* === CRITERIA (compact chips) === */
-.section-criteria { background: #faf9f7; }
-.criteria-chips {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
-  margin-top: 24px;
+/* === PORTFOLIO CAPTION (VOID DIVER) === */
+.portfolio-caption {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; padding: 14px 4px 0; flex-wrap: wrap;
 }
-.crit-chip {
-  background: #fff; border: 1px solid #ebe4e2; border-radius: 12px;
-  padding: 28px 24px;
-  border-top: 3px solid #c0392b;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+.portfolio-caption h3 { font-size: 18px; font-weight: 700; letter-spacing: 1px; }
+.portfolio-links { display: flex; gap: 8px; }
+.portfolio-links a {
+  font-size: 13px; font-weight: 600; color: #c0392b;
+  padding: 6px 14px; border: 1px solid #e0d5d3; border-radius: 6px;
+  transition: all 0.2s;
 }
-.crit-chip:hover {
-  transform: translateY(-4px); box-shadow: 0 10px 24px rgba(192,57,43,0.1);
-}
-.crit-tag {
-  display: block; font-size: 11px; letter-spacing: 3px;
-  color: #c0392b; font-weight: 700; margin-bottom: 10px;
-}
-.crit-chip p {
-  font-size: 15px; color: #333; line-height: 1.5; font-weight: 500;
-}
-
-/* === CONTACT FORM SAMPLE NOTE === */
-.form-sample-note {
-  font-size: 12px; color: #999; text-align: center;
-  margin-top: 12px; font-style: italic;
-}
+.portfolio-links a:hover { background: #c0392b; color: #fff; border-color: #c0392b; }
 
 /* === RESPONSIVE for revised sections === */
 @media (max-width: 1024px) {
-  .criteria-chips { grid-template-columns: repeat(2, 1fr); }
   .brick-build { right: 24px; bottom: 96px; width: 180px; height: 144px; }
 }
 @media (max-width: 768px) {
   .hero-tagline { font-size: 15px; margin: -8px 0 24px; }
-  .criteria-chips { grid-template-columns: 1fr; gap: 14px; }
-  .crit-chip { padding: 22px 20px; }
   .brick-build {
     left: auto; right: 12px; transform: none;
     bottom: 48px; width: 110px; height: 88px;
