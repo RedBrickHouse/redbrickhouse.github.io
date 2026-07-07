@@ -89,25 +89,24 @@ inquiryForm.addEventListener('submit', (e) => {
     inquiryStatus.hidden = false;
     return;
   }
-  const data = {
-    '이름 (Name)': name,
-    '연락처 (Contact)': contact,
-    '회사 (Company)': document.getElementById('inqCompany').value.trim(),
-    '알게 된 경로 (Source)': document.getElementById('inqSource').value,
-    '문의사항 (Message)': message,
-    '_honey': inquiryForm.querySelector('.hp-field').value,
-    '_subject': '[RED BRICK HOUSE] Website Inquiry',
-    '_template': 'table',
-    '_captcha': 'false'
-  };
+  const fd = new FormData();
+  fd.append('이름 (Name)', name);
+  fd.append('연락처 (Contact)', contact);
+  fd.append('회사 (Company)', document.getElementById('inqCompany').value.trim());
+  fd.append('알게 된 경로 (Source)', document.getElementById('inqSource').value);
+  fd.append('문의사항 (Message)', message);
+  fd.append('_honey', inquiryForm.querySelector('.hp-field').value);
+  fd.append('_subject', '[RED BRICK HOUSE] Website Inquiry');
+  fd.append('_template', 'table');
+  fd.append('_captcha', 'false');
   inquirySend.disabled = true;
   inquiryStatus.textContent = tr('modalSending');
   inquiryStatus.className = 'modal-status';
   inquiryStatus.hidden = false;
   fetch('https://formsubmit.co/ajax/reahrt@gmail.com', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify(data)
+    headers: { 'Accept': 'application/json' },
+    body: fd
   })
     .then(r => r.json())
     .then(res => {
@@ -116,10 +115,11 @@ inquiryForm.addEventListener('submit', (e) => {
         inquiryStatus.className = 'modal-status ok';
         inquiryForm.reset();
       } else {
-        throw new Error('send failed');
+        throw new Error(res.message || 'send failed');
       }
     })
-    .catch(() => {
+    .catch((err) => {
+      console.error('inquiry send failed:', err);
       inquiryStatus.textContent = tr('modalFail');
       inquiryStatus.className = 'modal-status err';
     })
