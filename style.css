@@ -11,6 +11,8 @@ body {
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
+/* 한국어: 어절(띄어쓰기) 단위 줄바꿈. 단어 중간 절단 방지. en/zh는 기본 규칙 유지 */
+html:lang(ko) { word-break: keep-all; overflow-wrap: break-word; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
 /* === NAV === */
