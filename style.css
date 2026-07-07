@@ -7,12 +7,17 @@ body {
   background: #faf9f7;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word; /* 긴 토큰(이메일·URL) 넘침 방지, 전 언어 */
 }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
 /* 한국어: 어절(띄어쓰기) 단위 줄바꿈. 단어 중간 절단 방지. en/zh는 기본 규칙 유지 */
-html:lang(ko) { word-break: keep-all; overflow-wrap: break-word; }
+html:lang(ko) { word-break: keep-all; }
+/* 제목: 여러 줄일 때 줄 길이 균형 (전 언어, 미지원 브라우저는 무시) */
+.hero-title, .section-title, .about-text h2, .section-cta h2, .modal h3 { text-wrap: balance; }
+/* 본문: 마지막 줄 고아 단어 방지 등 줄바꿈 품질 (전 언어) */
+.hero-sub, .hero-tagline, .section-sub, .about-text p, .card-body p, .service-card p, .contact-info p, .contact-note { text-wrap: pretty; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
 /* === NAV === */

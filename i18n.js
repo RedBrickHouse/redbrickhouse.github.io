@@ -3,14 +3,14 @@ const translations = {
     navAbout: "About", navServices: "Services", navPortfolio: "Games", navContact: "Contact",
     heroTag: "CONSOLE INDIE GAME PUBLISHING",
     heroTitle: 'We Build Games<br>That <span class="highlight">Last</span>',
-    heroSub: "What's built with care stands forever.<br>We're RED BRICK HOUSE, and we're here to build your game's happy ending.",
+    heroSub: "What's built with care stands forever.<br>We're RED&nbsp;BRICK&nbsp;HOUSE, and we're here to build your game's happy ending.",
     heroTagline: "We're a home for your game.",
     heroBtn1: "Contact Us", heroBtn2: "Our Story", heroScroll: "Scroll",
     aboutLabel: "OUR STORY",
     aboutTitle: "Three houses.<br>One lesson.",
     aboutP1: "You know the story. The first pig built with straw, quick and cheap. The second chose wood, a little better but still fragile. The third pig took the time to lay every brick with intention. When the wolf came, only one house stood.",
     aboutP2: "The game industry tells the same story every day. The titles we remember share the same foundation: craft, patience, and precision. That's the foundation we build together.",
-    aboutP3: "At RED BRICK HOUSE, we only build brick houses. We partner with indie developers who share our philosophy: that games worth making deserve to be built to last.",
+    aboutP3: "At RED&nbsp;BRICK&nbsp;HOUSE, we only build brick houses. We partner with indie developers who share our philosophy: that games worth making deserve to be built to last.",
     stat1Num: "2026", stat1Label: "FOUNDED",
     stat3Num: "Console", stat3Label: "INDIE PUBLISHING",
     straw: "The Straw House", strawDesc: "The first pig's house. The quickest to build, and the first to fall.",
@@ -49,20 +49,20 @@ const translations = {
     modalFail: "Something went wrong. Please email angela@redbrickhouse.gg directly.",
     modalRequired: "Please fill in the required fields.",
     footerSlogan: "Build games that last.",
-    footerCopy: "&copy; 2026 RED BRICK HOUSE. All rights reserved."
+    footerCopy: "&copy; 2026 RED&nbsp;BRICK&nbsp;HOUSE. All rights reserved."
   },
   ko: {
     navAbout: "소개", navServices: "서비스", navPortfolio: "게임", navContact: "문의",
     heroTag: "콘솔 인디게임 퍼블리싱",
     heroTitle: '오래 남는<br>게임을 <span class="highlight">짓습니다</span>',
-    heroSub: "정성으로 쌓은 것은 영원히 남습니다.<br>RED BRICK HOUSE가 당신의 게임에 해피엔딩을 만들어드립니다.",
+    heroSub: "정성으로 쌓은 것은 영원히 남습니다.<br>RED&nbsp;BRICK&nbsp;HOUSE가 당신의 게임에 해피엔딩을 만들어드립니다.",
     heroTagline: "우리는 당신의 게임이 머무는 집입니다.",
     heroBtn1: "문의하기", heroBtn2: "우리의 이야기", heroScroll: "스크롤",
     aboutLabel: "우리의 이야기",
     aboutTitle: "세 채의 집,<br>하나의 교훈.",
     aboutP1: "누구나 아는 이야기입니다. 첫째 돼지는 빠르고 쉽게 짚으로 집을 지었습니다. 둘째 돼지는 나무를 골랐지만 여전히 약했습니다. 셋째 돼지는 벽돌 하나하나를 정성껏 쌓았습니다. 늑대가 왔을 때, 단 하나의 집만 남았습니다.",
     aboutP2: "게임 업계에서도 같은 이야기가 매일 반복됩니다. 오래 기억되는 타이틀에는 장인정신과 인내, 정밀함이라는 공통점이 있습니다. 우리는 그 기반을 개발자와 함께 만듭니다.",
-    aboutP3: "만들 가치가 있는 게임은 오래 남게 지어져야 합니다. RED BRICK HOUSE는 이 믿음을 공유하는 인디 개발자들과 파트너가 되어, 오직 벽돌집만 짓습니다.",
+    aboutP3: "만들 가치가 있는 게임은 오래 남게 지어져야 합니다. RED&nbsp;BRICK&nbsp;HOUSE는 이 믿음을 공유하는 인디 개발자들과 파트너가 되어, 오직 벽돌집만 짓습니다.",
     stat1Num: "2026", stat1Label: "설립",
     stat3Num: "콘솔", stat3Label: "인디게임 퍼블리싱",
     straw: "짚으로 만든 집", strawDesc: "첫째 돼지의 집. 가장 빨리 지었지만, 가장 먼저 무너졌습니다.",
@@ -101,20 +101,20 @@ const translations = {
     modalFail: "전송에 실패했습니다. angela@redbrickhouse.gg로 직접 메일 주세요.",
     modalRequired: "필수 항목을 입력해주세요.",
     footerSlogan: "오래 남을 게임을 짓습니다.",
-    footerCopy: "&copy; 2026 RED BRICK HOUSE. All rights reserved."
+    footerCopy: "&copy; 2026 RED&nbsp;BRICK&nbsp;HOUSE. All rights reserved."
   },
   zh: {
     navAbout: "关于", navServices: "服务", navPortfolio: "游戏", navContact: "联系",
     heroTag: "主机独立游戏发行",
     heroTitle: '我们建造<br><span class="highlight">经久不衰</span>的游戏',
-    heroSub: "用心建造的东西将永远屹立。<br>我们是 RED BRICK HOUSE，为您的游戏打造圆满结局。",
+    heroSub: "用心建造的东西将永远屹立。<br>我们是 RED&nbsp;BRICK&nbsp;HOUSE，为您的游戏打造圆满结局。",
     heroTagline: "我们是您游戏安身的家。",
     heroBtn1: "联系我们", heroBtn2: "我们的故事", heroScroll: "滚动",
     aboutLabel: "我们的故事",
     aboutTitle: "三栋房子，<br>一个教训。",
     aboutP1: "这是一个家喻户晓的故事。第一只小猪用稻草快速盖起了房子。第二只选择了木头，好一些，但仍然脆弱。第三只小猪花时间一块一块地砌砖。当大灰狼来的时候，只有一栋房子屹立不倒。",
     aboutP2: "游戏行业每天都在上演同样的故事。被人铭记的作品都有共同点：匠心、耐心与精确。这正是我们与开发者共同打造的基础。",
-    aboutP3: "值得制作的游戏，应该被打造得经久不衰。RED BRICK HOUSE 与认同这一理念的独立开发者合作，只建造砖房。",
+    aboutP3: "值得制作的游戏，应该被打造得经久不衰。RED&nbsp;BRICK&nbsp;HOUSE 与认同这一理念的独立开发者合作，只建造砖房。",
     stat1Num: "2026", stat1Label: "成立",
     stat3Num: "主机", stat3Label: "独立游戏发行",
     straw: "稻草屋", strawDesc: "第一只小猪的房子。盖得最快，也最先倒下。",
@@ -153,7 +153,7 @@ const translations = {
     modalFail: "发送失败，请直接发送邮件至 angela@redbrickhouse.gg。",
     modalRequired: "请填写必填项。",
     footerSlogan: "建造经久不衰的游戏。",
-    footerCopy: "&copy; 2026 RED BRICK HOUSE. All rights reserved."
+    footerCopy: "&copy; 2026 RED&nbsp;BRICK&nbsp;HOUSE. All rights reserved."
   }
 };
 
