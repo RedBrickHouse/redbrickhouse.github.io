@@ -31,7 +31,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.section-label, .section-title, .section-sub, .about-text, .about-visual, .story-card, .service-card, .portfolio-item, .team-card, .contact-info, .contact-action').forEach(el => {
+document.querySelectorAll('.section-label, .section-title, .section-sub, .about-text, .about-visual, .story-card, .service-card, .portfolio-item, .contact-info, .contact-action').forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
 });
@@ -43,4 +43,87 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) target.scrollIntoView({ behavior: 'smooth' });
   });
+});
+
+// Contact modal
+const contactModal = document.getElementById('contactModal');
+const inquiryForm = document.getElementById('inquiryForm');
+const inquiryStatus = document.getElementById('inquiryStatus');
+const inquirySend = document.getElementById('inquirySend');
+
+function tr(key) {
+  const lang = localStorage.getItem('bh-lang') || 'ko';
+  const dict = translations[lang] || translations.ko;
+  return dict[key] || key;
+}
+
+function openContactModal() {
+  contactModal.hidden = false;
+  document.body.style.overflow = 'hidden';
+  inquiryStatus.hidden = true;
+  document.getElementById('inqName').focus();
+}
+
+function closeContactModal() {
+  contactModal.hidden = true;
+  document.body.style.overflow = '';
+}
+
+document.getElementById('contactOpen').addEventListener('click', openContactModal);
+document.getElementById('contactClose').addEventListener('click', closeContactModal);
+contactModal.addEventListener('click', (e) => {
+  if (e.target === contactModal) closeContactModal();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !contactModal.hidden) closeContactModal();
+});
+
+inquiryForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.getElementById('inqName').value.trim();
+  const contact = document.getElementById('inqContact').value.trim();
+  const message = document.getElementById('inqMsg').value.trim();
+  if (!name || !contact || !message) {
+    inquiryStatus.textContent = tr('modalRequired');
+    inquiryStatus.className = 'modal-status err';
+    inquiryStatus.hidden = false;
+    return;
+  }
+  const data = {
+    '이름 (Name)': name,
+    '연락처 (Contact)': contact,
+    '회사 (Company)': document.getElementById('inqCompany').value.trim(),
+    '알게 된 경로 (Source)': document.getElementById('inqSource').value,
+    '문의사항 (Message)': message,
+    '_honey': inquiryForm.querySelector('.hp-field').value,
+    '_subject': '[RED BRICK HOUSE] Website Inquiry',
+    '_template': 'table',
+    '_captcha': 'false'
+  };
+  inquirySend.disabled = true;
+  inquiryStatus.textContent = tr('modalSending');
+  inquiryStatus.className = 'modal-status';
+  inquiryStatus.hidden = false;
+  fetch('https://formsubmit.co/ajax/angela@redbrickhouse.gg', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(data)
+  })
+    .then(r => r.json())
+    .then(res => {
+      if (res.success === 'true' || res.success === true) {
+        inquiryStatus.textContent = tr('modalSuccess');
+        inquiryStatus.className = 'modal-status ok';
+        inquiryForm.reset();
+      } else {
+        throw new Error('send failed');
+      }
+    })
+    .catch(() => {
+      inquiryStatus.textContent = tr('modalFail');
+      inquiryStatus.className = 'modal-status err';
+    })
+    .finally(() => {
+      inquirySend.disabled = false;
+    });
 });
