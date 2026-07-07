@@ -93,7 +93,8 @@ inquiryForm.addEventListener('submit', (e) => {
   fd.append('이름 (Name)', name);
   fd.append('연락처 (Contact)', contact);
   fd.append('회사 (Company)', document.getElementById('inqCompany').value.trim());
-  fd.append('알게 된 경로 (Source)', document.getElementById('inqSource').value);
+  const inqSource = document.getElementById('inqSource');
+  fd.append('알게 된 경로 (Source)', inqSource.value ? inqSource.options[inqSource.selectedIndex].text : '');
   fd.append('문의사항 (Message)', message);
   fd.append('_honey', inquiryForm.querySelector('.hp-field').value);
   fd.append('_subject', '[RED BRICK HOUSE] Website Inquiry');
@@ -103,7 +104,7 @@ inquiryForm.addEventListener('submit', (e) => {
   inquiryStatus.textContent = tr('modalSending');
   inquiryStatus.className = 'modal-status';
   inquiryStatus.hidden = false;
-  fetch('https://formsubmit.co/ajax/reahrt@gmail.com', {
+  fetch('https://formsubmit.co/ajax/angela@redbrickhouse.gg', {
     method: 'POST',
     headers: { 'Accept': 'application/json' },
     body: fd
