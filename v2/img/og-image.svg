@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#2d1b3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Brick pattern subtle -->
+  <g stroke="#fff" stroke-width="0.3" opacity="0.05">
+    <line x1="0" y1="100" x2="1200" y2="100"/><line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/><line x1="0" y1="250" x2="1200" y2="250"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="350" x2="1200" y2="350"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/><line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/><line x1="0" y1="550" x2="1200" y2="550"/>
+  </g>
+  <!-- Red accent line -->
+  <rect x="0" y="0" width="1200" height="6" fill="#E57373"/>
+  <!-- Logo blocks -->
+  <g transform="translate(100, 260)">
+    <rect x="0" y="0" width="28" height="28" rx="3" fill="#E57373"/>
+    <rect x="34" y="0" width="28" height="28" rx="3" fill="#E57373"/>
+    <rect x="68" y="0" width="28" height="28" rx="3" fill="#E57373"/>
+    <rect x="17" y="-34" width="28" height="28" rx="3" fill="#E57373" opacity="0.7"/>
+    <rect x="51" y="-34" width="28" height="28" rx="3" fill="#E57373" opacity="0.7"/>
+    <rect x="34" y="-68" width="28" height="28" rx="3" fill="#E57373" opacity="0.5"/>
+  </g>
+  <!-- Title -->
+  <text x="240" y="270" font-family="Georgia, serif" font-size="72" font-weight="900" fill="#fff" letter-spacing="3">RED BRICK HOUSE</text>
+  <!-- Subtitle -->
+  <text x="240" y="320" font-family="Arial, sans-serif" font-size="24" fill="#E57373" letter-spacing="8" font-weight="600">INDIE GAME PUBLISHING</text>
+  <!-- Tagline -->
+  <text x="240" y="380" font-family="Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.5)">We build games that last.</text>
+  <!-- Three pigs small -->
+  <g transform="translate(900, 420)">
+    <circle cx="30" cy="20" r="18" fill="#FFB6C1" opacity="0.8"/>
+    <ellipse cx="30" cy="28" rx="8" ry="5" fill="#FF9CAD" opacity="0.8"/>
+    <circle cx="24" cy="17" r="2.5" fill="#333"/><circle cx="36" cy="17" r="2.5" fill="#333"/>
+  </g>
+  <g transform="translate(960, 415)">
+    <circle cx="30" cy="20" r="20" fill="#FFB6C1" opacity="0.8"/>
+    <ellipse cx="30" cy="28" rx="8" ry="5" fill="#FF9CAD" opacity="0.8"/>
+    <circle cx="24" cy="17" r="2.5" fill="#333"/><circle cx="36" cy="17" r="2.5" fill="#333"/>
+    <rect x="14" y="38" width="32" height="20" rx="3" fill="#64B5F6" opacity="0.8"/>
+  </g>
+  <g transform="translate(1030, 410)">
+    <circle cx="30" cy="20" r="20" fill="#FFB6C1" opacity="0.8"/>
+    <ellipse cx="30" cy="28" rx="8" ry="5" fill="#FF9CAD" opacity="0.8"/>
+    <circle cx="24" cy="17" r="2.5" fill="#333"/><circle cx="36" cy="17" r="2.5" fill="#333"/>
+    <polygon points="18,4 22,12 26,2 30,12 34,2 38,12 42,4" fill="#FFD54F" opacity="0.8"/>
+  </g>
+  <!-- Bottom bar -->
+  <rect x="0" y="624" width="1200" height="6" fill="#E57373"/>
+</svg>
