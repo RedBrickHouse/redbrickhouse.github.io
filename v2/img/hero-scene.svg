@@ -1,481 +1,416 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#AEC8D6"/>
-      <stop offset="0.30" stop-color="#C9DAD8"/>
-      <stop offset="0.56" stop-color="#E2E2D2"/>
-      <stop offset="0.78" stop-color="#F0E7D1"/>
-      <stop offset="1" stop-color="#F5EBD6"/>
+      <stop offset="0" stop-color="#AECDE0"/>
+      <stop offset="0.36" stop-color="#CFE0DF"/>
+      <stop offset="0.66" stop-color="#EFEADA"/>
+      <stop offset="1" stop-color="#F8EFDC"/>
     </linearGradient>
-    <radialGradient id="horizonGlow" cx="0.6" cy="0.5" r="0.6">
-      <stop offset="0" stop-color="#FBEBC6" stop-opacity="0.85"/>
-      <stop offset="0.5" stop-color="#F7E6C2" stop-opacity="0.35"/>
-      <stop offset="1" stop-color="#F7E6C2" stop-opacity="0"/>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFF8E2" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#FFF3D6" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#FFF3D6" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="houseGlow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#FFEEC4" stop-opacity="0.8"/>
-      <stop offset="1" stop-color="#FFEEC4" stop-opacity="0"/>
+      <stop offset="0" stop-color="#FFF4D7" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#FFF4D7" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="lightPool" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#F6EBBE" stop-opacity="0.5"/>
-      <stop offset="1" stop-color="#F6EBBE" stop-opacity="0"/>
+      <stop offset="0" stop-color="#FBF3D2" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#FBF3D2" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="amberBand" cx="0.72" cy="0.5" r="0.58">
-      <stop offset="0" stop-color="#F4BC63" stop-opacity="0.82"/>
-      <stop offset="0.52" stop-color="#F3C77E" stop-opacity="0.34"/>
-      <stop offset="1" stop-color="#F3C77E" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="bark" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#4C382C"/>
-      <stop offset="0.5" stop-color="#63493A"/>
-      <stop offset="1" stop-color="#7E5F49"/>
-    </linearGradient>
-    <linearGradient id="brick" x1="0" y1="0" x2="1" y2="0.2">
-      <stop offset="0" stop-color="#C4693F"/>
-      <stop offset="0.55" stop-color="#B25733"/>
-      <stop offset="1" stop-color="#9C4728"/>
-    </linearGradient>
-    <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#D07A38"/>
-      <stop offset="1" stop-color="#B65B26"/>
-    </linearGradient>
-    <linearGradient id="cloak" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#71824A"/>
-      <stop offset="0.5" stop-color="#5E6E3B"/>
-      <stop offset="1" stop-color="#46532C"/>
-    </linearGradient>
-    <linearGradient id="path" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#EADEB6"/>
-      <stop offset="1" stop-color="#D8C79A"/>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#D14A3A"/>
+      <stop offset="0.55" stop-color="#C43A2E"/>
+      <stop offset="1" stop-color="#A3291F"/>
     </linearGradient>
     <linearGradient id="meadow" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#AFB877"/>
-      <stop offset="1" stop-color="#98A65E"/>
+      <stop offset="0" stop-color="#D2DCA6"/>
+      <stop offset="1" stop-color="#EFE9BE"/>
     </linearGradient>
-    <linearGradient id="win" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FBE3A0"/>
-      <stop offset="1" stop-color="#F3C972"/>
+    <linearGradient id="beam" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.16"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.07"/>
+      <stop offset="0.78" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
     </linearGradient>
-    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="7"/>
-    </filter>
-    <filter id="softer" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="16"/>
-    </filter>
-    <filter id="hillTex" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.006 0.014" numOctaves="2" seed="7" result="n"/>
-      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.30  0 0 0 0 0.40  0 0 0 0 0.22  0.7 0.7 0.7 0 -0.72"/>
-      <feComposite operator="in" in2="SourceGraphic"/>
-    </filter>
+    <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6EEDC" stop-opacity="0"/>
+      <stop offset="1" stop-color="#F6EEDC" stop-opacity="0.35"/>
+    </linearGradient>
+    <clipPath id="beamClip"><rect x="0" y="0" width="1920" height="790"/></clipPath>
+    <clipPath id="mottleClip">
+      <rect x="0" y="700" width="1490" height="380"/>
+      <rect x="1490" y="1008" width="430" height="72"/>
+    </clipPath>
     <filter id="grain" x="0" y="0" width="100%" height="100%">
       <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="n"/>
       <feColorMatrix in="n" type="saturate" values="0"/>
-      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feComponentTransfer><feFuncA type="linear" slope="0.55" intercept="0"/></feComponentTransfer>
     </filter>
-
-    <!-- ===== LEAF SPRIG (fan of geometric leaves) ===== -->
-    <g id="sprig">
-      <g fill="#48633E">
-        <path transform="rotate(-66)" d="M0,3 C7,-6 7,-18 0,-31 C-7,-18 -7,-6 0,3 Z"/>
-        <path transform="rotate(66)" d="M0,3 C7,-6 7,-18 0,-31 C-7,-18 -7,-6 0,3 Z"/>
-        <path transform="rotate(-46)" d="M0,3 C7,-6 7,-18 0,-31 C-7,-18 -7,-6 0,3 Z" opacity="0.95"/>
-      </g>
-      <g fill="#65875A">
-        <path transform="rotate(-44)" d="M0,3 C7,-6 7,-18 0,-31 C-7,-18 -7,-6 0,3 Z"/>
-        <path transform="rotate(44)" d="M0,3 C7,-6 7,-18 0,-31 C-7,-18 -7,-6 0,3 Z"/>
-        <path transform="rotate(-22)" d="M0,3 C7,-6 7,-18 0,-31 C-7,-18 -7,-6 0,3 Z" opacity="0.9"/>
-      </g>
-      <g fill="#87A874">
-        <path transform="rotate(-20)" d="M0,3 C6,-6 6,-18 0,-29 C-6,-18 -6,-6 0,3 Z"/>
-        <path transform="rotate(0)" d="M0,3 C6,-6 6,-20 0,-33 C-6,-20 -6,-6 0,3 Z"/>
-        <path transform="rotate(20)" d="M0,3 C6,-6 6,-18 0,-29 C-6,-18 -6,-6 0,3 Z"/>
-      </g>
-      <g stroke="#A6C48D" stroke-width="1.1" opacity="0.55" fill="none" stroke-linecap="round">
-        <path transform="rotate(-20)" d="M0,-2 L0,-26"/>
-        <path d="M0,-2 L0,-29"/>
-        <path transform="rotate(20)" d="M0,-2 L0,-26"/>
-      </g>
-    </g>
-
-    <!-- ===== DECORATIVE TREE (trunk + geometric canopy) ===== -->
-    <g id="tree">
-      <ellipse cx="0" cy="4" rx="120" ry="16" fill="#6F7E4E" opacity="0.25"/>
-      <!-- branches -->
-      <g stroke="#523E31" stroke-linecap="round" fill="none">
-        <path d="M-6,-140 C-30,-160 -54,-182 -82,-214" stroke-width="9"/>
-        <path d="M6,-140 C30,-162 56,-186 84,-218" stroke-width="9"/>
-        <path d="M0,-150 C2,-190 6,-224 2,-262" stroke-width="9"/>
-        <path d="M-40,-176 C-56,-196 -72,-214 -92,-236" stroke-width="6"/>
-        <path d="M40,-178 C58,-198 74,-214 96,-236" stroke-width="6"/>
-      </g>
-      <!-- trunk -->
-      <path d="M-19,8 C-22,-34 -14,-74 -13,-118 C-12,-142 -20,-158 -15,-172
-               C-9,-180 -2,-175 0,-152
-               C2,-175 9,-180 15,-172
-               C20,-158 12,-142 13,-118 C14,-74 22,-34 19,8
-               C10,12 -10,12 -19,8 Z" fill="url(#bark)"/>
-      <g stroke="#3F2E24" stroke-width="1.6" opacity="0.4" fill="none" stroke-linecap="round">
-        <path d="M-8,-10 C-10,-60 -6,-110 -8,-150"/>
-        <path d="M4,-6 C6,-70 2,-120 3,-158"/>
-      </g>
-      <path d="M-19,8 C-30,4 -34,-6 -30,-14 C-24,-8 -21,-4 -19,2 Z" fill="#4C382C"/>
-      <path d="M19,8 C30,4 34,-6 30,-14 C24,-8 21,-4 19,2 Z" fill="#4C382C"/>
-      <path d="M13,-118 C18,-140 12,-158 13,-172" stroke="#8E6C52" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round"/>
-      <!-- canopy base silhouette -->
-      <path d="M-142,-196
-               C-168,-236 -156,-306 -120,-336
-               C-136,-378 -94,-424 -48,-412
-               C-28,-448 44,-452 74,-416
-               C124,-428 164,-380 152,-330
-               C188,-300 182,-232 150,-198
-               C162,-158 120,-128 80,-140
-               C50,-118 -32,-120 -62,-140
-               C-108,-128 -152,-158 -142,-196 Z" fill="#425C39"/>
-      <!-- mid green masses -->
-      <g fill="#5E7E52">
-        <ellipse cx="-74" cy="-244" rx="72" ry="58" transform="rotate(-10 -74 -244)"/>
-        <ellipse cx="34" cy="-306" rx="88" ry="66"/>
-        <ellipse cx="98" cy="-244" rx="56" ry="52"/>
-        <ellipse cx="-32" cy="-182" rx="78" ry="46"/>
-        <ellipse cx="42" cy="-378" rx="56" ry="42"/>
-        <ellipse cx="-108" cy="-300" rx="42" ry="46"/>
-      </g>
-      <!-- dark gap accents -->
-      <g fill="#375030" opacity="0.85">
-        <ellipse cx="-40" cy="-236" rx="24" ry="30" transform="rotate(20 -40 -236)"/>
-        <ellipse cx="70" cy="-300" rx="20" ry="26"/>
-        <ellipse cx="-96" cy="-208" rx="20" ry="22"/>
-        <ellipse cx="10" cy="-150" rx="26" ry="18"/>
-      </g>
-      <!-- light highlight masses (sun from right) -->
-      <g fill="#82A46F">
-        <ellipse cx="76" cy="-334" rx="46" ry="38"/>
-        <ellipse cx="116" cy="-268" rx="34" ry="34"/>
-        <ellipse cx="22" cy="-388" rx="40" ry="28"/>
-        <ellipse cx="-38" cy="-336" rx="34" ry="28"/>
-        <ellipse cx="60" cy="-210" rx="34" ry="26"/>
-      </g>
-      <!-- sunlit rim highlight (upper-left light facets) -->
-      <g fill="#A4C489" opacity="0.92">
-        <ellipse cx="-98" cy="-318" rx="30" ry="24" transform="rotate(-14 -98 -318)"/>
-        <ellipse cx="-66" cy="-362" rx="26" ry="19"/>
-        <ellipse cx="-120" cy="-262" rx="21" ry="19"/>
-        <ellipse cx="-30" cy="-392" rx="24" ry="16"/>
-      </g>
-      <!-- geometric leaf sprigs -->
-      <use href="#sprig" transform="translate(-96,-198) scale(1.2) rotate(-20)"/>
-      <use href="#sprig" transform="translate(-120,-282) scale(1.3) rotate(-14)"/>
-      <use href="#sprig" transform="translate(-134,-232) scale(1.1) rotate(-30)"/>
-      <use href="#sprig" transform="translate(-78,-342) scale(1.25) rotate(-6)"/>
-      <use href="#sprig" transform="translate(-58,-330) scale(1.1)"/>
-      <use href="#sprig" transform="translate(-22,-392) scale(1.3)"/>
-      <use href="#sprig" transform="translate(12,-300) scale(1.45)"/>
-      <use href="#sprig" transform="translate(44,-406) scale(1.25) rotate(8)"/>
-      <use href="#sprig" transform="translate(92,-372) scale(1.3) rotate(14)"/>
-      <use href="#sprig" transform="translate(130,-300) scale(1.25) rotate(24)"/>
-      <use href="#sprig" transform="translate(118,-212) scale(1.2) rotate(30)"/>
-      <use href="#sprig" transform="translate(72,-262) scale(1.25) rotate(16)"/>
-      <use href="#sprig" transform="translate(58,-158) scale(1.15) rotate(22)"/>
-      <use href="#sprig" transform="translate(-42,-152) scale(1.15) rotate(-18)"/>
-      <use href="#sprig" transform="translate(-118,-160) scale(1.0) rotate(-40)"/>
-      <use href="#sprig" transform="translate(-8,-232) scale(1.2)"/>
-    </g>
-
-    <!-- ===== CYPRESS ===== -->
-    <g id="cypress">
-      <ellipse cx="0" cy="2" rx="30" ry="6" fill="#6F7E4E" opacity="0.3"/>
-      <path d="M0,4 C-16,-30 -20,-96 -12,-150 C-8,-186 -4,-210 0,-224 C4,-210 8,-186 12,-150 C20,-96 16,-30 0,4 Z" fill="#4E6C47"/>
-      <path d="M0,4 C-6,-40 -8,-110 -4,-176 C-2,-206 0,-216 0,-224 C2,-206 4,-176 5,-140 C8,-80 8,-30 0,4 Z" fill="#5E7E52" opacity="0.85"/>
-      <path d="M2,-10 C6,-70 8,-140 6,-200" stroke="#78996A" stroke-width="2.5" fill="none" opacity="0.5" stroke-linecap="round"/>
-    </g>
-
-    <!-- ===== SHRUB ===== -->
-    <g id="shrub">
-      <ellipse cx="0" cy="0" rx="22" ry="4" fill="#5E6E42" opacity="0.3"/>
-      <path d="M-20,-2 C-24,-18 -12,-30 0,-26 C6,-36 22,-32 22,-18 C28,-10 22,0 12,-1 C0,2 -14,2 -20,-2 Z" fill="#6C8B5C"/>
-      <path d="M-10,-14 C-12,-24 -2,-30 6,-24 C14,-28 22,-20 18,-12 C10,-8 -2,-8 -10,-14 Z" fill="#82A46F"/>
-    </g>
-
-    <!-- ===== PIG (back view, cloaked, walking) ===== -->
+    <filter id="mottle" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.005 0.013" numOctaves="2" seed="9" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.36  0 0 0 0 0.47  0 0 0 0 0.24  0.7 0.7 0.7 0 -0.75"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
     <g id="pig">
-      <ellipse cx="0" cy="6" rx="48" ry="10" fill="#6C7A4C" opacity="0.32"/>
-      <!-- feet -->
-      <path d="M-26,0 C-26,-18 -8,-18 -8,0 Z" fill="#2E2A1B"/>
-      <path d="M8,0 C8,-18 26,-18 26,0 Z" fill="#37331F"/>
-      <!-- cloak body -->
-      <path d="M-44,-14 C-49,-56 -42,-98 -27,-124 C-21,-134 -9,-138 0,-138
-               C9,-138 21,-134 27,-124 C42,-98 49,-56 44,-14
-               C24,-4 -24,-4 -44,-14 Z" fill="url(#cloak)"/>
-      <!-- left side shadow -->
-      <path d="M-44,-14 C-49,-56 -42,-98 -27,-124 C-24,-128 -19,-131 -14,-133
-               C-24,-110 -30,-70 -26,-20 C-32,-16 -39,-15 -44,-14 Z" fill="#3E4A28" opacity="0.55"/>
-      <!-- center lit panel -->
-      <path d="M-8,-128 C-2,-130 2,-130 8,-128 C12,-92 12,-46 8,-16 C2,-14 -2,-14 -8,-16 C-12,-46 -12,-92 -8,-128 Z" fill="#7C8C4E" opacity="0.35"/>
-      <!-- hem trim -->
-      <path d="M-43,-16 C-22,-6 22,-6 43,-16" stroke="#B9C280" stroke-width="3.4" fill="none" opacity="0.55"/>
-      <path d="M-42,-22 C-21,-13 21,-13 42,-22" stroke="#8C9A55" stroke-width="2" fill="none" opacity="0.5"/>
-      <!-- ==== embroidery ==== -->
-      <!-- shoulder yoke arch -->
-      <path d="M-30,-116 C-16,-127 16,-127 30,-116" stroke="#C6CE8C" stroke-width="2.4" fill="none" opacity="0.6"/>
-      <path d="M-25,-109 C-13,-118 13,-118 25,-109" stroke="#AEB979" stroke-width="1.5" fill="none" opacity="0.5"/>
-      <g fill="#C6CE8C" opacity="0.5"><circle cx="-30" cy="-116" r="2"/><circle cx="0" cy="-124" r="2.2"/><circle cx="30" cy="-116" r="2"/></g>
-      <!-- back seam -->
-      <path d="M0,-118 L0,-24" stroke="#B9C280" stroke-width="1.4" opacity="0.4"/>
-      <!-- central medallion -->
-      <circle cx="0" cy="-72" r="17" fill="none" stroke="#C6CE8C" stroke-width="2.2" opacity="0.65"/>
-      <circle cx="0" cy="-72" r="10" fill="none" stroke="#AEB979" stroke-width="1.4" opacity="0.55"/>
-      <path d="M0,-85 L12,-72 L0,-59 L-12,-72 Z" fill="none" stroke="#C6CE8C" stroke-width="1.8" opacity="0.6"/>
-      <circle cx="0" cy="-72" r="2.6" fill="#C6CE8C" opacity="0.6"/>
-      <g stroke="#AEB979" stroke-width="1.2" opacity="0.45" stroke-linecap="round"><path d="M0,-92 L0,-98"/><path d="M0,-52 L0,-46"/><path d="M-20,-72 L-26,-72"/><path d="M20,-72 L26,-72"/></g>
-      <!-- hem filigree -->
-      <path d="M-38,-24 Q-28,-31 -19,-24 Q-9,-31 0,-24 Q9,-31 19,-24 Q28,-31 38,-24" stroke="#C6CE8C" stroke-width="1.7" fill="none" opacity="0.5"/>
-      <g fill="#C6CE8C" opacity="0.45"><circle cx="-28" cy="-24" r="1.5"/><circle cx="-9" cy="-24" r="1.5"/><circle cx="9" cy="-24" r="1.5"/><circle cx="28" cy="-24" r="1.5"/></g>
-      <!-- shoulder cape / hood -->
-      <path d="M-31,-118 C-22,-134 22,-134 31,-118 C24,-104 -24,-104 -31,-118 Z" fill="#54632F"/>
-      <path d="M-31,-118 C-22,-134 22,-134 31,-118" stroke="#3D4A24" stroke-width="1.4" fill="none" opacity="0.6"/>
-      <!-- real curly pig tail poking out below hem -->
-      <path d="M0,-15 C11,-15 14,-2 4,-1 C-3,0 -2,-9 5,-10 C9,-11 9,-5 5,-5" stroke="#C39A8D" stroke-width="4.4" fill="none" stroke-linecap="round"/>
-      <path d="M0,-15 C11,-15 14,-2 4,-1 C-3,0 -2,-9 5,-10" stroke="#E1BFB2" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
-      <!-- ears (broad pig triangles, warm-brown) -->
-      <path d="M-15,-160 C-24,-158 -30,-156 -33,-154 C-37,-176 -35,-189 -31,-189 C-24,-176 -19,-167 -15,-160 Z" fill="#8A6A52"/>
-      <path d="M15,-160 C24,-158 30,-156 33,-154 C37,-176 35,-189 31,-189 C24,-176 19,-167 15,-160 Z" fill="#97765D"/>
-      <!-- pink inner ears -->
-      <path d="M-19,-161 C-24,-159 -28,-158 -30,-157 C-32,-173 -31,-181 -29,-182 C-25,-173 -22,-166 -19,-161 Z" fill="#D89A91" opacity="0.9"/>
-      <path d="M19,-161 C24,-159 28,-158 30,-157 C32,-173 31,-181 29,-182 C25,-173 22,-166 19,-161 Z" fill="#E0A69D" opacity="0.92"/>
-      <!-- head (rounded warm-brown pig cranium, back view) -->
-      <path d="M-33,-114 C-40,-142 -30,-166 0,-166 C30,-166 40,-142 33,-114 C18,-106 -18,-106 -33,-114 Z" fill="#A17E63"/>
-      <!-- soft left shade on head -->
-      <path d="M-33,-114 C-39,-142 -30,-163 -9,-166 C-21,-150 -26,-130 -23,-110 C-27,-111 -30,-113 -33,-114 Z" fill="#886750" opacity="0.5"/>
-      <!-- crown sunlit highlight -->
-      <path d="M-20,-156 C-9,-165 9,-165 20,-156 C9,-160 -9,-160 -20,-156 Z" fill="#BC9878" opacity="0.65"/>
-      <!-- subtle cheek hint (house side) -->
-      <path d="M26,-132 C33,-133 34,-125 28,-123 C26,-126 26,-129 26,-132 Z" fill="#8E6E56" opacity="0.65"/>
-      <!-- warm rim light (right / house side) -->
-      <path d="M44,-14 C49,-56 42,-98 27,-124 C21,-134 9,-138 0,-138" stroke="#F1D8A2" stroke-width="2.2" fill="none" opacity="0.7" stroke-linecap="round"/>
-      <path d="M33,-114 C40,-142 30,-166 0,-166" stroke="#F3DCA8" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round"/>
-      <path d="M15,-160 C24,-158 30,-156 33,-154" stroke="#F3DCA8" stroke-width="1.4" fill="none" opacity="0.5" stroke-linecap="round"/>
+      <linearGradient id="robeGrad" x1="0.18" y1="0" x2="0.6" y2="1">
+        <stop offset="0" stop-color="#79814A"/>
+        <stop offset="0.5" stop-color="#55612F"/>
+        <stop offset="1" stop-color="#333C1D"/>
+      </linearGradient>
+      <linearGradient id="yokeGrad" x1="0" y1="0" x2="0.15" y2="1">
+        <stop offset="0" stop-color="#5E6C3C"/>
+        <stop offset="1" stop-color="#333E1F"/>
+      </linearGradient>
+      <radialGradient id="headGrad" cx="0.36" cy="0.30" r="0.85">
+        <stop offset="0" stop-color="#BC926F"/>
+        <stop offset="0.55" stop-color="#8C6653"/>
+        <stop offset="1" stop-color="#523A31"/>
+      </radialGradient>
+      <radialGradient id="lowerGrad" cx="0.4" cy="0.32" r="0.85">
+        <stop offset="0" stop-color="#414B2A"/>
+        <stop offset="0.6" stop-color="#2A331A"/>
+        <stop offset="1" stop-color="#1A2110"/>
+      </radialGradient>
+      <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#E8D190"/>
+        <stop offset="1" stop-color="#A88A47"/>
+      </linearGradient>
+      <radialGradient id="warmGlow" cx="0.3" cy="0.26" r="0.72">
+        <stop offset="0" stop-color="#F4CB86" stop-opacity="0.4"/>
+        <stop offset="0.62" stop-color="#E3B06B" stop-opacity="0.1"/>
+        <stop offset="1" stop-color="#E3B06B" stop-opacity="0"/>
+      </radialGradient>
+      <clipPath id="robeClip">
+        <path d="M18,-40 C13.5,-33 11.5,-25 11,-18 C10.8,-14.5 12.5,-12.8 15,-13.4 C18,-14.2 20.5,-12.4 23.5,-13.2 C26.5,-12 28.5,-14 32,-13.2 C35.5,-14 37.5,-12 40.5,-13.2 C43.5,-12.4 46,-14.2 49,-13.4 C51.5,-12.8 53.2,-14.5 53,-18 C52.5,-25 50.5,-33 46,-40 C41,-44 23,-44 18,-40 Z"/>
+      </clipPath>
+      <!-- ground contact shadow -->
+      <ellipse cx="32" cy="2.5" rx="30" ry="5" fill="#37421F" opacity="0.32"/>
+      <!-- LOWER BODY (rounded haunches, dark) -->
+      <path d="M19,-18 C14.5,-13 14.5,-6 17,-2.5 C21,1 43,1 47,-2.5 C49.5,-6 49.5,-13 45,-18 Z" fill="url(#lowerGrad)"/>
+      <!-- leg separation shadow -->
+      <path d="M30,-1 C30.5,-5 31,-8 32,-9 C33,-8 33.5,-5 34,-1 C33,0.6 31,0.6 30,-1 Z" fill="#131810" opacity="0.55"/>
+      <!-- hooves -->
+      <path d="M22.5,-2.5 C22,0.4 23.6,1.4 25.6,0.9 C26.8,0.5 26.8,-0.9 26.2,-3 Z" fill="#3B2D25"/>
+      <path d="M41.5,-2.5 C42,0.4 40.4,1.4 38.4,0.9 C37.2,0.5 37.2,-0.9 37.8,-3 Z" fill="#3B2D25"/>
+      <!-- lower-body outer flank rim light (warm, sun upper-left) -->
+      <path d="M18.6,-17 C14.8,-12 14.8,-6 16.6,-2.6" fill="none" stroke="#F0CD91" stroke-width="1.5" stroke-linecap="round" opacity="0.62"/>
+      <!-- ROBE body -->
+      <path d="M18,-40 C13.5,-33 11.5,-25 11,-18 C10.8,-14.5 12.5,-12.8 15,-13.4 C18,-14.2 20.5,-12.4 23.5,-13.2 C26.5,-12 28.5,-14 32,-13.2 C35.5,-14 37.5,-12 40.5,-13.2 C43.5,-12.4 46,-14.2 49,-13.4 C51.5,-12.8 53.2,-14.5 53,-18 C52.5,-25 50.5,-33 46,-40 C41,-44 23,-44 18,-40 Z" fill="url(#robeGrad)"/>
+      <g clip-path="url(#robeClip)">
+        <!-- vertical fold shadows (cloth volume) -->
+        <path d="M39,-42 C42,-33 43,-24 43,-15 L46.5,-15 C46.5,-25 45.5,-34 44,-42 Z" fill="#2A331A" opacity="0.5"/>
+        <path d="M30.6,-42 C30.2,-32 30.2,-22 30.8,-14 L33.2,-14 C33.8,-22 33.8,-32 33.4,-42 Z" fill="#283019" opacity="0.32"/>
+        <path d="M22.5,-42 C21,-33 20.6,-24 21,-15 L23.4,-15 C22.8,-24 23.2,-33 25,-42 Z" fill="#2A331A" opacity="0.3"/>
+        <!-- left lit drape panel (warm cloth volume) -->
+        <path d="M20,-41 C16.5,-33 15,-25 14.6,-16 C14.4,-14 15.5,-13.4 17,-13.7 L19.4,-14 C18.4,-24 19,-33 22,-41 Z" fill="#7E8B5B" opacity="0.5"/>
+        <!-- soft belly highlight -->
+        <ellipse cx="27" cy="-27" rx="7" ry="12" fill="#8A9864" opacity="0.2"/>
+        <!-- GOLD DOTTED FILIGREE FIELD (scattered over full robe) -->
+        <g fill="#D2BA72" opacity="0.6">
+          <circle cx="19" cy="-37" r="0.85"/><circle cx="21.5" cy="-35.6" r="0.6"/><circle cx="24" cy="-38.2" r="0.8"/><circle cx="29" cy="-37" r="0.8"/><circle cx="31.5" cy="-38.4" r="0.6"/><circle cx="35" cy="-38.2" r="0.85"/><circle cx="40" cy="-37" r="0.8"/><circle cx="45" cy="-35" r="0.85"/>
+          <circle cx="16.5" cy="-32" r="0.8"/><circle cx="21.5" cy="-33.2" r="0.9"/><circle cx="26.5" cy="-32.6" r="0.8"/><circle cx="31.5" cy="-33.4" r="0.6"/><circle cx="37.5" cy="-32.6" r="0.85"/><circle cx="42.5" cy="-31.4" r="0.8"/><circle cx="47" cy="-29.2" r="0.85"/>
+          <circle cx="18" cy="-27" r="0.85"/><circle cx="23" cy="-28" r="0.8"/><circle cx="28" cy="-27.4" r="0.85"/><circle cx="32" cy="-28.6" r="0.6"/><circle cx="37" cy="-27.4" r="0.8"/><circle cx="42" cy="-26.4" r="0.9"/><circle cx="46.5" cy="-24.4" r="0.8"/>
+          <circle cx="16.5" cy="-22" r="0.8"/><circle cx="21.5" cy="-23" r="0.85"/><circle cx="26" cy="-22.6" r="0.8"/><circle cx="38.5" cy="-22.6" r="0.85"/><circle cx="43.5" cy="-21.4" r="0.8"/><circle cx="47" cy="-20.4" r="0.65"/>
+          <circle cx="19" cy="-17.6" r="0.85"/><circle cx="23.5" cy="-18.6" r="0.65"/><circle cx="40.5" cy="-18.6" r="0.65"/><circle cx="44.5" cy="-18" r="0.85"/><circle cx="48" cy="-19.4" r="0.8"/>
+          <circle cx="21" cy="-15.4" r="0.8"/><circle cx="25" cy="-15.6" r="0.75"/><circle cx="28.5" cy="-15" r="0.6"/><circle cx="35.5" cy="-15" r="0.6"/><circle cx="40" cy="-15.6" r="0.75"/><circle cx="44" cy="-15.4" r="0.8"/>
+        </g>
+        <g fill="none" stroke="#C6AD66" stroke-width="0.55" stroke-linecap="round" opacity="0.5">
+          <path d="M21.5,-35.4 q1.4,-1.2 2.8,-0.2"/><path d="M39,-34.4 q1.4,-1.2 2.8,-0.2"/>
+          <path d="M24,-25.4 q1.4,-1.2 2.8,-0.2"/><path d="M40,-24.6 q1.4,-1.2 2.8,-0.2"/>
+          <path d="M20,-20.4 q1.4,-1.2 2.8,-0.2"/>
+        </g>
+      </g>
+      <!-- HEM decorative band (scalloped) -->
+      <path d="M15,-14 C18,-12.6 20.5,-13.6 23.5,-14.2 C26.5,-13.4 28.5,-14.6 32,-14 C35.5,-14.6 37.5,-13.4 40.5,-14.2 C43.5,-13.6 46,-12.6 49,-14" fill="none" stroke="url(#goldGrad)" stroke-width="1.3" opacity="0.9"/>
+      <g fill="#CBB26C"><circle cx="20" cy="-12.9" r="0.85"/><circle cx="26" cy="-12.5" r="0.85"/><circle cx="32" cy="-12.7" r="0.85"/><circle cx="38" cy="-12.5" r="0.85"/><circle cx="44" cy="-12.9" r="0.85"/></g>
+      <!-- YOKE / shoulder cape (V-back collar, gold trim) -->
+      <path d="M14.5,-40 C12,-35 11,-30 12,-25.5 C15.5,-23.5 19.5,-24.5 22.5,-27.5 C26.5,-31 29.5,-29 32,-24.5 C34.5,-29 37.5,-31 41.5,-27.5 C44.5,-24.5 48.5,-23.5 52,-25.5 C53,-30 52,-35 49.5,-40 C41,-43 23,-43 14.5,-40 Z" fill="url(#yokeGrad)"/>
+      <!-- cape right-side shade -->
+      <path d="M41.5,-41 C44,-34 45,-29 44.5,-25.5 C47,-24 49.5,-24 52,-25.5 C53,-30 52,-35 49.5,-40 C47,-41.4 44,-41.6 41.5,-41 Z" fill="#2C3719" opacity="0.5"/>
+      <!-- cape gold trim -->
+      <path d="M12,-25.5 C15.5,-23.5 19.5,-24.5 22.5,-27.5 C26.5,-31 29.5,-29 32,-24.5 C34.5,-29 37.5,-31 41.5,-27.5 C44.5,-24.5 48.5,-23.5 52,-25.5" fill="none" stroke="url(#goldGrad)" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M12,-25.5 C15.5,-23.5 19.5,-24.5 22.5,-27.5 C26.5,-31 29.5,-29 32,-24.5 C34.5,-29 37.5,-31 41.5,-27.5 C44.5,-24.5 48.5,-23.5 52,-25.5" fill="none" stroke="#F1DEA2" stroke-width="0.6" stroke-linecap="round" opacity="0.6"/>
+      <!-- cape shoulder rim light (sun upper-left) -->
+      <path d="M16,-39.5 Q32,-43.6 48,-39.5" fill="none" stroke="#ECD9AC" stroke-width="1.2" stroke-linecap="round" opacity="0.45"/>
+      <path d="M15,-38.5 C13,-34 12.2,-30.5 12.6,-27" fill="none" stroke="#EAC68B" stroke-width="1.1" stroke-linecap="round" opacity="0.45"/>
+      <!-- cape filigree dots -->
+      <g fill="#CBB26C" opacity="0.5"><circle cx="20" cy="-34" r="0.75"/><circle cx="27" cy="-35" r="0.7"/><circle cx="37" cy="-35" r="0.7"/><circle cx="44" cy="-34" r="0.75"/></g>
+      <!-- MEDALLION -->
+      <circle cx="32" cy="-16" r="8" fill="none" stroke="#CBB26C" stroke-width="0.8" stroke-dasharray="0.5 2" opacity="0.85"/>
+      <circle cx="32" cy="-16" r="6.4" fill="#2A3219"/>
+      <circle cx="32" cy="-16" r="6.4" fill="none" stroke="url(#goldGrad)" stroke-width="1.7"/>
+      <path d="M32,-20.6 L34.2,-16 L32,-11.4 L29.8,-16 Z" fill="url(#goldGrad)"/>
+      <path d="M32,-20.6 L34.2,-16 L32,-16 Z" fill="#EAD79C"/>
+      <circle cx="32" cy="-16" r="1.2" fill="#F1E0AA"/>
+      <!-- curly tail (below medallion + hem, hugging lower body, with shadow) -->
+      <ellipse cx="32.4" cy="-4.2" rx="2.8" ry="1.7" fill="#131810" opacity="0.32"/>
+      <path d="M32,-8.4 q-3.1,0.7 -2.4,3.2 q0.7,2.1 2.7,1 q1.4,-0.9 0.2,-2.1" fill="none" stroke="#C88C84" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M31.4,-7.3 q-1.8,0.5 -1.4,2" fill="none" stroke="#DBA9A0" stroke-width="0.6" stroke-linecap="round" opacity="0.7"/>
+      <!-- EARS (behind head, short wide splayed pig ears) -->
+      <path d="M28,-56 L18,-63 Q15.5,-62.5 16.5,-59 Q19,-53.5 27,-53.2 Z" fill="#6A4D43"/>
+      <path d="M36,-56 L46,-63 Q48.5,-62.5 47.5,-59 Q45,-53.5 37,-53.2 Z" fill="#6A4D43"/>
+      <!-- HEAD -->
+      <ellipse cx="32" cy="-50" rx="13.5" ry="12.5" fill="url(#headGrad)"/>
+      <ellipse cx="33" cy="-44" rx="10" ry="6" fill="#4A342C" opacity="0.3"/>
+      <ellipse cx="27" cy="-55" rx="6" ry="5" fill="#D9BA98" opacity="0.4"/>
+      <path d="M27,-39 Q32,-35.5 37,-39" fill="none" stroke="#4A352C" stroke-width="1.3" stroke-linecap="round" opacity="0.4"/>
+      <!-- INNER EARS (muted pink) -->
+      <path d="M27,-55.5 L20,-61 Q18.8,-60.2 19.8,-58 Q21.6,-54.6 26.2,-54 Z" fill="#C68C85"/>
+      <path d="M37,-55.5 L44,-61 Q45.2,-60.2 44.2,-58 Q42.4,-54.6 37.8,-54 Z" fill="#C68C85"/>
+      <!-- WARM GLOW overlay (sunset, upper-left) -->
+      <ellipse cx="25" cy="-41" rx="25" ry="31" fill="url(#warmGlow)"/>
+      <!-- robe outer-left silhouette rim (sunset backlight) -->
+      <path d="M18,-40 C14.4,-33 12.4,-25 12,-18.5" fill="none" stroke="#EFCE94" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+      <!-- RIM LIGHTS (sun upper-left): ear ridges + head crown + head side -->
+      <path d="M18.5,-62.3 L27,-56" fill="none" stroke="#F6E7BE" stroke-width="1.5" stroke-linecap="round" opacity="0.82"/>
+      <path d="M45.5,-62.3 L37,-56" fill="none" stroke="#F4E1B8" stroke-width="1.3" stroke-linecap="round" opacity="0.66"/>
+      <path d="M20.3,-52 Q22,-60.4 30,-62.8" fill="none" stroke="#F8E9C2" stroke-width="2.2" stroke-linecap="round" opacity="0.82"/>
+      <path d="M20.3,-52 Q18.6,-47 21,-42.5" fill="none" stroke="#EFCF94" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    </g>
+    <g id="treeCluster">
+      <path d="M-6,0 L-2,-34 L2,-34 L6,0 Z" fill="#6B5140"/>
+      <path d="M-46,-32 Q-54,-44 -44,-52 Q-46,-64 -34,-68 Q-30,-78 -18,-76 Q-8,-76 -6,-66 Q0,-56 -4,-46 Q0,-34 -10,-28 Q-22,-20 -32,-26 Q-44,-24 -46,-32 Z" fill="#749868"/>
+      <path d="M-20,-28 Q-28,-40 -18,-50 Q-22,-66 -8,-72 Q-8,-88 10,-88 Q28,-90 32,-76 Q46,-76 48,-62 Q58,-54 52,-42 Q56,-28 42,-24 Q32,-14 18,-18 Q4,-10 -6,-18 Q-18,-16 -20,-28 Z" fill="#7EA06F"/>
+      <path d="M30,-58 Q38,-64 46,-58 Q54,-52 50,-42 Q52,-30 40,-26 Q30,-22 26,-32 Q22,-46 30,-58 Z" fill="#6F9264" opacity="0.85"/>
+      <path d="M-10,-62 Q-14,-72 -2,-76 Q0,-86 12,-84 Q22,-84 22,-74 Q26,-66 16,-62 Q6,-56 -2,-60 Q-8,-56 -10,-62 Z" fill="#93B67F"/>
+      <path d="M-44,-52 Q-46,-62 -36,-64 Q-34,-72 -24,-70 Q-16,-68 -18,-60 Q-14,-54 -24,-52 Q-34,-46 -44,-52 Z" fill="#93B67F" opacity="0.9"/>
     </g>
   </defs>
 
-  <!-- ================= SCENE ================= -->
+  <!-- SKY -->
   <rect width="1920" height="1080" fill="url(#sky)"/>
-  <ellipse cx="1180" cy="720" rx="820" ry="360" fill="url(#horizonGlow)"/>
+  <circle cx="400" cy="235" r="420" fill="url(#sun)"/>
+  <circle cx="400" cy="235" r="56" fill="#FFF9E8" opacity="0.95"/>
+  <circle cx="400" cy="235" r="90" fill="#FFF7DF" opacity="0.35"/>
 
-  <!-- soft clouds -->
-  <g fill="#FFFFFF" filter="url(#soft)">
-    <g opacity="0.85"><ellipse cx="300" cy="238" rx="120" ry="34"/><ellipse cx="360" cy="222" rx="80" ry="30"/><ellipse cx="250" cy="250" rx="70" ry="26"/></g>
-    <g opacity="0.8"><ellipse cx="1520" cy="220" rx="130" ry="36"/><ellipse cx="1580" cy="204" rx="86" ry="30"/><ellipse cx="1460" cy="234" rx="70" ry="26"/></g>
-    <g opacity="0.5"><ellipse cx="900" cy="180" rx="110" ry="26"/><ellipse cx="960" cy="170" rx="70" ry="22"/></g>
-    <g opacity="0.55"><ellipse cx="180" cy="400" rx="90" ry="24"/><ellipse cx="230" cy="392" rx="60" ry="20"/></g>
-    <g opacity="0.5"><ellipse cx="1760" cy="410" rx="90" ry="24"/><ellipse cx="1710" cy="402" rx="60" ry="20"/></g>
+  <!-- CLOUDS -->
+  <g fill="#FFFFFF">
+    <path d="M226,306 Q220,280 248,272 Q250,246 282,242 Q290,214 330,212 Q344,186 392,190 Q438,178 460,206 Q498,196 512,226 Q550,224 558,252 Q590,256 592,280 Q608,286 602,306 Z" opacity="0.92"/>
+    <path d="M1452,266 Q1446,242 1472,234 Q1476,208 1510,206 Q1520,180 1562,180 Q1580,158 1622,164 Q1664,156 1682,182 Q1718,178 1730,206 Q1764,208 1770,234 Q1794,240 1788,266 Z" opacity="0.9"/>
+    <path d="M842,196 Q838,180 856,174 Q860,158 884,156 Q896,140 924,144 Q952,138 964,156 Q988,154 994,174 Q1012,178 1006,196 Z" opacity="0.5"/>
+    <path d="M108,438 Q104,424 120,419 Q124,406 144,405 Q154,392 176,396 Q198,391 208,406 Q226,404 231,419 Q245,423 240,438 Z" opacity="0.55"/>
+    <path d="M1706,400 Q1702,388 1716,383 Q1719,372 1736,371 Q1744,360 1763,363 Q1781,359 1789,372 Q1804,371 1808,383 Q1820,387 1816,400 Z" opacity="0.5"/>
+  </g>
+  <g fill="#FFFFFF">
+    <path d="M300,238 Q296,214 322,206 Q330,184 360,186 Q390,176 408,196 Q430,194 434,212 Q450,220 442,234 Q424,242 402,238 Q362,246 332,240 Q310,244 300,238 Z"/>
+    <path d="M1516,214 Q1512,192 1538,186 Q1546,166 1576,168 Q1604,158 1620,176 Q1642,174 1646,192 Q1660,200 1652,212 Q1634,220 1612,214 Q1574,222 1546,216 Q1524,220 1516,214 Z"/>
+  </g>
+  <g fill="#D9E2E0">
+    <path d="M238,306 Q246,286 284,288 Q296,268 340,272 Q376,258 424,268 Q472,258 506,272 Q544,268 562,286 Q590,288 602,306 Z" opacity="0.7"/>
+    <path d="M1462,266 Q1470,248 1504,250 Q1518,234 1556,238 Q1592,226 1634,236 Q1678,228 1706,240 Q1742,238 1760,250 Q1782,252 1788,266 Z" opacity="0.7"/>
+    <path d="M850,196 Q866,186 900,188 Q950,184 980,190 Q998,190 1006,196 Z" opacity="0.45"/>
   </g>
 
-  <!-- ===== LAYERED HILLS ===== -->
-  <path d="M0,676 C220,648 420,644 620,660 C860,680 1040,646 1260,660 C1480,674 1680,656 1920,668 L1920,760 L0,760 Z" fill="#CFDDCF"/>
-  <path d="M0,706 C240,676 460,672 680,690 C920,708 1120,672 1360,688 C1560,700 1740,686 1920,700 L1920,800 L0,800 Z" fill="#BAD0BE"/>
-  <path d="M0,738 C260,708 480,714 720,724 C960,734 1160,706 1420,720 C1620,730 1780,716 1920,728 L1920,830 L0,830 Z" fill="#A6C5AC"/>
-  <path d="M0,738 C260,708 480,714 720,724 C960,734 1160,706 1420,720 C1620,730 1780,716 1920,728 L1920,836 L0,836 Z" fill="#B4CBB9" filter="url(#hillTex)" opacity="0.5"/>
-  <!-- distant shrubs on ridges -->
-  <g opacity="0.85">
-    <use href="#shrub" transform="translate(250,742) scale(0.5)"/>
-    <use href="#shrub" transform="translate(560,730) scale(0.55)"/>
-    <use href="#shrub" transform="translate(1520,726) scale(0.55)"/>
-    <use href="#shrub" transform="translate(1720,720) scale(0.5)"/>
+  <!-- FAR HILLS: warm sage-green ridges -->
+  <path d="M0,672 C160,644 300,638 460,654 C640,672 780,632 960,644 C1150,656 1290,630 1470,648 C1640,662 1790,650 1920,660 L1920,780 L0,780 Z" fill="#D8E4D9"/>
+  <path d="M0,708 C190,676 360,670 540,688 C740,706 900,668 1090,682 C1290,696 1480,670 1660,690 C1770,700 1860,696 1920,702 L1920,800 L0,800 Z" fill="#C6D8C8"/>
+  <path d="M0,740 C200,712 380,718 560,726 C760,734 920,706 1120,718 C1320,730 1520,710 1700,726 L1920,738 L1920,820 L0,820 Z" fill="#B4CBBB"/>
+  <!-- haze lift following ridge silhouette -->
+  <path d="M0,740 C200,712 380,718 560,726 C760,734 920,706 1120,718 C1320,730 1520,710 1700,726 L1920,738 L1920,826 L0,826 Z" fill="url(#haze)"/>
+
+  <!-- MID SAGE HILLS with hedgerows -->
+  <path d="M0,772 C240,730 440,752 660,756 C920,760 1100,726 1330,748 C1540,766 1720,742 1920,762 L1920,880 L0,880 Z" fill="#B7CDA0"/>
+  <g fill="#93B285" opacity="0.9">
+    <circle cx="196" cy="764" r="9"/><circle cx="212" cy="766" r="7"/>
+    <circle cx="448" cy="758" r="8"/><circle cx="462" cy="760" r="6"/>
+    <circle cx="668" cy="760" r="7"/>
+    <circle cx="1560" cy="766" r="8"/><circle cx="1578" cy="768" r="6"/>
   </g>
 
-  <!-- mid sage hill -->
-  <path d="M0,772 C260,732 460,752 700,758 C960,764 1140,730 1380,750 C1580,766 1760,746 1920,764 L1920,890 L0,890 Z" fill="#93B489"/>
-  <path d="M0,772 C260,732 460,752 700,758 C960,764 1140,730 1380,750 C1580,766 1760,746 1920,764 L1920,890 L0,890 Z" fill="#7FA475" filter="url(#hillTex)" opacity="0.4"/>
-  <g fill="#7CA06E" opacity="0.6" stroke="none">
-    <path d="M0,806 C240,780 460,776 720,792" fill="none" stroke="#83A876" stroke-width="3" opacity="0.5"/>
-    <path d="M1000,780 C1200,770 1400,772 1620,786" fill="none" stroke="#83A876" stroke-width="3" opacity="0.4"/>
-  </g>
-
-  <!-- warm amber sunset band (right horizon) -->
-  <ellipse cx="1500" cy="742" rx="680" ry="188" fill="url(#amberBand)"/>
-  <ellipse cx="1560" cy="770" rx="520" ry="70" fill="#F2C173" opacity="0.28" filter="url(#soft)"/>
-
-  <!-- house plateau -->
-  <path d="M560,844 C880,780 1140,762 1340,762 C1560,762 1740,792 1920,832 L1920,948 L560,948 Z" fill="#96AF75"/>
-
-  <!-- ===== HOUSE ENSEMBLE ===== -->
+  <!-- PATCHWORK FIELDS (left slope, contour-following ribbons tapering into the plateau) -->
   <g>
-    <ellipse cx="1330" cy="640" rx="440" ry="240" fill="url(#houseGlow)"/>
-    <!-- trees behind house -->
-    <use href="#tree" transform="translate(1560,790) scale(0.62)"/>
-    <use href="#cypress" transform="translate(1218,772) scale(1.0)"/>
-    <use href="#cypress" transform="translate(1196,776) scale(0.72)"/>
-
-    <!-- HOUSE -->
-    <g>
-      <ellipse cx="1338" cy="766" rx="150" ry="14" fill="#77925F" opacity="0.4"/>
-      <!-- chimney -->
-      <rect x="1402" y="536" width="22" height="66" fill="#9C4728"/>
-      <rect x="1398" y="530" width="30" height="9" fill="#EFE2C8"/>
-      <path d="M1414,528 C1408,506 1422,490 1416,468 C1410,446 1424,430 1418,408 C1414,392 1422,380 1418,368" stroke="#FFFFFF" stroke-width="9" fill="none" opacity="0.5" stroke-linecap="round" filter="url(#soft)"/>
-      <path d="M1414,528 C1409,508 1420,492 1415,472 C1410,452 1421,436 1416,416" stroke="#F3EEE2" stroke-width="5" fill="none" opacity="0.55" stroke-linecap="round" filter="url(#soft)"/>
-      <!-- roof -->
-      <polygon points="1218,616 1338,514 1458,616" fill="url(#roof)"/>
-      <polygon points="1218,616 1338,514 1348,514 1230,616" fill="#9C4B1E" opacity="0.55"/>
-      <g stroke="#A6521F" stroke-width="2" opacity="0.5" fill="none">
-        <path d="M1250,586 C1300,578 1376,578 1426,586"/>
-        <path d="M1266,566 C1310,560 1366,560 1410,566"/>
-        <path d="M1282,546 C1316,542 1360,542 1394,546"/>
-      </g>
-      <polygon points="1210,616 1338,508 1466,616 1454,624 1338,522 1222,624" fill="#C97C3C"/>
-      <!-- wall -->
-      <rect x="1244" y="616" width="188" height="150" fill="url(#brick)"/>
-      <!-- brick courses -->
-      <g stroke="#8B3E24" stroke-width="1" opacity="0.35">
-        <line x1="1244" y1="628" x2="1432" y2="628"/><line x1="1244" y1="640" x2="1432" y2="640"/>
-        <line x1="1244" y1="652" x2="1432" y2="652"/><line x1="1244" y1="664" x2="1432" y2="664"/>
-        <line x1="1244" y1="676" x2="1432" y2="676"/><line x1="1244" y1="688" x2="1432" y2="688"/>
-        <line x1="1244" y1="700" x2="1432" y2="700"/><line x1="1244" y1="712" x2="1432" y2="712"/>
-        <line x1="1244" y1="724" x2="1432" y2="724"/><line x1="1244" y1="736" x2="1432" y2="736"/>
-        <line x1="1244" y1="748" x2="1432" y2="748"/><line x1="1244" y1="760" x2="1432" y2="760"/>
-      </g>
-      <!-- lighter mortar highlight (running-bond depth) -->
-      <g stroke="#D98A5E" stroke-width="1" opacity="0.28">
-        <line x1="1244" y1="635" x2="1432" y2="635"/><line x1="1244" y1="647" x2="1432" y2="647"/>
-        <line x1="1244" y1="659" x2="1432" y2="659"/><line x1="1244" y1="671" x2="1432" y2="671"/>
-        <line x1="1244" y1="683" x2="1432" y2="683"/><line x1="1244" y1="695" x2="1432" y2="695"/>
-        <line x1="1244" y1="707" x2="1432" y2="707"/><line x1="1244" y1="719" x2="1432" y2="719"/>
-        <line x1="1244" y1="731" x2="1432" y2="731"/><line x1="1244" y1="743" x2="1432" y2="743"/>
-        <line x1="1244" y1="755" x2="1432" y2="755"/>
-      </g>
-      <g stroke="#8B3E24" stroke-width="1" opacity="0.24">
-        <line x1="1268" y1="616" x2="1268" y2="628"/><line x1="1316" y1="616" x2="1316" y2="628"/><line x1="1364" y1="616" x2="1364" y2="628"/><line x1="1412" y1="616" x2="1412" y2="628"/>
-        <line x1="1292" y1="628" x2="1292" y2="640"/><line x1="1340" y1="628" x2="1340" y2="640"/><line x1="1388" y1="628" x2="1388" y2="640"/>
-        <line x1="1268" y1="640" x2="1268" y2="652"/><line x1="1316" y1="640" x2="1316" y2="652"/><line x1="1364" y1="640" x2="1364" y2="652"/><line x1="1412" y1="640" x2="1412" y2="652"/>
-        <line x1="1292" y1="652" x2="1292" y2="664"/><line x1="1340" y1="652" x2="1340" y2="664"/><line x1="1388" y1="652" x2="1388" y2="664"/>
-        <line x1="1268" y1="664" x2="1268" y2="676"/><line x1="1412" y1="664" x2="1412" y2="676"/>
-        <line x1="1292" y1="700" x2="1292" y2="712"/><line x1="1388" y1="700" x2="1388" y2="712"/>
-        <line x1="1268" y1="712" x2="1268" y2="724"/><line x1="1412" y1="712" x2="1412" y2="724"/>
-        <line x1="1340" y1="712" x2="1340" y2="724"/>
-        <line x1="1292" y1="736" x2="1292" y2="748"/><line x1="1388" y1="736" x2="1388" y2="748"/>
-        <line x1="1268" y1="748" x2="1268" y2="760"/><line x1="1412" y1="748" x2="1412" y2="760"/>
-      </g>
-      <!-- cornice -->
-      <rect x="1238" y="610" width="200" height="8" fill="#EFE2C8"/>
-      <!-- upper windows (lit) -->
-      <g>
-        <rect x="1264" y="634" width="26" height="36" fill="url(#win)"/>
-        <rect x="1322" y="634" width="26" height="36" fill="url(#win)"/>
-        <rect x="1386" y="634" width="26" height="36" fill="url(#win)"/>
-      </g>
-      <!-- lower left + right windows (lit) -->
-      <rect x="1264" y="700" width="30" height="46" fill="url(#win)"/>
-      <rect x="1382" y="700" width="30" height="46" fill="url(#win)"/>
-      <!-- window frames + muntins -->
-      <g fill="none" stroke="#7A4A2E" stroke-width="2">
-        <rect x="1264" y="634" width="26" height="36"/><rect x="1322" y="634" width="26" height="36"/><rect x="1386" y="634" width="26" height="36"/>
-        <rect x="1264" y="700" width="30" height="46"/><rect x="1382" y="700" width="30" height="46"/>
-      </g>
-      <g stroke="#7A4A2E" stroke-width="1.4" opacity="0.85">
-        <line x1="1277" y1="634" x2="1277" y2="670"/><line x1="1264" y1="652" x2="1290" y2="652"/>
-        <line x1="1335" y1="634" x2="1335" y2="670"/><line x1="1322" y1="652" x2="1348" y2="652"/>
-        <line x1="1399" y1="634" x2="1399" y2="670"/><line x1="1386" y1="652" x2="1412" y2="652"/>
-        <line x1="1279" y1="700" x2="1279" y2="746"/><line x1="1264" y1="723" x2="1294" y2="723"/>
-        <line x1="1397" y1="700" x2="1397" y2="746"/><line x1="1382" y1="723" x2="1412" y2="723"/>
-      </g>
-      <!-- window sills + warm sill glow -->
-      <g fill="#EFE2C8">
-        <rect x="1261" y="670" width="32" height="4"/><rect x="1319" y="670" width="32" height="4"/><rect x="1383" y="670" width="32" height="4"/>
-        <rect x="1261" y="746" width="36" height="5"/><rect x="1379" y="746" width="36" height="5"/>
-      </g>
-      <!-- arched door -->
-      <path d="M1316,766 L1316,714 A22 22 0 0 1 1360,714 L1360,766 Z" fill="#5E3A22"/>
-      <path d="M1316,714 A22 22 0 0 1 1360,714 L1360,720 A22 22 0 0 0 1316,720 Z" fill="#F4CF88" opacity="0.85"/>
-      <rect x="1320" y="726" width="36" height="40" fill="#5E3A22"/>
-      <line x1="1338" y1="720" x2="1338" y2="766" stroke="#42281733" stroke-width="2"/>
-      <path d="M1310,766 h56 l4,4 h-64 Z" fill="#EFE2C8" opacity="0.7"/>
-      <ellipse cx="1338" cy="770" rx="40" ry="10" fill="#F6D690" opacity="0.4" filter="url(#soft)"/>
-      <!-- sunlit wall edge (right) + roof shade -->
-      <rect x="1429" y="616" width="3" height="150" fill="#F0A87E" opacity="0.7"/>
-      <!-- front hedges -->
-      <path d="M1246,766 Q1260,752 1278,766 Q1294,754 1312,766 L1312,772 L1246,772 Z" fill="#6C8B5C"/>
-      <path d="M1364,766 Q1380,754 1398,766 Q1414,754 1430,766 L1430,772 L1364,772 Z" fill="#6C8B5C"/>
+    <path d="M0,796 C240,768 480,766 720,782 C480,792 240,798 0,828 Z" fill="#C6D49C" opacity="0.9"/>
+    <path d="M0,828 C240,798 480,794 760,812 C520,824 240,836 0,872 Z" fill="#D8DBA6" opacity="0.85"/>
+    <path d="M0,872 C240,836 480,830 800,850 C560,864 240,880 0,922 Z" fill="#C0CF96" opacity="0.8"/>
+    <g fill="none" stroke="#A6BF88" stroke-width="2.5" opacity="0.5">
+      <path d="M0,828 C240,798 480,794 760,812"/>
+      <path d="M0,872 C240,836 480,830 800,850"/>
     </g>
   </g>
 
-  <!-- ===== FOREGROUND MEADOW ===== -->
-  <path d="M0,888 C280,826 520,814 780,836 C1040,858 1300,856 1560,890 C1700,908 1830,920 1920,928 L1920,1080 L0,1080 Z" fill="url(#meadow)"/>
-  <ellipse cx="720" cy="980" rx="560" ry="180" fill="url(#lightPool)"/>
-  <path d="M0,888 C280,826 520,814 780,836 C1040,858 1300,856 1560,890 C1700,908 1830,920 1920,928 L1920,1080 L0,1080 Z" fill="#849259" filter="url(#hillTex)" opacity="0.3"/>
-  <g stroke="#B0C083" stroke-width="3" fill="none" opacity="0.4">
-    <path d="M40,946 C280,900 500,890 720,904"/>
-    <path d="M20,996 C260,946 480,934 700,948"/>
-    <path d="M80,1046 C300,998 520,986 720,1000"/>
-    <path d="M1160,900 C1320,910 1460,922 1600,938"/>
+  <!-- HOUSE PLATEAU -->
+  <path d="M580,840 C880,776 1140,756 1330,756 C1540,756 1720,788 1920,828 L1920,940 L580,940 Z" fill="#C8D6A6"/>
+
+  <!-- HOUSE ENSEMBLE (shifted right for CTA clearance) -->
+  <g transform="translate(60,0)">
+    <!-- HOUSE GLOW -->
+    <ellipse cx="1290" cy="668" rx="420" ry="220" fill="url(#houseGlow)"/>
+
+    <!-- TREES BEHIND HOUSE (right) -->
+    <use href="#treeCluster" transform="translate(1452,764)"/>
+    <use href="#treeCluster" transform="translate(1520,776) scale(0.7)"/>
+    <ellipse cx="1490" cy="770" rx="90" ry="9" fill="#7F9A6B" opacity="0.3"/>
+
+    <!-- HOUSE -->
+    <g>
+      <ellipse cx="1300" cy="764" rx="170" ry="13" fill="#7F9A6B" opacity="0.35"/>
+      <!-- chimneys at ridge ends -->
+      <rect x="1236" y="524" width="16" height="52" fill="#A3291F"/>
+      <rect x="1332" y="524" width="16" height="52" fill="#A3291F"/>
+      <rect x="1233" y="518" width="22" height="7" fill="#F2E7D2"/>
+      <rect x="1329" y="518" width="22" height="7" fill="#F2E7D2"/>
+      <!-- roof -->
+      <polygon points="1184,632 1228,566 1354,566 1398,632" fill="#7C2B22"/>
+      <polygon points="1228,566 1354,566 1346,576 1236,576" fill="#96352A"/>
+      <!-- side wing (right) -->
+      <polygon points="1392,700 1420,676 1448,700" fill="#8A3127"/>
+      <rect x="1396" y="700" width="44" height="60" fill="#AC3226"/>
+      <rect x="1408" y="714" width="18" height="26" fill="#F7EDD4"/>
+      <rect x="1408" y="714" width="18" height="4" fill="#D9C7A6"/>
+      <!-- cornice + wall -->
+      <rect x="1192" y="632" width="182" height="8" fill="#F2E7D2"/>
+      <rect x="1196" y="640" width="174" height="120" fill="url(#wall)"/>
+      <rect x="1196" y="640" width="174" height="7" fill="#8E2A20" opacity="0.3"/>
+      <g stroke="#8E2A20" stroke-width="1" opacity="0.15">
+        <line x1="1196" y1="654" x2="1370" y2="654"/><line x1="1196" y1="662" x2="1370" y2="662"/>
+        <line x1="1196" y1="670" x2="1370" y2="670"/><line x1="1196" y1="678" x2="1370" y2="678"/>
+        <line x1="1196" y1="686" x2="1370" y2="686"/><line x1="1196" y1="694" x2="1370" y2="694"/>
+        <line x1="1196" y1="702" x2="1370" y2="702"/><line x1="1196" y1="710" x2="1370" y2="710"/>
+        <line x1="1196" y1="718" x2="1370" y2="718"/><line x1="1196" y1="726" x2="1370" y2="726"/>
+        <line x1="1196" y1="734" x2="1370" y2="734"/><line x1="1196" y1="742" x2="1370" y2="742"/>
+        <line x1="1196" y1="750" x2="1370" y2="750"/>
+      </g>
+      <!-- windows -->
+      <g fill="#F7EDD4">
+        <rect x="1210" y="652" width="20" height="30"/><rect x="1244" y="652" width="20" height="30"/>
+        <rect x="1302" y="652" width="20" height="30"/><rect x="1336" y="652" width="20" height="30"/>
+        <rect x="1210" y="700" width="20" height="34"/><rect x="1244" y="700" width="20" height="34"/>
+        <rect x="1302" y="700" width="20" height="34"/><rect x="1336" y="700" width="20" height="34"/>
+      </g>
+      <g fill="#D9C7A6">
+        <rect x="1210" y="652" width="20" height="4"/><rect x="1244" y="652" width="20" height="4"/>
+        <rect x="1302" y="652" width="20" height="4"/><rect x="1336" y="652" width="20" height="4"/>
+        <rect x="1210" y="700" width="20" height="4"/><rect x="1244" y="700" width="20" height="4"/>
+        <rect x="1302" y="700" width="20" height="4"/><rect x="1336" y="700" width="20" height="4"/>
+      </g>
+      <g fill="#F2E7D2">
+        <rect x="1208" y="682" width="24" height="3"/><rect x="1242" y="682" width="24" height="3"/>
+        <rect x="1300" y="682" width="24" height="3"/><rect x="1334" y="682" width="24" height="3"/>
+        <rect x="1208" y="734" width="24" height="3"/><rect x="1242" y="734" width="24" height="3"/>
+        <rect x="1300" y="734" width="24" height="3"/><rect x="1334" y="734" width="24" height="3"/>
+      </g>
+      <!-- door with pediment -->
+      <polygon points="1262,712 1283,694 1304,712" fill="#F2E7D2"/>
+      <rect x="1266" y="712" width="34" height="48" fill="#F2E7D2"/>
+      <path d="M1272,760 L1272,724 Q1283,712 1294,724 L1294,760 Z" fill="#634036"/>
+      <rect x="1268" y="760" width="30" height="5" fill="#E6D8BC"/>
+      <!-- front hedges -->
+      <path d="M1198,760 Q1210,748 1226,760 Q1240,750 1256,760 L1256,766 L1198,766 Z" fill="#7FA173"/>
+      <path d="M1310,760 Q1324,750 1340,760 Q1354,750 1368,760 L1368,766 L1310,766 Z" fill="#7FA173"/>
+      <!-- sunlit rim (light from left) -->
+      <rect x="1196" y="640" width="3" height="120" fill="#F0A88E" opacity="0.8"/>
+      <polygon points="1184,632 1228,566 1236,566 1194,632" fill="#B0503F" opacity="0.9"/>
+      <!-- gentle chimney smoke -->
+      <path d="M1244,512 C1238,498 1252,490 1246,476 C1240,464 1254,456 1250,442" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity="0.4"/>
+    </g>
+
+    <!-- CYPRESS FLANKS (asymmetric pair, left of house) -->
+    <path d="M1166,762 C1156,730 1156,684 1166,658 C1176,684 1176,730 1166,762 Z" fill="#66875F"/>
+    <path d="M1140,764 C1133,740 1133,706 1140,688 C1147,706 1147,740 1140,764 Z" fill="#749868"/>
+    <ellipse cx="1156" cy="768" rx="38" ry="5" fill="#7F9A6B" opacity="0.3"/>
   </g>
 
-  <!-- ===== PATH ===== -->
-  <path d="M540,1080 C700,978 900,936 1090,900 C1210,876 1300,834 1352,776 L1414,776 C1360,842 1244,894 1120,926 C960,966 800,1002 724,1080 Z" fill="url(#path)"/>
-  <path d="M604,1080 C740,988 910,946 1070,910 C1190,884 1290,846 1338,788 C1284,850 1170,900 1044,932 C900,968 780,1012 700,1080 Z" fill="#F4EACB" opacity="0.6"/>
-  <path d="M540,1080 C700,978 900,936 1090,900 C1210,876 1300,834 1352,776" stroke="#CBB98C" stroke-width="3" fill="none" opacity="0.4"/>
-
-  <!-- ===== LEFT FRAMING TREES ===== -->
-  <use href="#tree" transform="translate(300,984) scale(1.02)"/>
-  <use href="#tree" transform="translate(126,1010) scale(1.42)"/>
-
-  <!-- ===== RIGHT FRAMING TREE (larger, darker anchor) ===== -->
-  <use href="#tree" transform="translate(1836,1018) scale(1.78) scale(-1,1)"/>
-  <ellipse cx="1792" cy="500" rx="238" ry="270" fill="#283B21" opacity="0.22" filter="url(#softer)"/>
-
-  <!-- ===== FOREGROUND SHRUBS ===== -->
-  <use href="#shrub" transform="translate(360,1010) scale(1.25)"/>
-  <use href="#shrub" transform="translate(250,1052) scale(1.4)"/>
-  <use href="#shrub" transform="translate(1500,1024) scale(1.3)"/>
-  <use href="#shrub" transform="translate(1640,1058) scale(1.5)"/>
-
-  <!-- ===== GRASS TUFTS ===== -->
-  <g fill="none" stroke="#A6BC7C" stroke-width="2.6" stroke-linecap="round" opacity="0.6">
-    <path d="M470,1006 q-3,-12 2,-20 M478,1006 q3,-10 -1,-18"/>
-    <path d="M640,1052 q-3,-12 2,-20 M648,1052 q3,-10 -1,-18"/>
-    <path d="M1180,1000 q-3,-11 2,-18 M1188,1000 q3,-9 -1,-16"/>
-    <path d="M1360,1044 q-3,-12 2,-20 M1368,1044 q3,-10 -1,-18"/>
-    <path d="M820,1066 q-3,-12 2,-20 M828,1066 q3,-10 -1,-18"/>
+  <!-- FOREGROUND MEADOW -->
+  <path d="M0,880 C280,818 520,806 780,828 C1040,850 1300,848 1560,882 C1700,900 1830,914 1920,922 L1920,1080 L0,1080 Z" fill="url(#meadow)"/>
+  <ellipse cx="620" cy="960" rx="480" ry="150" fill="url(#lightPool)"/>
+  <!-- low-frequency grass mottle (kept clear of bottom-right animation zone) -->
+  <path d="M0,880 C280,818 520,806 780,828 C1040,850 1300,848 1560,882 C1700,900 1830,914 1920,922 L1920,1080 L0,1080 Z" fill="#8FA668" filter="url(#mottle)" clip-path="url(#mottleClip)" opacity="0.16"/>
+  <!-- contour curves -->
+  <g stroke="#AFC489" stroke-width="3" fill="none" opacity="0.5">
+    <path d="M30,940 C260,892 470,880 680,894"/>
+    <path d="M10,984 C240,934 450,922 660,936"/>
+    <path d="M60,1034 C280,986 480,972 660,986"/>
+  </g>
+  <g stroke="#C4D398" stroke-width="2.5" fill="none" opacity="0.45">
+    <path d="M1120,884 C1240,892 1350,902 1450,914"/>
+    <path d="M1660,1000 C1760,1016 1850,1032 1920,1044"/>
   </g>
 
-  <!-- ===== PIG TRIO (right pig with staff, left pig with bundle) ===== -->
-  <!-- right pig + staff -->
-  <g transform="translate(1052,988) scale(1.16)">
-    <path d="M42,10 L34,-176" stroke="#6A4E38" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <path d="M42,10 L34,-176" stroke="#8E7052" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.5"/>
-    <ellipse cx="34" cy="-178" rx="8" ry="6" fill="#6A4E38"/>
-  </g>
-  <use href="#pig" transform="translate(1052,988) scale(1.16)"/>
-  <g transform="translate(1052,988) scale(1.16)">
-    <path d="M30,-70 C40,-64 44,-52 42,-40" stroke="#5C6E3B" stroke-width="9" fill="none" stroke-linecap="round"/>
-    <ellipse cx="41" cy="-40" rx="7" ry="6" fill="#A17E63"/>
+  <!-- LEFT MID-GROUND TREE CLUSTER (poster balance) -->
+  <g>
+    <path d="M320,936 C420,930 520,942 600,958 C500,966 400,964 320,952 Z" fill="#9CB37D" opacity="0.5"/>
+    <use href="#treeCluster" transform="translate(316,934) scale(1.15)"/>
+    <use href="#treeCluster" transform="translate(414,944) scale(0.78)"/>
   </g>
 
-  <!-- middle pig -->
-  <use href="#pig" transform="translate(960,1001) scale(1.22)"/>
-
-  <!-- left pig + shoulder bundle (bindle) -->
-  <use href="#pig" transform="translate(870,1014) scale(1.28)"/>
-  <g transform="translate(870,1014) scale(1.28)">
-    <!-- stick over shoulder -->
-    <path d="M-8,-118 C-28,-134 -46,-152 -58,-176" stroke="#7A5C42" stroke-width="4.6" fill="none" stroke-linecap="round"/>
-    <path d="M-8,-118 C-28,-134 -46,-152 -58,-176" stroke="#9A7A5A" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.55"/>
-    <!-- tied cloth sack -->
-    <path d="M-58,-150 C-77,-150 -85,-133 -76,-119 C-64,-105 -41,-107 -35,-124 C-32,-139 -46,-150 -58,-150 Z" fill="#D8B47E"/>
-    <path d="M-58,-150 C-71,-150 -79,-139 -75,-127 C-70,-137 -63,-145 -55,-147 Z" fill="#E8C994" opacity="0.7"/>
-    <!-- cloth folds -->
-    <path d="M-64,-146 C-67,-135 -64,-124 -57,-116 M-47,-146 C-43,-135 -43,-124 -48,-115" stroke="#B79766" stroke-width="1.5" fill="none" opacity="0.6"/>
-    <!-- knot -->
-    <path d="M-65,-152 C-58,-159 -49,-159 -43,-152 C-50,-149 -58,-149 -65,-152 Z" fill="#8A7550"/>
-    <ellipse cx="-54" cy="-155" rx="5.4" ry="4" fill="#9C865E"/>
+  <!-- SPARSE GRASS TUFTS -->
+  <g fill="none" stroke="#A8BC80" stroke-width="2.5" stroke-linecap="round" opacity="0.6">
+    <path d="M238,1010 q-3,-12 2,-20 M246,1010 q3,-10 -1,-18"/>
+    <path d="M412,964 q-3,-11 2,-18 M420,964 q3,-9 -1,-16"/>
+    <path d="M560,1042 q-3,-12 2,-20 M568,1042 q3,-10 -1,-18"/>
+    <path d="M888,986 q-3,-10 2,-17 M896,986 q3,-9 -1,-15"/>
+    <path d="M1078,1006 q-3,-11 2,-18 M1086,1006 q3,-9 -1,-16"/>
+    <path d="M1420,1010 q-3,-10 2,-17 M1428,1010 q3,-9 -1,-15"/>
+    <path d="M736,1064 q-3,-12 2,-20 M744,1064 q3,-10 -1,-18"/>
   </g>
 
-  <!-- ===== BIRDS ===== -->
-  <g stroke="#6E7F86" stroke-width="2" fill="none" opacity="0.5" stroke-linecap="round">
-    <path d="M660,300 q7,-7 14,0 q7,-7 14,0"/>
-    <path d="M710,318 q6,-6 12,0 q6,-6 12,0"/>
-    <path d="M738,296 q5,-5 10,0 q5,-5 10,0"/>
+  <!-- PATH -->
+  <path d="M480,1080 C620,976 770,928 920,894 C1070,860 1246,834 1328,770 L1358,770 C1276,846 1120,892 960,924 C820,958 700,1004 660,1080 Z" fill="#EDE0BA"/>
+  <path d="M540,1080 C660,988 790,940 935,904 C1075,868 1236,840 1316,782 C1240,852 1090,898 950,930 C830,962 720,1010 664,1080 Z" fill="#F6ECCE" opacity="0.75"/>
+  <!-- grounding stroke along lower path edge -->
+  <path d="M480,1080 C620,976 770,928 920,894 C1070,860 1246,834 1328,770" fill="none" stroke="#C9B88E" stroke-width="3" opacity="0.4"/>
+  <path d="M1358,770 C1276,846 1120,892 960,924 C820,958 700,1004 660,1080" fill="none" stroke="#C9B88E" stroke-width="2.5" opacity="0.25"/>
+
+  <!-- PIGS -->
+  <g transform="translate(952,916) scale(1.05)">
+    <!-- bindle: pole over shoulder + cloth bundle (outer/left side) -->
+    <path d="M24,-32 L-5,-61" stroke="#6E4B33" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M-14,-60 Q-11,-71 -2,-66 Q3,-62 -1,-57 Q-8,-53 -14,-57 Z" fill="#B85B49"/>
+    <path d="M-12,-60 Q-7,-67 -2,-63" fill="none" stroke="#D98C74" stroke-width="1.1" stroke-linecap="round" opacity="0.7"/>
+    <path d="M-10,-56 Q-6,-58 -3,-56" fill="none" stroke="#8E4131" stroke-width="1.2" stroke-linecap="round"/>
+    <use href="#pig"/>
+  </g>
+  <g transform="translate(1034,892) scale(0.87)">
+    <use href="#pig"/>
+    <!-- raised arm (sleeve + fist), toward the house -->
+    <path d="M45,-33 C49,-37 51,-42 52,-46 C52.4,-48 53.8,-48.4 54.8,-47 C55.6,-45.6 55.2,-43 54.2,-40 C53.2,-37 50.6,-34 47.6,-32 Z" fill="url(#robeGrad)"/>
+    <ellipse cx="54" cy="-47.5" rx="2.8" ry="2.6" fill="url(#headGrad)"/>
+    <path d="M46,-33 C50,-37 52,-42 53,-46" fill="none" stroke="#ECD9AC" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+    <path d="M52,-49 Q54.6,-49.6 55.4,-47.6" fill="none" stroke="#F2E0B6" stroke-width="0.9" stroke-linecap="round" opacity="0.6"/>
+  </g>
+  <g transform="translate(1098,871) scale(0.74)">
+    <use href="#pig"/>
+    <!-- walking staff (outer/right side) -->
+    <path d="M53,-1 Q55,-30 54,-58" stroke="#6E4B33" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+    <ellipse cx="54" cy="-59" rx="3" ry="2.7" fill="#7C563B"/>
+    <path d="M54,-52 Q56,-38 55,-26" stroke="#8F6A4C" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.7"/>
   </g>
 
-  <!-- ===== GRAIN ===== -->
-  <rect width="1920" height="1080" filter="url(#grain)" opacity="0.12" style="mix-blend-mode:soft-light"/>
+  <!-- BIRDS -->
+  <g stroke="#6E7F86" stroke-width="2" fill="none" opacity="0.55" stroke-linecap="round">
+    <path d="M1508,300 q7,-7 14,0 q7,-7 14,0"/>
+    <path d="M1556,318 q6,-6 12,0 q6,-6 12,0"/>
+    <path d="M1584,296 q5,-5 10,0 q5,-5 10,0"/>
+  </g>
+
+  <!-- BOTTOM-LEFT FOREGROUND CORNER -->
+  <path d="M0,1008 C140,976 300,982 430,1016 C330,1046 170,1068 0,1076 Z M0,1076 L430,1016 C460,1026 480,1040 490,1080 L0,1080 Z" fill="#B4C48D" opacity="0.85"/>
+  <g fill="none" stroke="#8CA96B" stroke-width="3.5" stroke-linecap="round">
+    <path d="M70,1080 Q62,1022 78,984"/>
+    <path d="M110,1080 Q118,1020 102,978"/>
+    <path d="M156,1080 Q148,1034 164,1000"/>
+    <path d="M202,1080 Q210,1040 196,1008"/>
+    <path d="M42,1080 Q38,1044 50,1018"/>
+  </g>
+  <g fill="#B34F3F">
+    <circle cx="79" cy="979" r="6"/><circle cx="101" cy="972" r="6.5"/><circle cx="165" cy="994" r="5.5"/>
+  </g>
+  <g fill="#C9B26A">
+    <circle cx="197" cy="1003" r="4.5"/><circle cx="51" cy="1013" r="4"/>
+  </g>
+  <g fill="#F6EFD8" opacity="0.65">
+    <circle cx="300" cy="1036" r="4"/><circle cx="360" cy="1014" r="3.5"/><circle cx="430" cy="1050" r="4"/>
+    <circle cx="260" cy="1066" r="3.5"/><circle cx="510" cy="1030" r="3"/>
+  </g>
+
+  <!-- SUN BEAMS (clipped above horizon) -->
+  <g clip-path="url(#beamClip)">
+    <polygon points="300,0 560,0 1220,1080 850,1080" fill="url(#beam)"/>
+    <polygon points="630,0 770,0 1580,1080 1340,1080" fill="url(#beam)" opacity="0.75"/>
+  </g>
+
+  <!-- GRAIN -->
+  <rect width="1920" height="1080" filter="url(#grain)" opacity="0.14" style="mix-blend-mode:soft-light"/>
 </svg>
