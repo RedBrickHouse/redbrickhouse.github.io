@@ -1,2 +1,5 @@
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /v2/
+
+Sitemap: https://redbrickhouse.gg/sitemap.xml
