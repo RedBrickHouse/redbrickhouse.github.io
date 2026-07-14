@@ -128,3 +128,16 @@ inquiryForm.addEventListener('submit', (e) => {
       inquirySend.disabled = false;
     });
 });
+
+// Hero background video
+const heroVideo = document.querySelector('.hero-bg-video');
+if (heroVideo) {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    heroVideo.removeAttribute('autoplay');
+    heroVideo.pause();
+  } else {
+    heroVideo.muted = true;
+    const playAttempt = heroVideo.play();
+    if (playAttempt) playAttempt.catch(() => {});
+  }
+}
