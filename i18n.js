@@ -1,7 +1,7 @@
 const translations = {
   en: {
     navAbout: "COMPANY", navServices: "BUSINESS", navPortfolio: "GAMES", navContact: "CONTACT",
-    heroTag: "KOREA'S FIRST INDIE GAME PUBLISHER",
+    heroTag: "GLOBAL INDIE GAME PUBLISHER",
     heroTitle: 'RED&nbsp;BRICK&nbsp;HOUSE',
     heroSub: "RED&nbsp;BRICK&nbsp;HOUSE is more than a publisher.<br>We are a trusted partner for indie developers.",
     heroBtn1: "Contact Us", heroBtn2: "Our Story", heroScroll: "Scroll",
@@ -48,7 +48,7 @@ const translations = {
   },
   ko: {
     navAbout: "COMPANY", navServices: "BUSINESS", navPortfolio: "GAMES", navContact: "CONTACT",
-    heroTag: "대한민국 최초 인디게임 퍼블리셔",
+    heroTag: "글로벌 인디게임 퍼블리셔",
     heroTitle: 'RED&nbsp;BRICK&nbsp;HOUSE',
     heroSub: "레드브릭하우스는 단순 퍼블리셔가 아닙니다.<br>인디 개발자들의 든든한 동반자입니다.",
     heroBtn1: "문의하기", heroBtn2: "우리의 이야기", heroScroll: "스크롤",
@@ -95,7 +95,7 @@ const translations = {
   },
   zh: {
     navAbout: "COMPANY", navServices: "BUSINESS", navPortfolio: "GAMES", navContact: "CONTACT",
-    heroTag: "韩国首家独立游戏发行商",
+    heroTag: "全球独立游戏发行商",
     heroTitle: 'RED&nbsp;BRICK&nbsp;HOUSE',
     heroSub: "RED&nbsp;BRICK&nbsp;HOUSE 不只是发行商。<br>我们是独立开发者值得信赖的伙伴。",
     heroBtn1: "联系我们", heroBtn2: "我们的故事", heroScroll: "滚动",
