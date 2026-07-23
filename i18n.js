@@ -1,5 +1,6 @@
 const translations = {
   en: {
+    docTitle: "RED BRICK HOUSE - Indie Game Publishing",
     navAbout: "COMPANY", navServices: "BUSINESS", navPortfolio: "GAMES", navContact: "CONTACT",
     heroTag: "GLOBAL INDIE GAME PUBLISHER",
     heroTitle: 'RED&nbsp;BRICK&nbsp;HOUSE',
@@ -43,6 +44,7 @@ const translations = {
     footerCopy: "&copy; 2026 RED&nbsp;BRICK&nbsp;HOUSE. All rights reserved."
   },
   ko: {
+    docTitle: "레드브릭하우스 RED BRICK HOUSE - 인디게임 퍼블리셔",
     navAbout: "COMPANY", navServices: "BUSINESS", navPortfolio: "GAMES", navContact: "CONTACT",
     heroTag: "글로벌 인디게임 퍼블리셔",
     heroTitle: 'RED&nbsp;BRICK&nbsp;HOUSE',
@@ -86,6 +88,7 @@ const translations = {
     footerCopy: "&copy; 2026 RED&nbsp;BRICK&nbsp;HOUSE. All rights reserved."
   },
   zh: {
+    docTitle: "RED BRICK HOUSE - 全球独立游戏发行商",
     navAbout: "COMPANY", navServices: "BUSINESS", navPortfolio: "GAMES", navContact: "CONTACT",
     heroTag: "全球独立游戏发行商",
     heroTitle: 'RED&nbsp;BRICK&nbsp;HOUSE',
@@ -134,6 +137,7 @@ function setLang(lang) {
   const t = translations[lang];
   if (!t) return;
   document.documentElement.lang = lang === 'ko' ? 'ko' : lang === 'zh' ? 'zh-CN' : 'en';
+  if (t.docTitle) document.title = t.docTitle;
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (t[key] !== undefined) {
