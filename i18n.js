@@ -1,6 +1,7 @@
 const translations = {
   en: {
     docTitle: "RED BRICK HOUSE - Indie Game Publishing",
+    metaDesc: "RED BRICK HOUSE is a global indie game publisher. From business strategy and funding to community, marketing, and worldwide launch, we walk the whole journey with indie developers.",
     navAbout: "COMPANY", navServices: "BUSINESS", navPortfolio: "GAMES", navContact: "CONTACT",
     heroTag: "GLOBAL INDIE GAME PUBLISHER",
     heroTitle: 'RED&nbsp;BRICK&nbsp;HOUSE',
@@ -45,6 +46,7 @@ const translations = {
   },
   ko: {
     docTitle: "레드브릭하우스 RED BRICK HOUSE - 인디게임 퍼블리셔",
+    metaDesc: "레드브릭하우스(RED BRICK HOUSE)는 글로벌 인디게임 퍼블리셔입니다. 사업화 전략과 투자 유치, 팬 커뮤니티와 마케팅, 글로벌 출시까지 인디 개발사의 모든 여정을 함께합니다.",
     navAbout: "COMPANY", navServices: "BUSINESS", navPortfolio: "GAMES", navContact: "CONTACT",
     heroTag: "글로벌 인디게임 퍼블리셔",
     heroTitle: 'RED&nbsp;BRICK&nbsp;HOUSE',
@@ -89,6 +91,7 @@ const translations = {
   },
   zh: {
     docTitle: "RED BRICK HOUSE - 全球独立游戏发行商",
+    metaDesc: "RED BRICK HOUSE 是一家全球独立游戏发行商。从商业化战略、融资对接到社区与营销、全球发行，我们陪伴独立开发者走完每一段旅程。",
     navAbout: "COMPANY", navServices: "BUSINESS", navPortfolio: "GAMES", navContact: "CONTACT",
     heroTag: "全球独立游戏发行商",
     heroTitle: 'RED&nbsp;BRICK&nbsp;HOUSE',
@@ -136,7 +139,7 @@ const translations = {
 function setLang(lang) {
   const t = translations[lang];
   if (!t) return;
-  document.documentElement.lang = lang === 'ko' ? 'ko' : lang === 'zh' ? 'zh-CN' : 'en';
+  document.documentElement.lang = lang === 'ko' ? 'ko' : lang === 'zh' ? 'zh-Hans' : 'en';
   if (t.docTitle) document.title = t.docTitle;
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
@@ -155,10 +158,14 @@ function setLang(lang) {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
-  localStorage.setItem('bh-lang', lang);
+}
+
+// Page language is the source of truth (each URL is pre-rendered in one language).
+function pageLang() {
+  const map = { ko: 'ko', en: 'en', 'zh-Hans': 'zh', 'zh-CN': 'zh', zh: 'zh' };
+  return map[document.documentElement.lang] || 'ko';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const saved = localStorage.getItem('bh-lang') || 'ko';
-  setLang(saved);
+  setLang(pageLang());
 });

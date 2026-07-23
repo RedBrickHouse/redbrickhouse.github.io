@@ -52,7 +52,7 @@ const inquiryStatus = document.getElementById('inquiryStatus');
 const inquirySend = document.getElementById('inquirySend');
 
 function tr(key) {
-  const lang = localStorage.getItem('bh-lang') || 'ko';
+  const lang = typeof pageLang === 'function' ? pageLang() : 'ko';
   const dict = translations[lang] || translations.ko;
   return dict[key] || key;
 }
@@ -128,6 +128,32 @@ inquiryForm.addEventListener('submit', (e) => {
       inquirySend.disabled = false;
     });
 });
+
+// First-visit language suggestion (Korean root page only).
+// A dismissible suggestion, not an automatic redirect, so it stays SEO-safe.
+(function suggestLang() {
+  if (document.documentElement.lang !== 'ko') return;
+  if (location.pathname !== '/' && location.pathname !== '/index.html') return;
+  const nav = (navigator.language || 'ko').toLowerCase();
+  let target = null, label = '';
+  if (nav.indexOf('en') === 0) { target = '/en/'; label = 'View this page in English'; }
+  else if (nav.indexOf('zh') === 0) { target = '/zh/'; label = '查看中文页面'; }
+  if (!target) return;
+  try { if (sessionStorage.getItem('bh-lang-suggest') === 'off') return; } catch (e) {}
+  const bar = document.createElement('div');
+  bar.className = 'lang-suggest';
+  const a = document.createElement('a');
+  a.href = target; a.textContent = label; a.className = 'lang-suggest-link';
+  const x = document.createElement('button');
+  x.type = 'button'; x.className = 'lang-suggest-close'; x.setAttribute('aria-label', 'Close');
+  x.innerHTML = '&times;';
+  x.addEventListener('click', () => {
+    bar.remove();
+    try { sessionStorage.setItem('bh-lang-suggest', 'off'); } catch (e) {}
+  });
+  bar.appendChild(a); bar.appendChild(x);
+  document.body.appendChild(bar);
+})();
 
 // Hero background video
 const heroVideo = document.querySelector('.hero-bg-video');
