@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs><linearGradient id="g6" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1B5E20"/><stop offset="100%" stop-color="#2E7D32"/></linearGradient></defs>
+  <rect width="600" height="400" fill="url(#g6)"/>
+  <!-- Grid/map -->
+  <g stroke="#4CAF50" stroke-width="0.5" opacity="0.3">
+    <line x1="0" y1="50" x2="600" y2="50"/><line x1="0" y1="100" x2="600" y2="100"/>
+    <line x1="0" y1="150" x2="600" y2="150"/><line x1="0" y1="200" x2="600" y2="200"/>
+    <line x1="0" y1="250" x2="600" y2="250"/><line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="0" y1="350" x2="600" y2="350"/>
+    <line x1="75" y1="0" x2="75" y2="400"/><line x1="150" y1="0" x2="150" y2="400"/>
+    <line x1="225" y1="0" x2="225" y2="400"/><line x1="300" y1="0" x2="300" y2="400"/>
+    <line x1="375" y1="0" x2="375" y2="400"/><line x1="450" y1="0" x2="450" y2="400"/>
+    <line x1="525" y1="0" x2="525" y2="400"/>
+  </g>
+  <!-- Territory markers -->
+  <rect x="75" y="100" width="150" height="100" fill="#F44336" opacity="0.15" rx="4"/>
+  <rect x="300" y="150" width="150" height="100" fill="#2196F3" opacity="0.15" rx="4"/>
+  <rect x="150" y="250" width="150" height="100" fill="#FF9800" opacity="0.15" rx="4"/>
+  <!-- Units -->
+  <g fill="#F44336" opacity="0.7">
+    <circle cx="120" cy="140" r="8"/><circle cx="150" cy="160" r="8"/><circle cx="180" cy="140" r="8"/>
+  </g>
+  <g fill="#2196F3" opacity="0.7">
+    <circle cx="350" cy="190" r="8"/><circle cx="380" cy="210" r="8"/><circle cx="410" cy="190" r="8"/>
+  </g>
+  <!-- Arrows -->
+  <path d="M200,150 Q250,120 300,180" fill="none" stroke="#FFD54F" stroke-width="2" opacity="0.5" stroke-dasharray="5,5"/>
+  <polygon points="295,175 305,183 293,185" fill="#FFD54F" opacity="0.5"/>
+  <!-- Crown -->
+  <g transform="translate(280, 30)">
+    <polygon points="0,20 5,0 10,15 15,0 20,15 25,0 30,15 35,0 40,20" fill="#FFD54F" stroke="#FFA000" stroke-width="1"/>
+    <rect x="0" y="18" width="40" height="6" rx="2" fill="#FFD54F" stroke="#FFA000" stroke-width="1"/>
+  </g>
+  <text x="300" y="385" text-anchor="middle" font-family="serif" font-size="15" fill="#A5D6A7" opacity="0.5" letter-spacing="6">DOMINION TACTICS</text>
+</svg>

@@ -1,0 +1,317 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Wooden cabin at a bright forest edge">
+<defs>
+  <linearGradient id="wsky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f1f7ea"/>
+    <stop offset=".5" stop-color="#f9f3d7"/>
+    <stop offset="1" stop-color="#f4e6b2"/>
+  </linearGradient>
+  <radialGradient id="wsun" cx=".30" cy=".16" r=".62">
+    <stop offset="0" stop-color="#fffdEE" stop-opacity="1"/>
+    <stop offset=".38" stop-color="#fdf4cb" stop-opacity=".55"/>
+    <stop offset="1" stop-color="#fdf4cb" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="wground2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#cfd291"/>
+    <stop offset="1" stop-color="#84944f"/>
+  </linearGradient>
+  <linearGradient id="wwall" x1="0" y1="0" x2="1" y2=".1">
+    <stop offset="0" stop-color="#c2925c"/>
+    <stop offset=".55" stop-color="#a97a44"/>
+    <stop offset="1" stop-color="#875f32"/>
+  </linearGradient>
+  <linearGradient id="wroof" x1="0" y1="0" x2="1" y2=".08">
+    <stop offset="0" stop-color="#a5794a"/>
+    <stop offset=".5" stop-color="#875e33"/>
+    <stop offset="1" stop-color="#6a4725"/>
+  </linearGradient>
+  <radialGradient id="wvig" cx=".5" cy=".46" r=".8">
+    <stop offset=".58" stop-color="#5c6636" stop-opacity="0"/>
+    <stop offset="1" stop-color="#5c6636" stop-opacity=".14"/>
+  </radialGradient>
+  <filter id="wd1" x="-12%" y="-12%" width="124%" height="124%">
+    <feTurbulence type="fractalNoise" baseFrequency=".012 .02" numOctaves="3" seed="21" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="16"/>
+  </filter>
+  <filter id="wd2" x="-14%" y="-14%" width="128%" height="128%">
+    <feTurbulence type="fractalNoise" baseFrequency=".03 .05" numOctaves="2" seed="14" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="9"/>
+  </filter>
+  <filter id="wcan" x="-18%" y="-18%" width="136%" height="136%">
+    <feTurbulence type="fractalNoise" baseFrequency=".03 .045" numOctaves="3" seed="31" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="24" result="d"/>
+    <feGaussianBlur in="d" stdDeviation="1.2"/>
+  </filter>
+  <filter id="wcl" x="-40%" y="-40%" width="180%" height="180%">
+    <feTurbulence type="fractalNoise" baseFrequency=".016 .03" numOctaves="3" seed="6" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="26" result="d"/>
+    <feGaussianBlur in="d" stdDeviation="5"/>
+  </filter>
+  <filter id="wb1" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.2"/></filter>
+  <filter id="wb3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+  <filter id="wb8" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+  <filter id="wb14" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="14"/></filter>
+  <filter id="wgrain">
+    <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="17"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 .35  0 0 0 0 .38  0 0 0 0 .2  0 0 0 .6 0"/>
+  </filter>
+  <g id="grow" fill="none" stroke-linecap="round">
+    <path d="M0,0 c-1,-7 -2,-13 -4,-18"/>
+    <path d="M19,2 c0,-8 0,-15 1,-22"/>
+    <path d="M38,0 c1,-7 3,-12 6,-16"/>
+    <path d="M57,1 c-1,-8 -1,-14 0,-20"/>
+    <path d="M76,0 c-2,-7 -4,-13 -7,-17"/>
+    <path d="M95,2 c1,-8 1,-15 0,-22"/>
+    <path d="M114,0 c2,-7 4,-12 7,-15"/>
+    <path d="M133,1 c0,-7 -1,-13 -2,-19"/>
+    <path d="M152,0 c1,-8 2,-14 4,-20"/>
+    <path d="M171,2 c-1,-7 -2,-13 -3,-18"/>
+    <path d="M190,0 c0,-7 1,-13 3,-19"/>
+    <path d="M209,1 c-2,-8 -3,-14 -3,-20"/>
+    <path d="M228,0 c1,-7 2,-13 2,-18"/>
+    <path d="M247,2 c0,-8 -1,-14 -3,-21"/>
+    <path d="M266,0 c2,-7 3,-13 3,-18"/>
+    <path d="M285,1 c-1,-7 -1,-13 0,-18"/>
+    <path d="M304,0 c-2,-8 -3,-14 -2,-21"/>
+    <path d="M323,2 c1,-7 2,-12 4,-17"/>
+    <path d="M342,0 c0,-7 0,-13 1,-19"/>
+    <path d="M361,1 c-1,-7 -2,-13 -2,-18"/>
+  </g>
+</defs>
+
+<!-- sky -->
+<rect width="800" height="800" fill="url(#wsky)"/>
+<rect width="800" height="800" fill="url(#wsun)"/>
+
+<!-- soft clouds -->
+<g filter="url(#wcl)">
+  <g fill="#fffbe6" opacity=".8">
+    <ellipse cx="240" cy="170" rx="86" ry="20"/>
+    <ellipse cx="290" cy="155" rx="48" ry="15"/>
+  </g>
+  <ellipse cx="252" cy="178" rx="70" ry="9" fill="#e8e0bc" opacity=".45"/>
+  <g fill="#fffbe6" opacity=".75">
+    <ellipse cx="620" cy="220" rx="70" ry="16"/>
+    <ellipse cx="660" cy="208" rx="40" ry="12"/>
+  </g>
+  <ellipse cx="560" cy="120" rx="46" ry="10" fill="#fffbe6" opacity=".55"/>
+</g>
+
+<!-- far forest haze -->
+<path d="M-30,478 C60,440 170,428 270,440 C350,450 390,444 480,436 C580,428 690,438 830,468 L830,640 L-30,640 Z" fill="#cfe0ad" opacity=".92" filter="url(#wcan)"/>
+<g fill="#b9d295" opacity=".85" filter="url(#wcan)">
+  <ellipse cx="120" cy="452" rx="52" ry="26"/>
+  <ellipse cx="330" cy="446" rx="46" ry="22"/>
+  <ellipse cx="560" cy="446" rx="54" ry="24"/>
+  <ellipse cx="740" cy="462" rx="48" ry="24"/>
+</g>
+<path d="M-30,512 C120,478 260,470 400,480 C560,491 680,480 830,506 L830,660 L-30,660 Z" fill="#a5c17e" opacity=".92" filter="url(#wcan)"/>
+
+<!-- ground -->
+<path d="M-30,544 C200,530 560,530 830,542 L830,820 L-30,820 Z" fill="url(#wground2)" filter="url(#wd1)"/>
+<!-- tonal patches -->
+<g filter="url(#wb14)">
+  <ellipse cx="230" cy="640" rx="170" ry="36" fill="#e9e4a4" opacity=".33"/>
+  <ellipse cx="620" cy="690" rx="180" ry="42" fill="#6d8342" opacity=".3"/>
+  <ellipse cx="140" cy="760" rx="150" ry="40" fill="#5f7538" opacity=".3"/>
+  <ellipse cx="460" cy="628" rx="140" ry="28" fill="#f5ecb4" opacity=".3"/>
+  <ellipse cx="700" cy="790" rx="150" ry="42" fill="#54662f" opacity=".26"/>
+</g>
+<path d="M-30,652 L830,598 L830,660 L-30,742 Z" fill="#f5ecb4" opacity=".3" filter="url(#wb14)"/>
+
+<!-- big left tree -->
+<g>
+  <path d="M136,566 C138,516 140,462 146,408" fill="none" stroke="#7c5834" stroke-width="17" stroke-linecap="round" filter="url(#wd2)"/>
+  <path d="M146,416 C136,392 118,374 100,362 M146,420 C158,392 174,376 192,366" fill="none" stroke="#7c5834" stroke-width="9" stroke-linecap="round" filter="url(#wd2)"/>
+  <g filter="url(#wcan)">
+    <g fill="#7aa155">
+      <ellipse cx="90" cy="360" rx="76" ry="52"/>
+      <ellipse cx="220" cy="352" rx="80" ry="56"/>
+      <ellipse cx="158" cy="304" rx="86" ry="58"/>
+    </g>
+    <ellipse cx="152" cy="388" rx="100" ry="30" fill="#5f8747" opacity=".85"/>
+    <g fill="#9dbd76">
+      <ellipse cx="116" cy="312" rx="70" ry="46"/>
+      <ellipse cx="212" cy="304" rx="70" ry="48"/>
+      <ellipse cx="70" cy="348" rx="46" ry="32"/>
+    </g>
+    <g fill="#c3da9c">
+      <ellipse cx="102" cy="280" rx="52" ry="32"/>
+      <ellipse cx="184" cy="268" rx="58" ry="34"/>
+      <ellipse cx="52" cy="316" rx="34" ry="22"/>
+      <ellipse cx="246" cy="296" rx="34" ry="22"/>
+    </g>
+  </g>
+</g>
+
+<!-- right tree -->
+<g>
+  <path d="M676,560 C674,512 670,460 664,414" fill="none" stroke="#6d4c2c" stroke-width="14" stroke-linecap="round" filter="url(#wd2)"/>
+  <path d="M666,420 C656,398 642,384 626,374 M666,424 C676,400 690,388 704,380" fill="none" stroke="#6d4c2c" stroke-width="8" stroke-linecap="round" filter="url(#wd2)"/>
+  <g filter="url(#wcan)">
+    <g fill="#6d9450">
+      <ellipse cx="628" cy="378" rx="62" ry="44"/>
+      <ellipse cx="742" cy="372" rx="64" ry="46"/>
+      <ellipse cx="686" cy="330" rx="70" ry="48"/>
+    </g>
+    <ellipse cx="684" cy="404" rx="82" ry="24" fill="#587c40" opacity=".85"/>
+    <g fill="#8fb168">
+      <ellipse cx="650" cy="336" rx="56" ry="38"/>
+      <ellipse cx="736" cy="330" rx="56" ry="38"/>
+    </g>
+    <g fill="#bcd694">
+      <ellipse cx="640" cy="308" rx="42" ry="26"/>
+      <ellipse cx="712" cy="298" rx="46" ry="28"/>
+      <ellipse cx="774" cy="330" rx="30" ry="20"/>
+    </g>
+  </g>
+</g>
+
+<!-- dirt path -->
+<path d="M404,568 C396,614 366,686 322,748 L478,748 C450,680 454,614 458,568 Z" fill="#d3b67e" opacity=".92" filter="url(#wd1)"/>
+<g fill="none" stroke-linecap="round" filter="url(#wd2)">
+  <path d="M404,568 C396,614 368,682 328,740" stroke="#a3874f" stroke-width="4" opacity=".4"/>
+  <path d="M458,568 C454,616 448,682 472,742" stroke="#a3874f" stroke-width="4" opacity=".35"/>
+  <path d="M406,612 h44 M394,660 h56 M380,710 h70" stroke="#b3975d" stroke-width="3" opacity=".35"/>
+  <path d="M416,590 h32 M402,636 h48 M388,686 h60" stroke="#e6d3a0" stroke-width="2.5" opacity=".4"/>
+</g>
+
+<!-- cabin cast shadow -->
+<ellipse cx="482" cy="568" rx="160" ry="19" fill="#4f5a2e" opacity=".32" filter="url(#wb8)"/>
+
+<!-- cabin -->
+<g>
+  <!-- wall planks -->
+  <path d="M330,438 L540,438 L544,562 L326,562 Z" fill="url(#wwall)" filter="url(#wd2)"/>
+  <g filter="url(#wd2)">
+    <path d="M329,438 L541,438 L541.5,456 L328.5,456 Z" fill="#b98a4f" opacity=".55"/>
+    <path d="M328.5,474 L541.8,474 L542.2,492 L328,492 Z" fill="#b3834a" opacity=".5"/>
+    <path d="M327.8,510 L542.6,510 L543,528 L327.4,528 Z" fill="#ad7d45" opacity=".5"/>
+    <path d="M327,546 L543.4,546 L544,562 L326,562 Z" fill="#98703c" opacity=".55"/>
+  </g>
+  <g stroke-linecap="round" filter="url(#wd2)">
+    <path d="M329,456 H541" stroke="#6f4b27" stroke-width="2.5" opacity=".55"/>
+    <path d="M328,474 H542" stroke="#6f4b27" stroke-width="2.5" opacity=".5"/>
+    <path d="M328,492 H542" stroke="#6f4b27" stroke-width="2.5" opacity=".55"/>
+    <path d="M327,510 H543" stroke="#6f4b27" stroke-width="2.5" opacity=".5"/>
+    <path d="M327,528 H543" stroke="#6f4b27" stroke-width="2.5" opacity=".55"/>
+    <path d="M326,546 H544" stroke="#5d3f20" stroke-width="2.5" opacity=".55"/>
+  </g>
+  <!-- corner trims -->
+  <path d="M326,438 L338,438 L342,562 L326,562 Z" fill="#d8ac6f" opacity=".6" filter="url(#wd2)"/>
+  <path d="M530,438 L544,438 L544,562 L524,562 Z" fill="#6a4725" opacity=".55" filter="url(#wd2)"/>
+  <!-- eave shadow on wall -->
+  <path d="M328,438 L542,438 L541,458 L329,458 Z" fill="#4f371d" opacity=".28" filter="url(#wb3)"/>
+
+  <!-- gable -->
+  <path d="M330,438 L426,344 L540,438 Z" fill="#c0905a" filter="url(#wd2)"/>
+  <path d="M330,438 L426,344 L430,354 L348,438 Z" fill="#dcb277" opacity=".65" filter="url(#wd2)"/>
+  <path d="M426,344 L540,438 L516,438 L424,356 Z" fill="#96693a" opacity=".5" filter="url(#wd2)"/>
+  <!-- loft window -->
+  <rect x="416" y="400" width="22" height="20" rx="2" fill="#523a20"/>
+  <rect x="416" y="400" width="22" height="20" rx="2" fill="none" stroke="#e6d3a0" stroke-width="3" opacity=".95"/>
+
+  <!-- roof slabs with thickness -->
+  <path d="M426,318 L292,452 L312,464 L426,350 L540,464 L560,452 Z" fill="url(#wroof)" filter="url(#wd2)"/>
+  <path d="M292,452 L312,464 L316,456 L298,446 Z" fill="#523517" opacity=".8" filter="url(#wd2)"/>
+  <path d="M560,452 L540,464 L536,456 L554,446 Z" fill="#42290f" opacity=".8" filter="url(#wd2)"/>
+  <path d="M426,318 L292,452" fill="none" stroke="#e9c98f" stroke-width="7" stroke-linecap="round" opacity=".8" filter="url(#wb1)"/>
+  <path d="M426,318 L560,452" fill="none" stroke="#4a2f13" stroke-width="5" stroke-linecap="round" opacity=".55" filter="url(#wb1)"/>
+  <g fill="none" stroke-linecap="round" filter="url(#wd2)">
+    <path d="M412,342 L316,438" stroke="#75512a" stroke-width="3" opacity=".5"/>
+    <path d="M420,356 L342,434" stroke="#b98a4f" stroke-width="3" opacity=".45"/>
+    <path d="M440,356 L516,434" stroke="#523517" stroke-width="3" opacity=".45"/>
+    <path d="M448,344 L536,438" stroke="#75512a" stroke-width="3" opacity=".5"/>
+  </g>
+
+  <!-- window -->
+  <rect x="348" y="474" width="44" height="42" rx="2" fill="#54492e" filter="url(#wd2)"/>
+  <rect x="348" y="474" width="44" height="42" rx="2" fill="none" stroke="#e6d3a0" stroke-width="4.5" opacity=".95" filter="url(#wd2)"/>
+  <path d="M370,476 V514 M350,494 H390" stroke="#e6d3a0" stroke-width="2.5" opacity=".85" filter="url(#wd2)"/>
+  <path d="M352,480 l12,-5" stroke="#f6efd2" stroke-width="3" opacity=".6"/>
+  <rect x="344" y="516" width="52" height="6" fill="#e6d3a0" opacity=".9" filter="url(#wd2)"/>
+
+  <!-- door -->
+  <path d="M404,562 L404,488 Q431,474 458,488 L458,562 Z" fill="#4f371d" filter="url(#wd2)"/>
+  <path d="M404,562 L404,488 Q431,474 458,488" fill="none" stroke="#3a270f" stroke-width="4" opacity=".8"/>
+  <path d="M407,556 L407,491 Q419,483 430,481" fill="none" stroke="#a97a44" stroke-width="3" opacity=".7"/>
+  <circle cx="450" cy="528" r="2.6" fill="#d8ac6f" opacity=".9"/>
+  <!-- base plinth -->
+  <path d="M324,556 L546,556 L547,564 L323,564 Z" fill="#5d3f20" opacity=".6" filter="url(#wd2)"/>
+</g>
+
+<!-- dappled light on ground -->
+<g fill="#fff3c4" filter="url(#wb8)">
+  <ellipse cx="250" cy="644" rx="70" ry="15" opacity=".32"/>
+  <ellipse cx="570" cy="694" rx="90" ry="19" opacity=".28"/>
+  <ellipse cx="150" cy="742" rx="80" ry="17" opacity=".22"/>
+</g>
+
+<!-- grass stroke fields -->
+<g stroke="#c8cd8a" stroke-width="2.6" opacity=".6">
+  <use href="#grow" transform="translate(-10,614) scale(1.05)"/>
+  <use href="#grow" transform="translate(390,618) scale(1.05)"/>
+</g>
+<g stroke="#6d8342" stroke-width="3" opacity=".6">
+  <use href="#grow" transform="translate(-30,652) scale(1.3)"/>
+  <use href="#grow" transform="translate(430,656) scale(1.3)"/>
+</g>
+<g stroke="#e4e0a0" stroke-width="3.4" opacity=".7">
+  <use href="#grow" transform="translate(-20,696) scale(1.55)"/>
+  <use href="#grow" transform="translate(400,692) scale(1.55)"/>
+</g>
+<g stroke="#54662f" stroke-width="3.8" opacity=".6">
+  <use href="#grow" transform="translate(-40,742) scale(1.85)"/>
+  <use href="#grow" transform="translate(380,746) scale(1.85)"/>
+</g>
+<g stroke="#cfd291" stroke-width="4.2" opacity=".75">
+  <use href="#grow" transform="translate(-30,794) scale(2.15)"/>
+  <use href="#grow" transform="translate(400,798) scale(2.15)"/>
+</g>
+<g stroke="#52683a" stroke-width="4.4" opacity=".5">
+  <use href="#grow" transform="translate(-60,826) scale(2.35)"/>
+  <use href="#grow" transform="translate(390,830) scale(2.35)"/>
+</g>
+<g stroke="#9cb06a" stroke-width="2" opacity=".4">
+  <use href="#grow" transform="translate(-10,584) scale(.8)"/>
+  <use href="#grow" transform="translate(290,586) scale(.8)"/>
+  <use href="#grow" transform="translate(580,584) scale(.8)"/>
+</g>
+
+<!-- wildflowers -->
+<g fill="#f4ecb0">
+  <circle cx="190" cy="668" r="3"/>
+  <circle cx="206" cy="676" r="2.4"/>
+  <circle cx="586" cy="648" r="2.8"/>
+  <circle cx="640" cy="712" r="3.2"/>
+  <circle cx="120" cy="716" r="3"/>
+  <circle cx="540" cy="760" r="3.6"/>
+  <circle cx="256" cy="736" r="3.2"/>
+</g>
+
+<!-- drifting leaves -->
+<g fill="#b9cf8a" filter="url(#wb1)">
+  <path d="M520,300 q8,-8 16,-2 q-8,8 -16,2 Z" opacity=".8"/>
+  <path d="M262,270 q7,-7 14,-2 q-7,7 -14,2 Z" opacity=".6"/>
+  <path d="M572,378 q7,-7 14,-2 q-7,7 -14,2 Z" fill="#9dbd76" opacity=".7"/>
+</g>
+
+<!-- pig, side view walking toward the cabin -->
+<g transform="translate(300,584)">
+  <ellipse cx="2" cy="2" rx="33" ry="5.5" fill="#33421d" opacity=".32" filter="url(#wb3)"/>
+  <path d="M-26,-15 L-29,-2 Q-29,0 -27,0 L-22,0 Q-20,0 -20,-2 L-18,-14 Z" fill="#5a3d28"/>
+  <path d="M18,-14 L17,-2 Q17,0 19,0 L24,0 Q26,0 26,-2 L27,-13 Z" fill="#5a3d28"/>
+  <path d="M-15,-14 L-15,-4 Q-15,-2 -13,-2 L-9,-2 Q-7,-2 -7,-4 L-7,-14 Z" fill="#452e1d"/>
+  <path d="M8,-14 L8,-4 Q8,-2 10,-2 L14,-2 Q16,-2 16,-4 L16,-14 Z" fill="#452e1d"/>
+  <path d="M-32,-30 C-33,-38 -26,-45 -15,-47 C-3,-49 10,-48 18,-44 C24,-41 27,-37 30,-32 C33,-27 37,-25 40,-22 C42,-20 42,-17 40,-16 C37,-14 32,-14 28,-14 C24,-12 18,-11 14,-11 C4,-10 -8,-10 -16,-11 C-24,-12 -30,-15 -32,-20 C-33,-23 -33,-27 -32,-30 Z" fill="#63432c"/>
+  <path d="M10,-46 C12,-51 17,-53 21,-51 C21,-47 18,-43 14,-42 Z" fill="#523517"/>
+  <path d="M20,-40 C26,-34 29,-27 29,-18 C29,-15 28,-14 30,-14 C34,-14 38,-15 40,-16 C42,-17 42,-20 40,-22 C37,-25 33,-27 30,-32 C28,-36 24,-39 20,-40 Z" fill="#4f3521" opacity=".4" filter="url(#wb1)"/>
+  <path d="M-33,-31 c-4,1 -6,5 -4,8 c2,3 6,2 7,-1" fill="none" stroke="#8a6034" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M-30,-32 C-28,-41 -18,-47 -6,-48 C6,-49 15,-46 21,-42 C26,-39 29,-35 31,-31" fill="none" stroke="#f4e6bd" stroke-width="3.2" stroke-linecap="round" opacity="1" filter="url(#wb1)"/>
+  <path d="M11,-46 C14,-50 18,-52 21,-51" fill="none" stroke="#f4e6bd" stroke-width="2" stroke-linecap="round" opacity=".9" filter="url(#wb1)"/>
+  <path d="M-24,-22 C-12,-26 6,-27 18,-24" fill="none" stroke="#7a5638" stroke-width="5" stroke-linecap="round" opacity=".5" filter="url(#wb1)"/>
+</g>
+
+<!-- vignette + grain -->
+<rect width="800" height="800" fill="url(#wvig)"/>
+<rect width="800" height="800" filter="url(#wgrain)" opacity=".08"/>
+</svg>
