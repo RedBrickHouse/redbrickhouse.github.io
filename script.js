@@ -169,24 +169,48 @@ inquiryForm.addEventListener('submit', (e) => {
     clone.classList.add('visible');
     track.appendChild(clone);
   });
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const carousel = track.closest('.news-carousel') || track;
-  const SPEED = 28; // px per second
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const SPEED = 42; // px per second
+  const ANIM_MS = 450; // arrow step duration
   let paused = false;
   let inView = false;
   let pos = 0;
   let last = null;
+  let mode = 'auto'; // 'auto' (marquee) | 'anim' (arrow step)
+  let animFrom = 0;
+  let animTo = 0;
+  let animStart = 0;
   function loopWidth() {
     const firstClone = track.children[cards.length];
     return firstClone.offsetLeft - cards[0].offsetLeft;
   }
   function sync() { pos = track.scrollLeft; }
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+  function stepBy(dir) {
+    const card = track.querySelector('.news-card');
+    const gap = parseFloat(getComputedStyle(track).columnGap) || 28;
+    const step = (card ? card.getBoundingClientRect().width : 300) + gap;
+    const lw = loopWidth();
+    sync();
+    let from = pos;
+    // keep position inside the first card set; the clone set makes the jump invisible
+    if (lw > 0 && from >= lw) { from -= lw; track.scrollLeft = from; }
+    let to = from + dir * step;
+    if (to < 0) { from += lw; track.scrollLeft = from; to += lw; }
+    animFrom = from; animTo = to; animStart = performance.now();
+    mode = 'anim';
+  }
+  const prev = document.querySelector('.news-prev');
+  const next = document.querySelector('.news-next');
+  if (prev) prev.addEventListener('click', () => stepBy(-1));
+  if (next) next.addEventListener('click', () => stepBy(1));
   carousel.addEventListener('mouseenter', () => { paused = true; });
-  carousel.addEventListener('mouseleave', () => { sync(); paused = false; });
+  carousel.addEventListener('mouseleave', () => { if (mode !== 'anim') sync(); paused = false; });
   carousel.addEventListener('touchstart', () => { paused = true; }, { passive: true });
-  carousel.addEventListener('touchend', () => { sync(); paused = false; }, { passive: true });
+  carousel.addEventListener('touchend', () => { if (mode !== 'anim') sync(); paused = false; }, { passive: true });
   carousel.addEventListener('focusin', () => { paused = true; });
-  carousel.addEventListener('focusout', () => { sync(); paused = false; });
+  carousel.addEventListener('focusout', () => { if (mode !== 'anim') sync(); paused = false; });
   new IntersectionObserver((entries) => {
     inView = entries[0].isIntersecting;
   }).observe(carousel);
@@ -194,9 +218,18 @@ inquiryForm.addEventListener('submit', (e) => {
     if (last === null) last = ts;
     const dt = Math.min(ts - last, 100);
     last = ts;
-    if (!paused && inView && !document.hidden) {
+    const lw = loopWidth();
+    if (mode === 'anim') {
+      // arrow step runs even while hovered
+      const t = Math.min((ts - animStart) / ANIM_MS, 1);
+      pos = animFrom + (animTo - animFrom) * easeOutCubic(t);
+      if (t >= 1) {
+        mode = 'auto';
+        if (lw > 0 && pos >= lw) pos -= lw;
+      }
+      track.scrollLeft = pos;
+    } else if (!reducedMotion && !paused && inView && !document.hidden) {
       pos += (SPEED * dt) / 1000;
-      const lw = loopWidth();
       if (lw > 0 && pos >= lw) pos -= lw;
       track.scrollLeft = pos;
     }
