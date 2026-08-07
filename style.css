@@ -458,13 +458,12 @@ html:lang(ko) { word-break: keep-all; }
 /* News (press coverage) */
 #news { background: linear-gradient(180deg, #f7efe8 0%, #f2e6db 100%); }
 .news-carousel { position: relative; }
-.news-grid {
+.news-grid { overflow: hidden; padding-bottom: 4px; }
+.news-track {
   display: flex; gap: 28px;
-  overflow-x: auto;
-  scrollbar-width: none; -ms-overflow-style: none;
-  padding-bottom: 4px;
+  will-change: transform;
+  touch-action: pan-y;
 }
-.news-grid::-webkit-scrollbar { display: none; }
 .news-card { display: block; flex: 0 0 calc((100% - 56px) / 3); }
 .news-nav {
   position: absolute; top: 50%; transform: translateY(-50%); z-index: 5;
@@ -501,12 +500,12 @@ html:lang(ko) { word-break: keep-all; }
 }
 .news-card:hover .news-headline { color: #c0392b; }
 @media (max-width: 1024px) {
-  .news-grid { gap: 20px; }
+  .news-track { gap: 20px; }
   .news-card { flex-basis: calc((100% - 40px) / 3); }
   .news-headline { font-size: 15px; }
 }
 @media (max-width: 768px) {
-  .news-grid { gap: 16px; }
+  .news-track { gap: 16px; }
   .news-card { flex-basis: 85%; }
   .news-nav { display: none; }
   .news-headline { font-size: 15.5px; }

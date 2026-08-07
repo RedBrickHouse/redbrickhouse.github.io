@@ -155,9 +155,12 @@ inquiryForm.addEventListener('submit', (e) => {
   document.body.appendChild(bar);
 })();
 
-// News marquee: continuous smooth auto-scroll with seamless loop
+// News marquee: continuous auto-scroll with seamless loop.
+// Rendered with translate3d (GPU sub-pixel) instead of scrollLeft, which
+// snaps to whole pixels and looks juddery at slow speeds.
 (function () {
-  const track = document.querySelector('.news-grid');
+  const grid = document.querySelector('.news-grid');
+  const track = grid ? grid.querySelector('.news-track') : null;
   if (!track) return;
   const cards = Array.from(track.children);
   if (cards.length < 2) return;
@@ -169,7 +172,7 @@ inquiryForm.addEventListener('submit', (e) => {
     clone.classList.add('visible');
     track.appendChild(clone);
   });
-  const carousel = track.closest('.news-carousel') || track;
+  const carousel = grid.closest('.news-carousel') || grid;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const SPEED = 42; // px per second
   const ANIM_MS = 450; // arrow step duration
@@ -181,23 +184,30 @@ inquiryForm.addEventListener('submit', (e) => {
   let animFrom = 0;
   let animTo = 0;
   let animStart = 0;
+  let dragging = false;
+  let dragMoved = false;
+  let dragStartX = 0;
+  let dragStartPos = 0;
   function loopWidth() {
     const firstClone = track.children[cards.length];
     return firstClone.offsetLeft - cards[0].offsetLeft;
   }
-  function sync() { pos = track.scrollLeft; }
+  function norm() {
+    const lw = loopWidth();
+    if (lw > 0) pos = ((pos % lw) + lw) % lw;
+  }
+  function render() {
+    track.style.transform = 'translate3d(' + (-pos) + 'px, 0, 0)';
+  }
   function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
   function stepBy(dir) {
-    const card = track.querySelector('.news-card');
     const gap = parseFloat(getComputedStyle(track).columnGap) || 28;
-    const step = (card ? card.getBoundingClientRect().width : 300) + gap;
-    const lw = loopWidth();
-    sync();
+    const step = cards[0].getBoundingClientRect().width + gap;
+    if (mode === 'anim') pos = animTo; // rapid clicks accumulate
+    norm();
     let from = pos;
-    // keep position inside the first card set; the clone set makes the jump invisible
-    if (lw > 0 && from >= lw) { from -= lw; track.scrollLeft = from; }
     let to = from + dir * step;
-    if (to < 0) { from += lw; track.scrollLeft = from; to += lw; }
+    if (to < 0) { from += loopWidth(); to += loopWidth(); } // clone set makes the jump invisible
     animFrom = from; animTo = to; animStart = performance.now();
     mode = 'anim';
   }
@@ -205,12 +215,29 @@ inquiryForm.addEventListener('submit', (e) => {
   const next = document.querySelector('.news-next');
   if (prev) prev.addEventListener('click', () => stepBy(-1));
   if (next) next.addEventListener('click', () => stepBy(1));
+  // Drag to browse (mouse and touch); vertical touch scroll stays native via touch-action.
+  track.addEventListener('pointerdown', (e) => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    dragging = true; dragMoved = false;
+    dragStartX = e.clientX; dragStartPos = pos;
+    mode = 'auto'; // cancel a pending arrow step
+  });
+  window.addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    const dx = e.clientX - dragStartX;
+    if (Math.abs(dx) > 5) dragMoved = true;
+    if (dragMoved) { pos = dragStartPos - dx; norm(); render(); }
+  });
+  window.addEventListener('pointerup', () => { dragging = false; });
+  window.addEventListener('pointercancel', () => { dragging = false; });
+  track.addEventListener('dragstart', (e) => e.preventDefault());
+  track.addEventListener('click', (e) => {
+    if (dragMoved) { e.preventDefault(); e.stopPropagation(); dragMoved = false; }
+  }, true);
   carousel.addEventListener('mouseenter', () => { paused = true; });
-  carousel.addEventListener('mouseleave', () => { if (mode !== 'anim') sync(); paused = false; });
-  carousel.addEventListener('touchstart', () => { paused = true; }, { passive: true });
-  carousel.addEventListener('touchend', () => { if (mode !== 'anim') sync(); paused = false; }, { passive: true });
+  carousel.addEventListener('mouseleave', () => { paused = false; });
   carousel.addEventListener('focusin', () => { paused = true; });
-  carousel.addEventListener('focusout', () => { if (mode !== 'anim') sync(); paused = false; });
+  carousel.addEventListener('focusout', () => { paused = false; });
   new IntersectionObserver((entries) => {
     inView = entries[0].isIntersecting;
   }).observe(carousel);
@@ -218,20 +245,16 @@ inquiryForm.addEventListener('submit', (e) => {
     if (last === null) last = ts;
     const dt = Math.min(ts - last, 100);
     last = ts;
-    const lw = loopWidth();
     if (mode === 'anim') {
       // arrow step runs even while hovered
       const t = Math.min((ts - animStart) / ANIM_MS, 1);
       pos = animFrom + (animTo - animFrom) * easeOutCubic(t);
-      if (t >= 1) {
-        mode = 'auto';
-        if (lw > 0 && pos >= lw) pos -= lw;
-      }
-      track.scrollLeft = pos;
-    } else if (!reducedMotion && !paused && inView && !document.hidden) {
+      if (t >= 1) { mode = 'auto'; norm(); }
+      render();
+    } else if (!reducedMotion && !paused && !dragging && inView && !document.hidden) {
       pos += (SPEED * dt) / 1000;
-      if (lw > 0 && pos >= lw) pos -= lw;
-      track.scrollLeft = pos;
+      norm();
+      render();
     }
     requestAnimationFrame(tick);
   }
