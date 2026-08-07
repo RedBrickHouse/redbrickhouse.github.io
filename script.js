@@ -155,6 +155,52 @@ inquiryForm.addEventListener('submit', (e) => {
   document.body.appendChild(bar);
 })();
 
+// News carousel arrows + auto-roll
+(function () {
+  const track = document.querySelector('.news-grid');
+  const prev = document.querySelector('.news-prev');
+  const next = document.querySelector('.news-next');
+  if (!track || !prev || !next) return;
+  function step() {
+    const card = track.querySelector('.news-card');
+    const gap = parseFloat(getComputedStyle(track).columnGap) || 28;
+    return card ? card.getBoundingClientRect().width + gap : 320;
+  }
+  function maxScroll() {
+    return track.scrollWidth - track.clientWidth - 1;
+  }
+  prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+  next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+  function update() {
+    prev.classList.toggle('is-disabled', track.scrollLeft <= 0);
+    next.classList.toggle('is-disabled', track.scrollLeft >= maxScroll());
+  }
+  track.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+
+  // Auto-roll every 5s: pause on hover/touch/focus, stop off-screen or in hidden tab,
+  // loop back to the first card at the end. Skipped for reduced-motion users.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const carousel = track.closest('.news-carousel');
+  let paused = false;
+  let inView = false;
+  carousel.addEventListener('mouseenter', () => { paused = true; });
+  carousel.addEventListener('mouseleave', () => { paused = false; });
+  carousel.addEventListener('touchstart', () => { paused = true; }, { passive: true });
+  carousel.addEventListener('touchend', () => { paused = false; }, { passive: true });
+  carousel.addEventListener('focusin', () => { paused = true; });
+  carousel.addEventListener('focusout', () => { paused = false; });
+  new IntersectionObserver((entries) => {
+    inView = entries[0].isIntersecting;
+  }).observe(carousel);
+  setInterval(() => {
+    if (paused || !inView || document.hidden) return;
+    if (track.scrollLeft >= maxScroll()) track.scrollTo({ left: 0, behavior: 'smooth' });
+    else track.scrollBy({ left: step(), behavior: 'smooth' });
+  }, 5000);
+})();
+
 // Hero background video
 const heroVideo = document.querySelector('.hero-bg-video');
 if (heroVideo) {

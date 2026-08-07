@@ -28,7 +28,7 @@
 <meta name="twitter:image" content="https://redbrickhouse.gg/img/og-image.png?v=20260713">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="style.css?v=20260723-2">
+<link rel="stylesheet" href="style.css?v=20260807-1">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png?v=20260713">
 <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png?v=20260713">
@@ -254,7 +254,11 @@
     <div class="section-label" data-i18n="newsLabel">NEWS</div>
     <h2 class="section-title" data-i18n="newsTitle">언론이 전한 레드브릭하우스</h2>
     <p class="section-sub" data-i18n="newsSub">레드브릭하우스의 새로운 소식을 만나보세요.</p>
-    <div class="news-grid">
+    <div class="news-carousel">
+      <button class="news-nav news-prev" type="button" aria-label="Previous news">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <div class="news-grid">
       <a class="news-card" href="https://www.news1.kr/it-science/general-it/6227176" target="_blank" rel="noopener">
         <div class="news-thumb"><img src="img/news-news1.jpg" alt="" class="news-img" loading="lazy"></div>
         <div class="news-meta">
@@ -279,6 +283,18 @@
         </div>
         <h3 class="news-headline" data-i18n="newsA3Title">네오위즈 인디 성공 주역들, 새 도전... 레드브릭하우스 투자 유치</h3>
       </a>
+      <a class="news-card" href="https://m.sports.naver.com/esports/article/442/0000195202" target="_blank" rel="noopener">
+        <div class="news-thumb"><img src="img/news-inven2.jpg" alt="" class="news-img" loading="lazy"></div>
+        <div class="news-meta">
+          <span class="news-press" data-i18n="newsA4Press">인벤</span>
+          <time class="news-date" datetime="2026-08-07">2026.08.07</time>
+        </div>
+        <h3 class="news-headline" data-i18n="newsA4Title">[인터뷰] 1호 인디전문 퍼블리셔, '레드브릭하우스'</h3>
+      </a>
+      </div>
+      <button class="news-nav news-next" type="button" aria-label="Next news">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
     </div>
   </div>
 </section>
@@ -363,7 +379,7 @@
   </div>
 </div>
 
-<script src="i18n.js?v=20260723-3"></script>
-<script src="script.js?v=20260723-2"></script>
+<script src="i18n.js?v=20260807-1"></script>
+<script src="script.js?v=20260807-1"></script>
 </body>
 </html>
