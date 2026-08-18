@@ -91,7 +91,7 @@ inquiryForm.addEventListener('submit', (e) => {
   }
   const fd = new FormData();
   fd.append('이름 (Name)', name);
-  fd.append('연락처 (Contact)', contact);
+  fd.append('이메일 (Email)', contact);
   fd.append('회사 (Company)', document.getElementById('inqCompany').value.trim());
   const inqSource = document.getElementById('inqSource');
   fd.append('알게 된 경로 (Source)', inqSource.value ? inqSource.options[inqSource.selectedIndex].text : '');
