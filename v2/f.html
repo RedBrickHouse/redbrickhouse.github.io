@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[시안 E] 메인 히어로 v2 - RED BRICK HOUSE</title>
+<title>[시안 F] 메인 히어로 v2 - RED BRICK HOUSE</title>
 <meta name="description" content="레드브릭하우스(RED BRICK HOUSE)는 글로벌 인디게임 퍼블리셔입니다. 사업화 전략과 투자 유치, 팬 커뮤니티와 마케팅, 글로벌 출시까지 인디 개발사의 모든 여정을 함께합니다.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#c0392b">
@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png?v=20260713">
 <link rel="apple-touch-icon" href="/img/favicon-180.png">
 <style>
-/* === v2 draft (E: 밤의 벽돌집) === */
+/* === v2 draft (F: 낮의 벽돌집) === */
 /* v2 draft switcher */
 .v2-switch{position:fixed;left:16px;bottom:16px;z-index:400;display:flex;gap:6px;align-items:center;background:rgba(26,26,26,0.92);border-radius:8px;padding:8px 10px;box-shadow:0 6px 24px rgba(0,0,0,0.25);}
 .v2-switch span{color:#bbb;font-size:11px;letter-spacing:1px;margin-right:4px;}
@@ -27,47 +27,47 @@
 .v2-switch a:hover{background:rgba(255,255,255,0.12);color:#fff;}
 .v2-switch a.on{background:#c0392b;border-color:#c0392b;color:#fff;}
 
-/* v2 E: night brick house */
-.hero-v2e{background:#0a0e1e;color:#fff;}
+/* v2 F: day brick house */
+.hero-v2f{background:#d6e5ea;}
 .v2e-scene{position:absolute;inset:0;overflow:hidden;}
 .v2e-svg{position:absolute;inset:0;width:100%;height:100%;}
-.v2e-grain{position:absolute;inset:0;opacity:0.05;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");}
+.v2e-grain{position:absolute;inset:0;opacity:0.04;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");}
 .v2e-content{padding-bottom:26vh;}
-.hero-v2e .hero-tag{color:#e7a15c;}
-.hero-v2e .hero-title{color:#f5f3ee;}
-.hero-v2e .hero-sub{color:#c3c9da;}
-.hero-v2e .btn-ghost{border-color:rgba(255,255,255,0.42);color:#fff;}
-.hero-v2e .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,0.08);}
-.hero-v2e .hero-scroll{color:rgba(255,255,255,0.5);left:auto;right:40px;transform:none;}
-.hero-v2e .scroll-line{background:rgba(255,255,255,0.28);}
-.v2e-wind path{stroke-dasharray:80 1600;stroke-dashoffset:0;opacity:0.1;}
+.hero-v2f .hero-tag{color:#c0392b;}
+.hero-v2f .hero-sub{color:#4a4640;}
+.hero-v2f .hero-scroll{color:rgba(26,26,26,0.45);left:auto;right:40px;transform:none;}
+.hero-v2f .scroll-line{background:rgba(26,26,26,0.25);}
+.v2f-drift{animation:v2fDrift linear infinite;}
+.v2f-d1{animation-duration:95s;animation-delay:-30s;}
+.v2f-d2{animation-duration:120s;animation-delay:-78s;}
+.v2f-d3{animation-duration:80s;animation-delay:-52s;}
+@keyframes v2fDrift{from{transform:translateX(-260px);}to{transform:translateX(2000px);}}
+.v2e-wind path{stroke-dasharray:80 1600;stroke-dashoffset:0;opacity:0.5;}
 .v2e-w1{animation:v2eWind 13s linear infinite;}
 .v2e-w2{animation:v2eWind 18s linear infinite -6s;}
 .v2e-w3{animation:v2eWind 22s linear infinite -12s;}
 @keyframes v2eWind{to{stroke-dashoffset:-1680;}}
-#v2eStars .tw{animation:v2eTwinkle 4s ease-in-out infinite alternate;}
-@keyframes v2eTwinkle{from{opacity:0.15;}to{opacity:0.9;}}
 .v2e-smoke circle{transform-box:fill-box;transform-origin:center;}
-.v2e-window rect[filter]{animation:v2eGlow 6s ease-in-out infinite alternate;}
-.v2e-window:nth-of-type(2) rect[filter]{animation-delay:3s;}
-@keyframes v2eGlow{from{opacity:0.42;}to{opacity:0.58;}}
 .v2e-p1{animation:v2ePuff 8s ease-out infinite;}
 .v2e-p2{animation:v2ePuff 8s ease-out infinite 2.7s;}
 .v2e-p3{animation:v2ePuff 8s ease-out infinite 5.4s;}
-@keyframes v2ePuff{0%{opacity:0;transform:translate(0,14px) scale(0.6);}16%{opacity:0.09;}100%{opacity:0;transform:translate(26px,-64px) scale(1.9);}}
-.v2e-straw{position:absolute;left:-4vw;width:16px;height:3px;border-radius:2px;background:#cfa860;opacity:0;animation:v2eFly linear infinite;}
+@keyframes v2ePuff{0%{opacity:0;transform:translate(0,14px) scale(0.6);}16%{opacity:0.32;}100%{opacity:0;transform:translate(26px,-64px) scale(1.9);}}
+.v2e-straw{position:absolute;left:-4vw;width:16px;height:3px;border-radius:2px;background:#a8843c;opacity:0;animation:v2eFly linear infinite;}
 .v2e-st1{top:22%;animation-duration:11s;}
-.v2e-st2{top:38%;width:12px;background:#9a7448;animation-duration:14s;animation-delay:3s;}
-.v2e-st3{top:15%;width:20px;background:#c8b184;animation-duration:12s;animation-delay:6s;}
+.v2e-st2{top:38%;width:12px;background:#8a6a3c;animation-duration:14s;animation-delay:3s;}
+.v2e-st3{top:15%;width:20px;background:#b89b58;animation-duration:12s;animation-delay:6s;}
 @keyframes v2eFly{0%{transform:translate(0,0) rotate(0deg);opacity:0;}6%{opacity:0.55;}92%{opacity:0.45;}100%{transform:translate(112vw,6vh) rotate(660deg);opacity:0;}}
 @media (prefers-reduced-motion: reduce){
-  .v2e-wind path,.v2e-smoke circle,#v2eStars .tw,.v2e-straw,.v2e-window rect[filter]{animation:none;}
-  .v2e-wind path{opacity:0.07;}
+  .v2e-wind path,.v2e-smoke circle,.v2e-straw,.v2f-drift{animation:none;}
+  .v2e-wind path{opacity:0.3;}
   .v2e-straw{opacity:0;}
+  .v2f-d1{transform:translateX(240px);}
+  .v2f-d2{transform:translateX(880px);}
+  .v2f-d3{transform:translateX(1180px);}
 }
 @media (max-width:768px){
   .v2e-content{padding-bottom:34vh;}
-  .hero-v2e .hero-scroll{display:none;}
+  .hero-v2f .hero-scroll{display:none;}
 }
 </style>
 </head>
@@ -97,76 +97,83 @@
   </div>
 </nav>
 
-<!-- Hero (v2 E: 밤의 벽돌집) -->
-<section class="hero hero-v2e" id="hero">
+<!-- Hero (v2 F: 낮의 벽돌집) -->
+<section class="hero hero-v2f" id="hero">
   <div class="v2e-scene" aria-hidden="true">
     <svg class="v2e-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
       <defs>
-        <linearGradient id="v2eSky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#0a0e1e"/>
-          <stop offset="0.5" stop-color="#121a30"/>
-          <stop offset="0.82" stop-color="#1d2340"/>
-          <stop offset="1" stop-color="#2a2a48"/>
+        <linearGradient id="v2fSky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#b7d3e6"/>
+          <stop offset="0.45" stop-color="#d6e5ea"/>
+          <stop offset="0.75" stop-color="#eeead9"/>
+          <stop offset="1" stop-color="#f6ecd8"/>
         </linearGradient>
-        <linearGradient id="v2eWin" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#ffd694"/>
-          <stop offset="1" stop-color="#ff9d4d"/>
-        </linearGradient>
-        <radialGradient id="v2ePool" cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0" stop-color="#ffb763" stop-opacity="0.5"/>
-          <stop offset="1" stop-color="#ffb763" stop-opacity="0"/>
+        <radialGradient id="v2fSun" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#fff3c2" stop-opacity="0.85"/>
+          <stop offset="1" stop-color="#fff3c2" stop-opacity="0"/>
         </radialGradient>
-        <pattern id="v2eBrick" width="26" height="16" patternUnits="userSpaceOnUse">
+        <linearGradient id="v2fGlass" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#e9f1f5"/>
+          <stop offset="1" stop-color="#bed2dc"/>
+        </linearGradient>
+        <filter id="v2fBlur8" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="8"/></filter>
+        <pattern id="v2fBrick" width="26" height="16" patternUnits="userSpaceOnUse">
           <rect width="26" height="16" fill="none"/>
-          <path d="M0 0.5 H26 M0 8.5 H26 M13 0.5 V8 M0 8.5 V16 M26 8.5 V16" stroke="#1c0f0c" stroke-width="1" opacity="0.5"/>
+          <path d="M0 0.5 H26 M0 8.5 H26 M13 0.5 V8 M0 8.5 V16 M26 8.5 V16" stroke="#7c2f24" stroke-width="1" opacity="0.4"/>
         </pattern>
-        <filter id="v2eBlur8" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="8"/></filter>
-        <filter id="v2eBlur16" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="16"/></filter>
       </defs>
-      <rect width="1440" height="900" fill="url(#v2eSky)"/>
-      <g id="v2eStars"></g>
+      <rect width="1440" height="900" fill="url(#v2fSky)"/>
+      <circle cx="1150" cy="140" r="280" fill="url(#v2fSun)"/>
+      <g fill="#ffffff" opacity="0.92">
+        <g transform="translate(0,140)"><g class="v2f-drift v2f-d1">
+          <ellipse cx="0" cy="0" rx="70" ry="22"/><ellipse cx="55" cy="-9" rx="55" ry="26"/><ellipse cx="116" cy="4" rx="62" ry="18"/>
+        </g></g>
+        <g transform="translate(0,84) scale(0.72)"><g class="v2f-drift v2f-d2">
+          <ellipse cx="0" cy="0" rx="70" ry="22"/><ellipse cx="55" cy="-9" rx="55" ry="26"/><ellipse cx="116" cy="4" rx="62" ry="18"/>
+        </g></g>
+        <g transform="translate(0,236) scale(1.12)"><g class="v2f-drift v2f-d3">
+          <ellipse cx="0" cy="0" rx="70" ry="22"/><ellipse cx="55" cy="-9" rx="55" ry="26"/><ellipse cx="116" cy="4" rx="62" ry="18"/>
+        </g></g>
+      </g>
       <g class="v2e-wind" fill="none" stroke="#ffffff" stroke-linecap="round">
         <path class="v2e-w1" d="M-120 170 C 280 120, 640 230, 1000 180 S 1400 120, 1560 170" stroke-width="2"/>
         <path class="v2e-w2" d="M-120 718 C 320 690, 700 756, 1120 700 S 1420 664, 1560 700" stroke-width="1.5"/>
         <path class="v2e-w3" d="M-120 90 C 400 60, 800 130, 1200 80 S 1440 60, 1560 90" stroke-width="1.5"/>
       </g>
-      <path d="M0 780 Q 300 726 620 762 Q 1000 800 1440 742 L1440 900 L0 900 Z" fill="#141a2c"/>
-      <path d="M0 828 Q 360 792 720 812 Q 1080 832 1440 796 L1440 900 L0 900 Z" fill="#0b0e18"/>
+      <path d="M0 780 Q 300 726 620 762 Q 1000 800 1440 742 L1440 900 L0 900 Z" fill="#c3cba2"/>
+      <path d="M0 828 Q 360 792 720 812 Q 1080 832 1440 796 L1440 900 L0 900 Z" fill="#a9b487"/>
       <g transform="translate(720,822)">
-        <g class="v2e-smoke" filter="url(#v2eBlur8)">
-          <circle class="v2e-p1" cx="86" cy="-300" r="9" fill="#c9c2b6" opacity="0"/>
-          <circle class="v2e-p2" cx="92" cy="-306" r="12" fill="#c9c2b6" opacity="0"/>
-          <circle class="v2e-p3" cx="80" cy="-296" r="7" fill="#c9c2b6" opacity="0"/>
+        <g class="v2e-smoke" filter="url(#v2fBlur8)">
+          <circle class="v2e-p1" cx="86" cy="-300" r="9" fill="#f7f3ea" opacity="0"/>
+          <circle class="v2e-p2" cx="92" cy="-306" r="12" fill="#f7f3ea" opacity="0"/>
+          <circle class="v2e-p3" cx="80" cy="-296" r="7" fill="#f7f3ea" opacity="0"/>
         </g>
-        <rect x="66" y="-286" width="32" height="86" fill="#2c1a16"/>
-        <rect x="61" y="-294" width="42" height="12" fill="#1f1210"/>
-        <ellipse cx="0" cy="4" rx="230" ry="26" fill="url(#v2ePool)" opacity="0.35"/>
-        <rect x="-150" y="-170" width="300" height="170" fill="#3f231e"/>
-        <rect x="-150" y="-170" width="300" height="170" fill="url(#v2eBrick)" opacity="0.55"/>
-        <rect x="-150" y="-170" width="300" height="170" fill="#000000" opacity="0.08"/>
-        <path d="M-178 -166 L 0 -302 L 178 -166 Z" fill="#1e1420"/>
-        <rect x="-178" y="-172" width="356" height="9" fill="#161020"/>
-        <circle cx="0" cy="-224" r="17" fill="url(#v2eWin)" filter="url(#v2eBlur8)" opacity="0.6"/>
-        <circle cx="0" cy="-224" r="14" fill="url(#v2eWin)"/>
-        <path d="M-14 -224 H14 M0 -238 V-210" stroke="#5a3120" stroke-width="2.5"/>
-        <circle cx="0" cy="-224" r="14" fill="none" stroke="#241310" stroke-width="3"/>
-        <g class="v2e-window">
-          <rect x="-121" y="-104" width="62" height="66" fill="#ffbe6e" filter="url(#v2eBlur16)" opacity="0.5"/>
-          <rect x="-118" y="-102" width="56" height="62" rx="2" fill="url(#v2eWin)"/>
-          <path d="M-90 -102 V-40 M-118 -71 H-62" stroke="#5a3120" stroke-width="3"/>
-          <rect x="-118" y="-102" width="56" height="62" rx="2" fill="none" stroke="#241310" stroke-width="4"/>
-          <rect x="-122" y="-40" width="64" height="7" fill="#241310"/>
+        <rect x="66" y="-286" width="32" height="86" fill="#8e4034"/>
+        <rect x="61" y="-294" width="42" height="12" fill="#6f3128"/>
+        <ellipse cx="12" cy="6" rx="212" ry="22" fill="#55603f" opacity="0.25"/>
+        <rect x="-150" y="-170" width="300" height="170" fill="#b74b3c"/>
+        <rect x="-150" y="-170" width="300" height="170" fill="url(#v2fBrick)"/>
+        <rect x="0" y="-170" width="150" height="170" fill="#000000" opacity="0.06"/>
+        <path d="M-178 -166 L 0 -302 L 178 -166 Z" fill="#4a3844"/>
+        <rect x="-178" y="-172" width="356" height="9" fill="#3a2c36"/>
+        <circle cx="0" cy="-224" r="14" fill="url(#v2fGlass)"/>
+        <path d="M-14 -224 H14 M0 -238 V-210" stroke="#f2ead8" stroke-width="2.5"/>
+        <circle cx="0" cy="-224" r="14" fill="none" stroke="#ede2cc" stroke-width="3.5"/>
+        <g>
+          <rect x="-118" y="-102" width="56" height="62" rx="2" fill="url(#v2fGlass)"/>
+          <path d="M-90 -102 V-40 M-118 -71 H-62" stroke="#f6f1e4" stroke-width="3"/>
+          <rect x="-118" y="-102" width="56" height="62" rx="2" fill="none" stroke="#ede2cc" stroke-width="4"/>
+          <rect x="-122" y="-40" width="64" height="7" fill="#ede2cc"/>
         </g>
-        <g class="v2e-window">
-          <rect x="59" y="-104" width="62" height="66" fill="#ffbe6e" filter="url(#v2eBlur16)" opacity="0.5"/>
-          <rect x="62" y="-102" width="56" height="62" rx="2" fill="url(#v2eWin)"/>
-          <path d="M90 -102 V-40 M62 -71 H118" stroke="#5a3120" stroke-width="3"/>
-          <rect x="62" y="-102" width="56" height="62" rx="2" fill="none" stroke="#241310" stroke-width="4"/>
-          <rect x="58" y="-40" width="64" height="7" fill="#241310"/>
+        <g>
+          <rect x="62" y="-102" width="56" height="62" rx="2" fill="url(#v2fGlass)"/>
+          <path d="M90 -102 V-40 M62 -71 H118" stroke="#f6f1e4" stroke-width="3"/>
+          <rect x="62" y="-102" width="56" height="62" rx="2" fill="none" stroke="#ede2cc" stroke-width="4"/>
+          <rect x="58" y="-40" width="64" height="7" fill="#ede2cc"/>
         </g>
-        <path d="M-27 0 L-27 -84 Q-27 -98 -13 -98 L13 -98 Q27 -98 27 -84 L27 0 Z" fill="#241310"/>
-        <circle cx="16" cy="-46" r="3" fill="#8a5a30"/>
-        <rect x="-36" y="0" width="72" height="9" fill="#1a100d"/>
+        <path d="M-27 0 L-27 -84 Q-27 -98 -13 -98 L13 -98 Q27 -98 27 -84 L27 0 Z" fill="#4a2c1c"/>
+        <circle cx="16" cy="-46" r="3" fill="#d8b878"/>
+        <rect x="-36" y="0" width="72" height="9" fill="#8a8068"/>
       </g>
     </svg>
     <span class="v2e-straw v2e-st1"></span>
@@ -475,25 +482,7 @@
 <script src="/script.js?v=20260818-1"></script>
 <div class="v2-switch" aria-label="시안 전환">
   <span><a href="/v2/" class="v2-home">시안 v2</a></span>
-  <a href="/v2/a.html">A</a><a href="/v2/b.html">B</a><a href="/v2/c.html">C</a><a href="/v2/d.html">D</a><a href="/v2/e.html" class="on">E</a><a href="/v2/f.html">F</a>
+  <a href="/v2/a.html">A</a><a href="/v2/b.html">B</a><a href="/v2/c.html">C</a><a href="/v2/d.html">D</a><a href="/v2/e.html">E</a><a href="/v2/f.html" class="on">F</a>
 </div>
-<script>
-(function(){
-  var g=document.getElementById('v2eStars');
-  if(!g)return;
-  var NS='http://www.w3.org/2000/svg';
-  for(var i=0;i<110;i++){
-    var c=document.createElementNS(NS,'circle');
-    var y=Math.random();
-    c.setAttribute('cx',(Math.random()*1440).toFixed(1));
-    c.setAttribute('cy',(y*y*560).toFixed(1));
-    c.setAttribute('r',(0.5+Math.random()*0.9).toFixed(2));
-    c.setAttribute('fill','#cdd6ff');
-    c.setAttribute('opacity',(0.2+Math.random()*0.6).toFixed(2));
-    if(Math.random()<0.22){c.setAttribute('class','tw');c.style.animationDelay=(Math.random()*4).toFixed(2)+'s';c.style.animationDuration=(3+Math.random()*3).toFixed(2)+'s';}
-    g.appendChild(c);
-  }
-})();
-</script>
 </body>
 </html>
