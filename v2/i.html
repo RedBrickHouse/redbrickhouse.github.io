@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[시안 D] 메인 히어로 v2 - RED BRICK HOUSE</title>
+<title>[시안 I] 메인 히어로 v2 - RED BRICK HOUSE</title>
 <meta name="description" content="레드브릭하우스(RED BRICK HOUSE)는 글로벌 인디게임 퍼블리셔입니다. 사업화 전략과 투자 유치, 팬 커뮤니티와 마케팅, 글로벌 출시까지 인디 개발사의 모든 여정을 함께합니다.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#c0392b">
@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png?v=20260713">
 <link rel="apple-touch-icon" href="/img/favicon-180.png">
 <style>
-/* === v2 draft (D: 게임 쇼케이스) === */
+/* === v2 draft (I: 스포트라이트 다크) === */
 /* v2 draft switcher */
 .v2-switch{position:fixed;left:16px;bottom:16px;z-index:400;display:flex;gap:6px;align-items:center;background:rgba(26,26,26,0.92);border-radius:8px;padding:8px 10px;box-shadow:0 6px 24px rgba(0,0,0,0.25);}
 .v2-switch span{color:#bbb;font-size:11px;letter-spacing:1px;margin-right:4px;}
@@ -27,33 +27,48 @@
 .v2-switch a:hover{background:rgba(255,255,255,0.12);color:#fff;}
 .v2-switch a.on{background:#c0392b;border-color:#c0392b;color:#fff;}
 
-/* v2 D: game showcase */
-.hero-v2d{background:linear-gradient(160deg,#faf9f7 0%,#f6efe6 100%);text-align:left;}
-.v2d-inner{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center;width:100%;padding-top:80px;}
-.hero-v2d .hero-title{font-size:clamp(34px,3.6vw,54px);}
-.v2d-sub{margin-left:0;margin-right:0;max-width:480px;}
-.v2d-actions{justify-content:flex-start;}
-.v2d-art{position:relative;height:480px;}
-.v2d-art::before{content:'';position:absolute;top:-26px;right:-14px;width:16px;height:16px;background:#c0392b;transform:rotate(12deg);}
-.v2d-art::after{content:'';position:absolute;bottom:-30px;left:8%;width:11px;height:11px;background:#e0c9a8;transform:rotate(-8deg);}
-.v2d-card{position:absolute;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 18px 48px rgba(60,30,20,0.22);}
-.v2d-card img{width:100%;height:100%;object-fit:cover;display:block;}
-.v2d-c1{width:78%;aspect-ratio:16/9;left:0;bottom:7%;transform:rotate(-3.5deg);z-index:3;animation:v2dFloat 7s ease-in-out infinite alternate;}
-.v2d-c2{width:52%;aspect-ratio:16/10;right:0;top:2%;transform:rotate(4deg);z-index:2;animation:v2dFloat 9s ease-in-out infinite alternate -2s;}
-.v2d-c3{width:44%;aspect-ratio:16/10;right:2%;bottom:2%;transform:rotate(-2deg);z-index:1;animation:v2dFloat 8s ease-in-out infinite alternate -4s;}
-@keyframes v2dFloat{from{translate:0 0;}to{translate:0 -14px;}}
-.v2d-chip{position:absolute;left:12px;bottom:12px;background:rgba(26,26,26,0.82);color:#fff;font-size:11px;letter-spacing:2px;font-weight:700;padding:6px 10px;border-radius:4px;}
-@media (prefers-reduced-motion: reduce){.v2d-card{animation:none;}}
+/* v2 I: spotlight dark */
+.hero-v2i{background:#100d0e;color:#fff;text-align:left;overflow:hidden;}
+.v2i-bg{position:absolute;inset:0;overflow:hidden;}
+.v2i-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(120% 100% at 70% 40%,#000 30%,transparent 78%);mask-image:radial-gradient(120% 100% at 70% 40%,#000 30%,transparent 78%);}
+.v2i-spot{position:absolute;inset:0;background:radial-gradient(460px 460px at var(--mx,68%) var(--my,42%),rgba(224,74,47,0.22),rgba(224,74,47,0.05) 40%,transparent 62%);transition:background 0.15s ease;}
+.v2i-noise{position:absolute;inset:0;opacity:0.05;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='150' height='150' filter='url(%23n)'/%3E%3C/svg%3E");}
+.v2i-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:center;width:100%;padding-top:80px;}
+.v2i-tag{display:inline-flex;align-items:center;gap:10px;color:#f2b6a3;}
+.v2i-live{width:8px;height:8px;border-radius:50%;background:#ff6a3d;box-shadow:0 0 0 0 rgba(255,106,61,0.6);animation:v2iLive 2.2s ease-out infinite;}
+@keyframes v2iLive{0%{box-shadow:0 0 0 0 rgba(255,106,61,0.55);}70%{box-shadow:0 0 0 10px rgba(255,106,61,0);}100%{box-shadow:0 0 0 0 rgba(255,106,61,0);}}
+.v2i-title{color:#fff;margin-bottom:22px;}
+.v2i-sub{color:rgba(255,255,255,0.66);max-width:460px;margin-left:0;}
+.v2i-actions{justify-content:flex-start;}
+.hero-v2i .btn-primary{background:#e0492f;color:#fff;}
+.hero-v2i .btn-primary:hover{background:#c93d27;}
+.hero-v2i .btn-ghost{border-color:rgba(255,255,255,0.28);color:#fff;}
+.hero-v2i .btn-ghost:hover{border-color:rgba(255,255,255,0.6);background:rgba(255,255,255,0.05);}
+.v2i-panel{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:12px;backdrop-filter:blur(8px);box-shadow:0 24px 60px rgba(0,0,0,0.4);}
+.v2i-panel-label{font-size:11px;letter-spacing:3px;color:rgba(255,255,255,0.4);font-weight:700;padding:12px 14px 14px;}
+.v2i-row{display:flex;align-items:center;gap:12px;padding:16px 14px;border-radius:10px;border-top:1px solid rgba(255,255,255,0.07);transition:background 0.2s;}
+.v2i-row-name{font-family:'GmarketSans','Pretendard Variable',Pretendard,sans-serif;font-size:16px;font-weight:700;letter-spacing:0.5px;color:#fff;}
+.v2i-row-meta{font-size:12.5px;color:rgba(255,255,255,0.45);margin-left:auto;}
+.v2i-row-go{color:#ff8a5c;font-size:15px;margin-left:4px;}
+a.v2i-row:hover{background:rgba(224,73,47,0.12);}
+a.v2i-row:hover .v2i-row-meta{color:rgba(255,255,255,0.7);}
+.v2i-row-static{cursor:default;}
+.hero-v2i .hero-scroll{color:rgba(255,255,255,0.4);left:40px;transform:none;}
+.hero-v2i .scroll-line{background:rgba(255,255,255,0.24);}
+@media (prefers-reduced-motion: reduce){.v2i-live{animation:none;}}
 @media (max-width:900px){
-  .v2d-inner{grid-template-columns:1fr;gap:40px;text-align:center;padding-top:104px;padding-bottom:90px;}
-  .hero-v2d .hero-title{font-size:clamp(24px,7.4vw,30px);}
-  .v2d-sub{margin:0 auto;}
-  .v2d-actions{justify-content:center;}
-  .v2d-art{height:280px;max-width:520px;width:100%;margin:0 auto;}
-  .v2d-c1{left:1%;}
-  .v2d-c2{right:3%;}
-  .v2d-c3{right:7%;}
-  .hero-v2d .hero-scroll{display:none;}
+  .hero-v2i{text-align:center;}
+  .v2i-wrap{grid-template-columns:1fr;gap:36px;padding-top:104px;padding-bottom:80px;}
+  .v2i-tag{justify-content:center;}
+  .v2i-sub{margin:0 auto;}
+  .v2i-actions{justify-content:center;}
+  .hero-v2i .hero-actions{flex-direction:row;}
+  .v2i-panel{text-align:left;max-width:440px;margin:0 auto;width:100%;}
+  .v2i-spot{display:none;}
+  .hero-v2i .hero-scroll{display:none;}
+}
+@media (max-width:480px){
+  .hero-v2i .hero-actions{flex-direction:column;align-items:stretch;}
 }
 </style>
 </head>
@@ -83,22 +98,40 @@
   </div>
 </nav>
 
-<!-- Hero (v2 D: 게임 쇼케이스) -->
-<section class="hero hero-v2d" id="hero">
-  <div class="v2d-inner container">
-    <div class="v2d-copy">
-      <p class="hero-tag" data-i18n="heroTag">글로벌 인디게임 퍼블리셔</p>
-      <h1 class="hero-title v2d-title" data-i18n="heroTitle">RED&nbsp;BRICK&nbsp;HOUSE</h1>
-      <p class="hero-sub v2d-sub" data-i18n="heroSub">레드브릭하우스는 단순 퍼블리셔가 아닙니다.<br>인디 개발자들의 든든한 동반자입니다.</p>
-      <div class="hero-actions v2d-actions">
-        <a href="#about" class="btn btn-ghost" data-i18n="heroBtn2">우리의 이야기</a>
+<!-- Hero (v2 I: 스포트라이트 다크) -->
+<section class="hero hero-v2i" id="hero">
+  <div class="v2i-bg" aria-hidden="true">
+    <div class="v2i-grid"></div>
+    <div class="v2i-spot" id="v2iSpot"></div>
+    <div class="v2i-noise"></div>
+  </div>
+  <div class="v2i-wrap container">
+    <div class="v2i-left">
+      <p class="hero-tag v2i-tag"><span class="v2i-live"></span><span data-i18n="heroTag">글로벌 인디게임 퍼블리셔</span></p>
+      <h1 class="hero-title v2i-title" data-i18n="heroTitle">RED&nbsp;BRICK&nbsp;HOUSE</h1>
+      <p class="hero-sub v2i-sub" data-i18n="heroSub">레드브릭하우스는 단순 퍼블리셔가 아닙니다.<br>인디 개발자들의 든든한 동반자입니다.</p>
+      <div class="hero-actions v2i-actions">
         <a href="#contact" class="btn btn-primary" data-i18n="heroBtn1">문의하기</a>
+        <a href="#about" class="btn btn-ghost" data-i18n="heroBtn2">우리의 이야기</a>
       </div>
     </div>
-    <div class="v2d-art" aria-hidden="true">
-      <div class="v2d-card v2d-c2"><img src="/img/project-b.png" alt=""><span class="v2d-chip">PROJECT B</span></div>
-      <div class="v2d-card v2d-c3"><img src="/img/project-o.png" alt=""><span class="v2d-chip">PROJECT O</span></div>
-      <div class="v2d-card v2d-c1"><img src="/img/void-diver.jpg" alt=""><span class="v2d-chip">VOID DIVER</span></div>
+    <div class="v2i-right">
+      <div class="v2i-panel">
+        <div class="v2i-panel-label">LINE&nbsp;UP</div>
+        <a class="v2i-row" href="https://store.steampowered.com/app/3438920/" target="_blank" rel="noopener">
+          <span class="v2i-row-name">VOID DIVER</span>
+          <span class="v2i-row-meta">Extraction · Steam</span>
+          <span class="v2i-row-go" aria-hidden="true">&#8599;</span>
+        </a>
+        <div class="v2i-row v2i-row-static">
+          <span class="v2i-row-name">PROJECT B</span>
+          <span class="v2i-row-meta">Roguelite · Upcoming</span>
+        </div>
+        <div class="v2i-row v2i-row-static">
+          <span class="v2i-row-name">PROJECT O</span>
+          <span class="v2i-row-meta">Dark Fantasy · Upcoming</span>
+        </div>
+      </div>
     </div>
   </div>
   <div class="hero-scroll">
@@ -393,7 +426,24 @@
 <script src="/script.js?v=20260818-1"></script>
 <div class="v2-switch" aria-label="시안 전환">
   <span><a href="/v2/" class="v2-home">시안 v2</a></span>
-  <a href="/v2/a.html">A</a><a href="/v2/b.html">B</a><a href="/v2/c.html">C</a><a href="/v2/d.html" class="on">D</a><a href="/v2/e.html">E</a><a href="/v2/f.html">F</a><a href="/v2/g.html">G</a><a href="/v2/h.html">H</a><a href="/v2/i.html">I</a>
+  <a href="/v2/a.html">A</a><a href="/v2/b.html">B</a><a href="/v2/c.html">C</a><a href="/v2/d.html">D</a><a href="/v2/e.html">E</a><a href="/v2/f.html">F</a><a href="/v2/g.html">G</a><a href="/v2/h.html">H</a><a href="/v2/i.html" class="on">I</a>
 </div>
+<script>
+(function(){
+  var spot=document.getElementById('v2iSpot');
+  if(!spot)return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  if(window.matchMedia('(pointer: coarse)').matches)return;
+  var hero=spot.closest('.hero');
+  window.addEventListener('mousemove',function(e){
+    var r=hero.getBoundingClientRect();
+    if(e.clientY<r.top||e.clientY>r.bottom)return;
+    var x=((e.clientX-r.left)/r.width*100).toFixed(1);
+    var y=((e.clientY-r.top)/r.height*100).toFixed(1);
+    spot.style.setProperty('--mx',x+'%');
+    spot.style.setProperty('--my',y+'%');
+  },{passive:true});
+})();
+</script>
 </body>
 </html>

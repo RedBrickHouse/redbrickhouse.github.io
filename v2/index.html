@@ -24,6 +24,10 @@ h1{font-size:clamp(26px,4.5vw,38px);font-weight:700;line-height:1.25;margin-bott
 .card-new p{color:#b8b2c4;}
 .card-new:hover{border-color:#e74c3c;}
 .new-tag{font-style:normal;font-size:11px;font-weight:700;letter-spacing:1px;color:#fff;background:#c0392b;border-radius:4px;padding:3px 8px;margin-left:8px;vertical-align:2px;}
+.group-label{font-size:13px;font-weight:700;letter-spacing:1px;color:#8b857e;margin:8px 0 16px;display:flex;align-items:center;gap:10px;}
+.group-label:not(:first-of-type){margin-top:36px;}
+.group-label em{font-style:normal;font-size:11px;font-weight:700;letter-spacing:1px;color:#fff;background:#c0392b;border-radius:4px;padding:3px 8px;}
+.cards + .group-label{border-top:1px solid #eee5da;padding-top:32px;}
 .card p{font-size:13.5px;color:#777;}
 .back{font-size:13.5px;color:#999;}
 .back a{color:#c0392b;font-weight:600;border-bottom:1px solid #e5cfc9;}
@@ -34,27 +38,45 @@ h1{font-size:clamp(26px,4.5vw,38px);font-weight:700;line-height:1.25;margin-bott
 <div class="wrap">
   <div class="label">DRAFT / REVIEW ONLY</div>
   <h1>메인 히어로 시안 v2</h1>
-  <p class="desc">메인 페이지 첫 화면의 배경 영상을 내리고 그 자리를 대신할 히어로 시안들입니다. 모두 코드로 직접 그린 화면이라 생성형 이미지 느낌이 없습니다. 각 시안은 실제 메인 페이지 전체 흐름 안에서 보여지며, 좌측 하단 버튼으로 시안을 바로 전환할 수 있습니다.</p>
+  <p class="desc">메인 페이지 첫 화면의 배경 영상을 내리고 그 자리를 대신할 히어로 시안들입니다. 모두 코드로 직접 그린 화면이라 생성형 이미지 느낌이 없습니다. 각 시안은 실제 메인 페이지 전체 흐름 안에서 보여지며, 좌측 하단 버튼으로 시안을 바로 전환할 수 있습니다. 마우스 반응·모션은 라이브에서 직접 확인해 주세요.</p>
+  <div class="group-label">모던 · 타이포/레이아웃 (일러스트 없음) <em>추천</em></div>
   <div class="cards">
-    <a class="card card-new" href="/v2/g.html">
-      <span class="badge">G</span>
+    <a class="card card-new" href="/v2/h.html">
+      <span class="badge">H</span>
       <span>
-        <h2>석양의 계곡 <em class="new-tag">추천 / 풀스크린</em></h2>
-        <p>화면 전체가 브랜드 레드빛 석양으로 타오르는 풀블리드 파랄락스 풍경. 여러 겹의 언덕 실루엣 위에 불 밝힌 벽돌집이 서 있고, 마우스를 움직이면 층이 따라 움직여 깊이가 생깁니다. 이전 영상처럼 시선을 꽉 채우는 몰입형 안.</p>
+        <h2>오로라 그라데이션 <em class="new-tag">NEW</em></h2>
+        <p>브랜드 레드빛 그라데이션이 화면 전체에서 부드럽게 흐르는 배경 위에 대형 타이포. 하단에는 라인업이 흐르는 티커. Stripe·Linear 계열의 깔끔하고 세련된 제품 랜딩 무드.</p>
       </span>
     </a>
-    <a class="card card-new" href="/v2/e.html">
+    <a class="card card-new" href="/v2/i.html">
+      <span class="badge">I</span>
+      <span>
+        <h2>스포트라이트 다크 <em class="new-tag">NEW</em></h2>
+        <p>차콜 배경에 미세한 그리드, 마우스를 따라 레드 조명이 움직입니다. 좌측 대형 타이포 + 우측 실제 게임 라인업 패널. 첫 화면에서 퍼블리셔라는 걸 바로 보여주는 프로덕트 랜딩 무드.</p>
+      </span>
+    </a>
+  </div>
+  <div class="group-label">일러스트 계열</div>
+  <div class="cards">
+    <a class="card" href="/v2/g.html">
+      <span class="badge">G</span>
+      <span>
+        <h2>석양의 계곡</h2>
+        <p>화면 전체가 레드빛 석양으로 타오르는 풀스크린 파랄락스 풍경. 마우스를 움직이면 층이 따라 움직입니다.</p>
+      </span>
+    </a>
+    <a class="card" href="/v2/e.html">
       <span class="badge">E</span>
       <span>
         <h2>밤의 벽돌집</h2>
-        <p>깊은 밤, 바람에 짚과 나뭇조각이 날려가도 벽돌집만은 따뜻하게 불을 켜고 서 있는 시네마틱 일러스트. 브랜드 동화를 화면 하나로 압축한 시그니처 안.</p>
+        <p>깊은 밤, 불을 켜고 서 있는 벽돌집 시네마틱 일러스트. 브랜드 동화를 압축한 시그니처 안.</p>
       </span>
     </a>
-    <a class="card card-new" href="/v2/f.html">
+    <a class="card" href="/v2/f.html">
       <span class="badge">F</span>
       <span>
-        <h2>낮의 벽돌집 <em class="new-tag">NEW</em></h2>
-        <p>E안과 같은 장면의 낮 버전. 맑은 하늘과 흐르는 구름 아래 초원 언덕 위에 선 빨간 벽돌집. 밝고 친근한 무드.</p>
+        <h2>낮의 벽돌집</h2>
+        <p>E안의 낮 버전. 맑은 하늘 아래 초원 위 빨간 벽돌집. 밝고 친근한 무드.</p>
       </span>
     </a>
     <a class="card" href="/v2/a.html">
