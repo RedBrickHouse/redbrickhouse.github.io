@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[시안 C] 메인 히어로 v2 - RED BRICK HOUSE</title>
+<title>[시안 R] 메인 히어로 v2 - RED BRICK HOUSE</title>
 <meta name="description" content="레드브릭하우스(RED BRICK HOUSE)는 글로벌 인디게임 퍼블리셔입니다. 사업화 전략과 투자 유치, 팬 커뮤니티와 마케팅, 글로벌 출시까지 인디 개발사의 모든 여정을 함께합니다.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#c0392b">
@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png?v=20260713">
 <link rel="apple-touch-icon" href="/img/favicon-180.png">
 <style>
-/* === v2 draft (C: 에디토리얼 타이포그래피) === */
+/* === v2 draft (R: Kiro 히어로 · 잔광의 가마) === */
 /* v2 draft switcher */
 .v2-switch{position:fixed;left:16px;bottom:16px;z-index:400;display:flex;gap:6px;align-items:center;background:rgba(26,26,26,0.92);border-radius:8px;padding:8px 10px;box-shadow:0 6px 24px rgba(0,0,0,0.25);}
 .v2-switch span{color:#bbb;font-size:11px;letter-spacing:1px;margin-right:4px;}
@@ -26,35 +26,275 @@
 .v2-switch a{color:#ddd;font-size:12px;font-weight:700;width:26px;height:26px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.25);border-radius:6px;transition:all .2s;}
 .v2-switch a:hover{background:rgba(255,255,255,0.12);color:#fff;}
 .v2-switch a.on{background:#c0392b;border-color:#c0392b;color:#fff;}
+.hero-v2r{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:flex-start;text-align:left;background:#130a09;color:#fff4e8;overflow:hidden;}
+.hero-v2r .khero-content{position:relative;z-index:3;width:100%;max-width:600px;margin:0;padding:88px clamp(24px,7vw,120px) 0;}
+.hero-v2r .hero-tag{color:#e58a6f;}
+.hero-v2r .hero-title{color:#fff4e8;text-shadow:0 2px 30px rgba(0,0,0,0.35);}
+.hero-v2r .hero-sub{color:#ddc9ba;margin-left:0;margin-right:0;}
+.hero-v2r .hero-actions{justify-content:flex-start;}
+.hero-v2r .btn-primary{background:#c0392b;color:#fff;}
+.hero-v2r .btn-primary:hover{background:#d8443a;transform:translateY(-2px);}
+.hero-v2r .btn-ghost{border-color:rgba(255,244,232,0.4);color:#fff4e8;}
+.hero-v2r .btn-ghost:hover{border-color:rgba(255,244,232,0.85);background:rgba(255,244,232,0.08);}
+.hero-v2r .hero-scroll{color:rgba(255,244,232,0.5);}
+.hero-v2r .scroll-line{background:rgba(255,244,232,0.5);}
+.nav:not(.scrolled){background:transparent;backdrop-filter:none;border-bottom:1px solid rgba(255,244,232,0.1);}
+.nav:not(.scrolled) .nav-links a{color:rgba(255,244,232,0.82);}
+.nav:not(.scrolled) .nav-links a:hover{color:#fff;}
+.nav:not(.scrolled) .logo-img{filter:brightness(0) invert(1);}
+.nav:not(.scrolled) .lang-btn{color:rgba(255,244,232,0.7);border-color:rgba(255,244,232,0.28);}
+.nav:not(.scrolled) .lang-btn.active{background:#c0392b;border-color:#c0392b;color:#fff;}
+.nav:not(.scrolled) .nav-toggle span{background:rgba(255,244,232,0.95);}
+@media (max-width:768px){.hero-v2r .khero-content{max-width:none;padding-top:92px;}}
 
-/* v2 C: editorial typography */
-.hero-v2c{background:#faf9f7;flex-direction:column;text-align:left;}
-.v2c-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;width:100%;padding-top:110px;padding-bottom:60px;}
-.v2c-tag{display:flex;align-items:center;gap:12px;margin-bottom:30px;}
-.v2c-square{width:12px;height:12px;background:#c0392b;display:inline-block;flex:0 0 auto;}
-.v2c-title{font-family:'GmarketSans','Pretendard Variable',Pretendard,sans-serif;font-weight:700;font-size:clamp(58px,10.5vw,148px);line-height:1.0;letter-spacing:0.01em;margin-bottom:40px;color:#1a1a1a;}
-.v2c-line{display:block;overflow:hidden;padding-top:0.08em;}
-.v2c-word{display:inline-block;transform:translateY(112%);animation:v2cRise .7s cubic-bezier(.2,.7,.2,1) forwards;}
-.v2c-line:nth-child(2) .v2c-word{animation-delay:.09s;}
-.v2c-line:nth-child(3) .v2c-word{animation-delay:.18s;}
-@keyframes v2cRise{to{transform:translateY(0);}}
-.v2c-outline{color:transparent;-webkit-text-stroke:2.5px #c0392b;}
-.v2c-bottom{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap;}
-.v2c-sub{margin:0;max-width:520px;}
-.v2c-actions{justify-content:flex-start;}
-.v2c-strip{width:100%;border-top:1px solid #e8e0d6;border-bottom:1px solid #e8e0d6;overflow:hidden;}
-.v2c-strip-track{display:flex;white-space:nowrap;width:max-content;animation:v2cTicker 30s linear infinite;}
-.v2c-strip-seq{display:inline-flex;align-items:center;gap:30px;padding:14px 15px;font-size:13px;letter-spacing:3px;font-weight:600;color:#8b857e;}
-.v2c-strip-seq i{width:9px;height:9px;background:#c0392b;display:inline-block;}
-@keyframes v2cTicker{to{transform:translateX(-50%);}}
-@media (prefers-reduced-motion: reduce){.v2c-word{animation:none;transform:none;}.v2c-strip-track{animation:none;}}
-@media (max-width:768px){
-  .v2c-wrap{padding-top:96px;padding-bottom:48px;}
-  .v2c-title{font-size:clamp(52px,15vw,88px);margin-bottom:32px;}
-  .v2c-bottom{flex-direction:column;align-items:flex-start;}
-  .hero-v2c .hero-actions{flex-direction:column;align-items:stretch;width:100%;}
-  .hero-v2c .hero-actions .btn{max-width:none;text-align:center;}
-  .v2c-strip-seq{font-size:11px;letter-spacing:2px;gap:20px;padding:12px 10px;}
+/* --- Kiro hero visual hv1 --- */
+/* 완결 CSS. .hv1{position:absolute;inset:0} 전제. */
+.hv1 {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  isolation: isolate;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 76% 76%, #8e2419 0%, #46130f 25%, transparent 56%),
+    linear-gradient(118deg, #100b0a 0%, #1c0d0b 48%, #3a100d 100%);
+}
+
+.hv1__canvas,
+.hv1__ambient,
+.hv1__core,
+.hv1__heat,
+.hv1__brick-field,
+.hv1__scrim,
+.hv1__grain,
+.hv1__vignette {
+  position: absolute;
+  inset: 0;
+}
+
+.hv1__canvas {
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.hv1__ambient {
+  z-index: 1;
+  inset: auto -8% -24% auto;
+  width: min(85vw, 1180px);
+  aspect-ratio: 1.25;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at 53% 48%,
+      rgba(255, 204, 132, .88) 0%,
+      rgba(225, 91, 48, .55) 12%,
+      rgba(192, 57, 43, .28) 31%,
+      rgba(92, 22, 15, .12) 52%,
+      transparent 72%);
+  filter: blur(12px);
+  transform: translate3d(0, 0, 0) scale(1);
+  opacity: .9;
+  animation: hv1-breathe 8s cubic-bezier(.45, 0, .25, 1) infinite alternate;
+}
+
+.hv1__core {
+  z-index: 3;
+  inset: auto 7% 4% auto;
+  width: clamp(250px, 33vw, 590px);
+  aspect-ratio: 1.55;
+  border-radius: 48% 52% 44% 56% / 56% 43% 57% 44%;
+  background:
+    radial-gradient(ellipse at 52% 58%,
+      rgba(255, 239, 198, .82) 0%,
+      rgba(255, 174, 91, .55) 12%,
+      rgba(210, 66, 36, .22) 39%,
+      transparent 70%);
+  mix-blend-mode: screen;
+  filter: blur(20px);
+  transform: translate3d(0, 0, 0);
+  animation: hv1-core 5.8s ease-in-out infinite alternate;
+}
+
+/* 투명한 열기 층: 형태 대신 굴절감만 암시 */
+.hv1__heat {
+  z-index: 2;
+  inset: 10% -4% 0 42%;
+  filter: blur(22px);
+  opacity: .52;
+  mix-blend-mode: screen;
+}
+
+.hv1__heat i {
+  position: absolute;
+  bottom: -18%;
+  width: 24%;
+  height: 92%;
+  border-radius: 50%;
+  background: linear-gradient(
+    to top,
+    rgba(243, 113, 64, .16),
+    rgba(255, 211, 160, .055) 45%,
+    transparent 86%
+  );
+  transform: translate3d(0, 0, 0) rotate(8deg);
+  animation: hv1-rise 9s ease-in-out infinite;
+}
+
+.hv1__heat i:nth-child(1) { left: 19%; animation-delay: -6s; }
+.hv1__heat i:nth-child(2) {
+  left: 47%;
+  width: 18%;
+  height: 78%;
+  animation-delay: -3s;
+  animation-duration: 7.5s;
+}
+.hv1__heat i:nth-child(3) {
+  left: 69%;
+  width: 27%;
+  height: 105%;
+  animation-delay: -8s;
+  animation-duration: 11s;
+}
+
+/* 거의 보이지 않는 벽돌 비례의 깊이 레이어 */
+.hv1__brick-field {
+  z-index: 2;
+  inset: 8% -8% -16% 48%;
+  perspective: 900px;
+  transform: rotate(-8deg) skewY(-3deg);
+  opacity: .36;
+  mask-image: linear-gradient(to left, #000 12%, rgba(0,0,0,.65) 58%, transparent);
+  -webkit-mask-image: linear-gradient(to left, #000 12%, rgba(0,0,0,.65) 58%, transparent);
+}
+
+.hv1__brick-field i {
+  position: absolute;
+  width: 34%;
+  aspect-ratio: 2.45;
+  border: 1px solid rgba(255, 179, 130, .12);
+  border-radius: 3px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.055), transparent 35%),
+    linear-gradient(160deg, rgba(168,47,34,.26), rgba(46,13,10,.06));
+  box-shadow:
+    inset 0 1px rgba(255, 228, 197, .07),
+    0 24px 45px rgba(0, 0, 0, .18);
+  transform: translate3d(0, 0, 0);
+  animation: hv1-brick 12s ease-in-out infinite alternate;
+}
+
+.hv1__brick-field i:nth-child(1) { left: 7%;  top: 16%; }
+.hv1__brick-field i:nth-child(2) { left: 45%; top: 17%; animation-delay: -3s; }
+.hv1__brick-field i:nth-child(3) { left: -8%; top: 39%; animation-delay: -7s; }
+.hv1__brick-field i:nth-child(4) { left: 31%; top: 41%; animation-delay: -1s; }
+.hv1__brick-field i:nth-child(5) { left: 69%; top: 43%; animation-delay: -5s; }
+.hv1__brick-field i:nth-child(6) { left: 9%;  top: 65%; animation-delay: -9s; }
+
+.hv1__scrim {
+  z-index: 6;
+  background:
+    linear-gradient(90deg,
+      rgba(12, 9, 8, .94) 0%,
+      rgba(12, 9, 8, .82) 25%,
+      rgba(12, 9, 8, .52) 48%,
+      rgba(12, 9, 8, .12) 70%,
+      transparent 100%),
+    linear-gradient(180deg,
+      rgba(8, 5, 4, .30) 0%,
+      transparent 24%,
+      transparent 70%,
+      rgba(8, 5, 4, .52) 100%);
+}
+
+.hv1__grain {
+  z-index: 7;
+  opacity: .09;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.72'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+.hv1__vignette {
+  z-index: 8;
+  box-shadow:
+    inset 0 0 180px rgba(0, 0, 0, .46),
+    inset 0 -90px 130px rgba(0, 0, 0, .30);
+}
+
+@keyframes hv1-breathe {
+  0%   { opacity: .72; transform: translate3d(2%, 2%, 0) scale(.96); }
+  45%  { opacity: .94; }
+  100% { opacity: .82; transform: translate3d(-1%, -2%, 0) scale(1.08); }
+}
+
+@keyframes hv1-core {
+  from { opacity: .58; transform: translate3d(2%, 3%, 0) scale(.88); }
+  to   { opacity: .94; transform: translate3d(-3%, -2%, 0) scale(1.12); }
+}
+
+@keyframes hv1-rise {
+  0%, 100% { transform: translate3d(-5%, 6%, 0) rotate(7deg) scaleX(.82); opacity: .22; }
+  45%      { transform: translate3d(8%, -5%, 0) rotate(-4deg) scaleX(1.08); opacity: .58; }
+  75%      { transform: translate3d(-2%, -10%, 0) rotate(3deg) scaleX(.92); opacity: .32; }
+}
+
+@keyframes hv1-brick {
+  from { transform: translate3d(0, 8px, -10px); filter: brightness(.82); }
+  to   { transform: translate3d(0, -9px, 24px); filter: brightness(1.18); }
+}
+
+@media (max-width: 760px) {
+  .hv1 {
+    background:
+      radial-gradient(ellipse at 72% 80%, #812218 0%, #39100d 31%, transparent 62%),
+      #120b09;
+  }
+
+  .hv1__ambient {
+    right: -36%;
+    bottom: -8%;
+    width: 150vw;
+  }
+
+  .hv1__core {
+    right: -12%;
+    bottom: 10%;
+    width: 78vw;
+  }
+
+  .hv1__brick-field {
+    inset: 18% -55% -8% 36%;
+    opacity: .28;
+  }
+
+  .hv1__scrim {
+    background:
+      linear-gradient(90deg,
+        rgba(11,8,7,.94) 0%,
+        rgba(11,8,7,.78) 56%,
+        rgba(11,8,7,.20) 100%),
+      linear-gradient(180deg,
+        rgba(8,5,4,.28),
+        transparent 50%,
+        rgba(8,5,4,.58));
+  }
+
+  .hv1__vignette {
+    box-shadow: inset 0 0 90px rgba(0,0,0,.42);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hv1 *,
+  .hv1 *::before,
+  .hv1 *::after {
+    animation: none !important;
+  }
+
+  .hv1__ambient { opacity: .84; transform: scale(1.04); }
+  .hv1__core { opacity: .82; transform: none; }
+  .hv1__heat { opacity: .34; }
 }
 </style>
 </head>
@@ -84,28 +324,38 @@
   </div>
 </nav>
 
-<!-- Hero (v2 C: 에디토리얼 타이포그래피) -->
-<section class="hero hero-v2c" id="hero">
-  <div class="v2c-wrap container">
-    <p class="hero-tag v2c-tag"><span class="v2c-square" aria-hidden="true"></span><span data-i18n="heroTag">글로벌 인디게임 퍼블리셔</span></p>
-    <h1 class="v2c-title" aria-label="RED BRICK HOUSE">
-      <span class="v2c-line"><span class="v2c-word">RED</span></span>
-      <span class="v2c-line"><span class="v2c-word v2c-outline">BRICK</span></span>
-      <span class="v2c-line"><span class="v2c-word">HOUSE</span></span>
-    </h1>
-    <div class="v2c-bottom">
-      <p class="hero-sub v2c-sub" data-i18n="heroSub">레드브릭하우스는 단순 퍼블리셔가 아닙니다.<br>인디 개발자들의 든든한 동반자입니다.</p>
-      <div class="hero-actions v2c-actions">
-        <a href="#about" class="btn btn-ghost" data-i18n="heroBtn2">우리의 이야기</a>
-        <a href="#contact" class="btn btn-primary" data-i18n="heroBtn1">문의하기</a>
-      </div>
+<!-- Hero (v2 V2R: Kiro visual) -->
+<section class="hero hero-v2r" id="hero">
+<!-- 장식 전용 레이어. 히어로 콘텐츠보다 먼저 배치하세요. -->
+<div class="hv1" aria-hidden="true">
+  <canvas class="hv1__canvas"></canvas>
+
+  <div class="hv1__ambient"></div>
+  <div class="hv1__core"></div>
+  <div class="hv1__heat">
+    <i></i><i></i><i></i>
+  </div>
+
+  <div class="hv1__brick-field">
+    <i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <div class="hv1__scrim"></div>
+  <div class="hv1__grain"></div>
+  <div class="hv1__vignette"></div>
+</div>
+  <div class="hero-content khero-content">
+    <p class="hero-tag" data-i18n="heroTag">글로벌 인디게임 퍼블리셔</p>
+    <h1 class="hero-title" data-i18n="heroTitle">RED&nbsp;BRICK&nbsp;HOUSE</h1>
+    <p class="hero-sub" data-i18n="heroSub">레드브릭하우스는 단순 퍼블리셔가 아닙니다.<br>인디 개발자들의 든든한 동반자입니다.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary" data-i18n="heroBtn1">문의하기</a>
+      <a href="#about" class="btn btn-ghost" data-i18n="heroBtn2">우리의 이야기</a>
     </div>
   </div>
-  <div class="v2c-strip" aria-hidden="true">
-    <div class="v2c-strip-track">
-      <span class="v2c-strip-seq"><span>VOID DIVER</span><i></i><span>PROJECT B</span><i></i><span>PROJECT O</span><i></i><span>EST. 2026</span><i></i><span>GLOBAL INDIE GAME PUBLISHER</span><i></i></span>
-      <span class="v2c-strip-seq"><span>VOID DIVER</span><i></i><span>PROJECT B</span><i></i><span>PROJECT O</span><i></i><span>EST. 2026</span><i></i><span>GLOBAL INDIE GAME PUBLISHER</span><i></i></span>
-    </div>
+  <div class="hero-scroll">
+    <span data-i18n="heroScroll">스크롤</span>
+    <div class="scroll-line"></div>
   </div>
 </section>
 
@@ -395,7 +645,183 @@
 <script src="/script.js?v=20260818-1"></script>
 <div class="v2-switch" aria-label="시안 전환">
   <span><a href="/v2/" class="v2-home">시안 v2</a></span>
-  <a href="/v2/a.html">A</a><a href="/v2/b.html">B</a><a href="/v2/c.html" class="on">C</a><a href="/v2/d.html">D</a><a href="/v2/e.html">E</a><a href="/v2/f.html">F</a><a href="/v2/g.html">G</a><a href="/v2/h.html">H</a><a href="/v2/i.html">I</a><a href="/v2/j.html">J</a><a href="/v2/k.html">K</a><a href="/v2/l.html">L</a><a href="/v2/m.html">M</a><a href="/v2/n.html">N</a><a href="/v2/o.html">O</a><a href="/v2/p.html">P</a><a href="/v2/q.html">Q</a><a href="/v2/r.html">R</a><a href="/v2/s.html">S</a>
+  <a href="/v2/a.html">A</a><a href="/v2/b.html">B</a><a href="/v2/c.html">C</a><a href="/v2/d.html">D</a><a href="/v2/e.html">E</a><a href="/v2/f.html">F</a><a href="/v2/g.html">G</a><a href="/v2/h.html">H</a><a href="/v2/i.html">I</a><a href="/v2/j.html">J</a><a href="/v2/k.html">K</a><a href="/v2/l.html">L</a><a href="/v2/m.html">M</a><a href="/v2/n.html">N</a><a href="/v2/o.html">O</a><a href="/v2/p.html">P</a><a href="/v2/q.html">Q</a><a href="/v2/r.html" class="on">R</a><a href="/v2/s.html">S</a>
 </div>
+<script>
+/* 경량 Canvas 2D 불씨/분진. 외부 의존성 0. */
+(() => {
+  const roots = document.querySelectorAll('.hv1');
+
+  roots.forEach((root) => {
+    const canvas = root.querySelector('.hv1__canvas');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d', { alpha: true });
+    const media = matchMedia('(prefers-reduced-motion: reduce)');
+    const particles = [];
+
+    let cssWidth = 1;
+    let cssHeight = 1;
+    let dpr = 1;
+    let frame = 0;
+    let lastTime = 0;
+    let visible = true;
+    let intersecting = true;
+    let reduced = media.matches;
+
+    const random = (min, max) => min + Math.random() * (max - min);
+
+    function createParticle(initial = false) {
+      const mobile = cssWidth < 760;
+      return {
+        x: random(cssWidth * (mobile ? .55 : .58), cssWidth * 1.02),
+        y: initial
+          ? random(cssHeight * .22, cssHeight * 1.04)
+          : random(cssHeight * .79, cssHeight * 1.05),
+        r: random(.35, mobile ? 1.45 : 1.8),
+        vx: random(-5, 4),
+        vy: random(-25, -7),
+        drift: random(5, 17),
+        phase: random(0, Math.PI * 2),
+        life: random(.2, 1),
+        decay: random(.035, .095),
+        glow: Math.random() > .78
+      };
+    }
+
+    function resetParticle(p) {
+      Object.assign(p, createParticle(false), { life: random(.65, 1) });
+    }
+
+    function buildParticles() {
+      particles.length = 0;
+      const count = reduced
+        ? Math.min(46, Math.round(cssWidth / 22))
+        : Math.min(cssWidth < 760 ? 54 : 96, Math.round(cssWidth / 14));
+
+      for (let i = 0; i < count; i++) {
+        particles.push(createParticle(true));
+      }
+    }
+
+    function resize() {
+      const rect = root.getBoundingClientRect();
+      cssWidth = Math.max(1, rect.width);
+      cssHeight = Math.max(1, rect.height);
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      canvas.width = Math.round(cssWidth * dpr);
+      canvas.height = Math.round(cssHeight * dpr);
+      canvas.style.width = `${cssWidth}px`;
+      canvas.style.height = `${cssHeight}px`;
+
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      buildParticles();
+
+      if (reduced) drawStill();
+    }
+
+    function paintParticle(p, alpha) {
+      const warm = p.glow ? '255,205,132' : '231,109,68';
+
+      if (p.glow) {
+        ctx.beginPath();
+        ctx.fillStyle = `rgba(${warm},${alpha * .12})`;
+        ctx.arc(p.x, p.y, p.r * 6, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      ctx.beginPath();
+      ctx.fillStyle = `rgba(${warm},${alpha})`;
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function drawStill() {
+      ctx.clearRect(0, 0, cssWidth, cssHeight);
+      particles.forEach((p) => paintParticle(p, p.life * .48));
+    }
+
+    function render(time) {
+      frame = 0;
+      if (!visible || !intersecting || reduced) return;
+
+      const dt = Math.min((time - lastTime) / 1000 || .016, .034);
+      lastTime = time;
+      ctx.clearRect(0, 0, cssWidth, cssHeight);
+
+      ctx.globalCompositeOperation = 'lighter';
+
+      particles.forEach((p) => {
+        p.phase += dt * random(.45, .7);
+        p.x += (p.vx + Math.sin(p.phase) * p.drift) * dt;
+        p.y += p.vy * dt;
+        p.life -= p.decay * dt;
+        p.vy -= 1.2 * dt;
+
+        const edgeFade = Math.min(
+          1,
+          Math.max(0, (p.y - cssHeight * .08) / (cssHeight * .2))
+        );
+        const pulse = .72 + Math.sin(p.phase * 2.3) * .28;
+        paintParticle(p, Math.max(0, p.life) * edgeFade * pulse * .72);
+
+        if (
+          p.life <= 0 ||
+          p.y < cssHeight * .04 ||
+          p.x < cssWidth * .38 ||
+          p.x > cssWidth * 1.08
+        ) {
+          resetParticle(p);
+        }
+      });
+
+      ctx.globalCompositeOperation = 'source-over';
+      frame = requestAnimationFrame(render);
+    }
+
+    function sync() {
+      const shouldRun = visible && intersecting && !reduced;
+      if (shouldRun && !frame) {
+        lastTime = performance.now();
+        frame = requestAnimationFrame(render);
+      } else if (!shouldRun && frame) {
+        cancelAnimationFrame(frame);
+        frame = 0;
+      }
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        intersecting = entry.isIntersecting;
+        sync();
+      },
+      { threshold: .01 }
+    );
+
+    const resizeObserver = new ResizeObserver(resize);
+
+    function onVisibility() {
+      visible = document.visibilityState === 'visible';
+      sync();
+    }
+
+    function onMotionChange(event) {
+      reduced = event.matches;
+      buildParticles();
+      if (reduced) drawStill();
+      sync();
+    }
+
+    observer.observe(root);
+    resizeObserver.observe(root);
+    document.addEventListener('visibilitychange', onVisibility);
+    media.addEventListener?.('change', onMotionChange);
+
+    resize();
+    sync();
+  });
+})();
+</script>
 </body>
 </html>

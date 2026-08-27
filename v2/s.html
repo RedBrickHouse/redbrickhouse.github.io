@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[시안 C] 메인 히어로 v2 - RED BRICK HOUSE</title>
+<title>[시안 S] 메인 히어로 v2 - RED BRICK HOUSE</title>
 <meta name="description" content="레드브릭하우스(RED BRICK HOUSE)는 글로벌 인디게임 퍼블리셔입니다. 사업화 전략과 투자 유치, 팬 커뮤니티와 마케팅, 글로벌 출시까지 인디 개발사의 모든 여정을 함께합니다.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#c0392b">
@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png?v=20260713">
 <link rel="apple-touch-icon" href="/img/favicon-180.png">
 <style>
-/* === v2 draft (C: 에디토리얼 타이포그래피) === */
+/* === v2 draft (S: Kiro 히어로 · 살아있는 조적) === */
 /* v2 draft switcher */
 .v2-switch{position:fixed;left:16px;bottom:16px;z-index:400;display:flex;gap:6px;align-items:center;background:rgba(26,26,26,0.92);border-radius:8px;padding:8px 10px;box-shadow:0 6px 24px rgba(0,0,0,0.25);}
 .v2-switch span{color:#bbb;font-size:11px;letter-spacing:1px;margin-right:4px;}
@@ -26,35 +26,227 @@
 .v2-switch a{color:#ddd;font-size:12px;font-weight:700;width:26px;height:26px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.25);border-radius:6px;transition:all .2s;}
 .v2-switch a:hover{background:rgba(255,255,255,0.12);color:#fff;}
 .v2-switch a.on{background:#c0392b;border-color:#c0392b;color:#fff;}
+.hero-v2s{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:flex-start;text-align:left;background:#17100e;color:#fff7ef;overflow:hidden;}
+.hero-v2s .khero-content{position:relative;z-index:3;width:100%;max-width:600px;margin:0;padding:88px clamp(24px,7vw,120px) 0;}
+.hero-v2s .hero-tag{color:#e39a86;}
+.hero-v2s .hero-title{color:#fff7ef;text-shadow:0 2px 30px rgba(0,0,0,0.35);}
+.hero-v2s .hero-sub{color:#decac0;margin-left:0;margin-right:0;}
+.hero-v2s .hero-actions{justify-content:flex-start;}
+.hero-v2s .btn-primary{background:#c0392b;color:#fff;}
+.hero-v2s .btn-primary:hover{background:#d8443a;transform:translateY(-2px);}
+.hero-v2s .btn-ghost{border-color:rgba(255,247,239,0.4);color:#fff7ef;}
+.hero-v2s .btn-ghost:hover{border-color:rgba(255,247,239,0.85);background:rgba(255,247,239,0.08);}
+.hero-v2s .hero-scroll{color:rgba(255,247,239,0.5);}
+.hero-v2s .scroll-line{background:rgba(255,247,239,0.5);}
+.nav:not(.scrolled){background:transparent;backdrop-filter:none;border-bottom:1px solid rgba(255,247,239,0.1);}
+.nav:not(.scrolled) .nav-links a{color:rgba(255,247,239,0.82);}
+.nav:not(.scrolled) .nav-links a:hover{color:#fff;}
+.nav:not(.scrolled) .logo-img{filter:brightness(0) invert(1);}
+.nav:not(.scrolled) .lang-btn{color:rgba(255,247,239,0.7);border-color:rgba(255,247,239,0.28);}
+.nav:not(.scrolled) .lang-btn.active{background:#c0392b;border-color:#c0392b;color:#fff;}
+.nav:not(.scrolled) .nav-toggle span{background:rgba(255,247,239,0.95);}
+@media (max-width:768px){.hero-v2s .khero-content{max-width:none;padding-top:92px;}}
 
-/* v2 C: editorial typography */
-.hero-v2c{background:#faf9f7;flex-direction:column;text-align:left;}
-.v2c-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;width:100%;padding-top:110px;padding-bottom:60px;}
-.v2c-tag{display:flex;align-items:center;gap:12px;margin-bottom:30px;}
-.v2c-square{width:12px;height:12px;background:#c0392b;display:inline-block;flex:0 0 auto;}
-.v2c-title{font-family:'GmarketSans','Pretendard Variable',Pretendard,sans-serif;font-weight:700;font-size:clamp(58px,10.5vw,148px);line-height:1.0;letter-spacing:0.01em;margin-bottom:40px;color:#1a1a1a;}
-.v2c-line{display:block;overflow:hidden;padding-top:0.08em;}
-.v2c-word{display:inline-block;transform:translateY(112%);animation:v2cRise .7s cubic-bezier(.2,.7,.2,1) forwards;}
-.v2c-line:nth-child(2) .v2c-word{animation-delay:.09s;}
-.v2c-line:nth-child(3) .v2c-word{animation-delay:.18s;}
-@keyframes v2cRise{to{transform:translateY(0);}}
-.v2c-outline{color:transparent;-webkit-text-stroke:2.5px #c0392b;}
-.v2c-bottom{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap;}
-.v2c-sub{margin:0;max-width:520px;}
-.v2c-actions{justify-content:flex-start;}
-.v2c-strip{width:100%;border-top:1px solid #e8e0d6;border-bottom:1px solid #e8e0d6;overflow:hidden;}
-.v2c-strip-track{display:flex;white-space:nowrap;width:max-content;animation:v2cTicker 30s linear infinite;}
-.v2c-strip-seq{display:inline-flex;align-items:center;gap:30px;padding:14px 15px;font-size:13px;letter-spacing:3px;font-weight:600;color:#8b857e;}
-.v2c-strip-seq i{width:9px;height:9px;background:#c0392b;display:inline-block;}
-@keyframes v2cTicker{to{transform:translateX(-50%);}}
-@media (prefers-reduced-motion: reduce){.v2c-word{animation:none;transform:none;}.v2c-strip-track{animation:none;}}
-@media (max-width:768px){
-  .v2c-wrap{padding-top:96px;padding-bottom:48px;}
-  .v2c-title{font-size:clamp(52px,15vw,88px);margin-bottom:32px;}
-  .v2c-bottom{flex-direction:column;align-items:flex-start;}
-  .hero-v2c .hero-actions{flex-direction:column;align-items:stretch;width:100%;}
-  .hero-v2c .hero-actions .btn{max-width:none;text-align:center;}
-  .v2c-strip-seq{font-size:11px;letter-spacing:2px;gap:20px;padding:12px 10px;}
+/* --- Kiro hero visual hv2 --- */
+/* 완결 CSS. .hv2{position:absolute;inset:0} 전제. */
+.hv2 {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  isolation: isolate;
+  pointer-events: none;
+  background: #150907;
+}
+
+.hv2__structure,
+.hv2__atmosphere,
+.hv2__scrim,
+.hv2__grain,
+.hv2__vignette {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hv2__structure {
+  z-index: 2;
+  display: block;
+  transform: translate3d(0, 0, 0) scale(1.025);
+}
+
+.hv2__atmosphere {
+  z-index: 1;
+  background:
+    radial-gradient(circle at 78% 42%,
+      rgba(255, 142, 100, .23),
+      rgba(192, 57, 43, .10) 23%,
+      transparent 52%),
+    linear-gradient(122deg,
+      #120806 0%,
+      #25100d 45%,
+      #4f1712 100%);
+  animation: hv2-atmosphere 10s ease-in-out infinite alternate;
+}
+
+.hv2__brick {
+  transform-box: fill-box;
+  transform-origin: center;
+  will-change: transform, opacity;
+  animation: hv2-settle 9s cubic-bezier(.2, .72, .2, 1) infinite;
+  animation-delay: calc(var(--i) * -.63s);
+}
+
+.hv2__column--2 .hv2__brick {
+  animation-duration: 10.5s;
+}
+
+.hv2__column--3 .hv2__brick {
+  animation-duration: 12s;
+}
+
+/* 전체 구조가 거의 인지되지 않을 정도로 천천히 호흡 */
+.hv2__masonry {
+  transform-origin: 72% 62%;
+  animation: hv2-mass 13s ease-in-out infinite alternate;
+}
+
+.hv2__back-plane {
+  transform-origin: 80% 50%;
+  animation: hv2-plane 16s ease-in-out infinite alternate;
+}
+
+.hv2__scan {
+  transform: translate3d(-47%, 0, 0);
+  animation: hv2-scan 10s cubic-bezier(.4, 0, .2, 1) infinite;
+  mix-blend-mode: screen;
+}
+
+.hv2__floor-glow {
+  animation: hv2-floor 7s ease-in-out infinite alternate;
+}
+
+.hv2__scrim {
+  z-index: 5;
+  background:
+    linear-gradient(90deg,
+      rgba(13, 8, 7, .96) 0%,
+      rgba(17, 9, 8, .88) 22%,
+      rgba(22, 9, 8, .67) 43%,
+      rgba(22, 9, 8, .20) 67%,
+      transparent 100%),
+    linear-gradient(180deg,
+      rgba(8, 4, 3, .28) 0%,
+      transparent 35%,
+      transparent 70%,
+      rgba(8, 4, 3, .58) 100%);
+}
+
+.hv2__grain {
+  z-index: 6;
+  opacity: .105;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.74' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.68'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+}
+
+.hv2__vignette {
+  z-index: 7;
+  box-shadow:
+    inset 0 0 190px rgba(0, 0, 0, .55),
+    inset 0 -100px 150px rgba(0, 0, 0, .38);
+}
+
+@keyframes hv2-settle {
+  0%, 7% {
+    opacity: .58;
+    transform: translate3d(0, -16px, 0) scale(.988);
+  }
+  16%, 72% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  87%, 100% {
+    opacity: .76;
+    transform: translate3d(0, 5px, 0) scale(.996);
+  }
+}
+
+@keyframes hv2-mass {
+  from { transform: translate3d(6px, 4px, 0) scale(.995); }
+  to   { transform: translate3d(-8px, -5px, 0) scale(1.012); }
+}
+
+@keyframes hv2-plane {
+  from { transform: translate3d(0, 0, 0) skewY(0deg); opacity: .26; }
+  to   { transform: translate3d(-12px, 4px, 0) skewY(-.35deg); opacity: .43; }
+}
+
+@keyframes hv2-scan {
+  0%, 14%   { transform: translate3d(-52%, 0, 0); opacity: 0; }
+  23%       { opacity: .72; }
+  67%       { opacity: .72; }
+  78%, 100% { transform: translate3d(59%, 0, 0); opacity: 0; }
+}
+
+@keyframes hv2-floor {
+  from { opacity: .10; transform: scaleX(.86); }
+  to   { opacity: .23; transform: scaleX(1.06); }
+}
+
+@keyframes hv2-atmosphere {
+  from { filter: brightness(.88) saturate(.92); }
+  to   { filter: brightness(1.08) saturate(1.1); }
+}
+
+@media (max-width: 760px) {
+  .hv2__structure {
+    width: 178%;
+    max-width: none;
+    left: -63%;
+    transform: translate3d(0, 0, 0) scale(1.02);
+  }
+
+  .hv2__scrim {
+    background:
+      linear-gradient(90deg,
+        rgba(12,7,6,.96) 0%,
+        rgba(16,8,7,.84) 52%,
+        rgba(18,8,7,.30) 100%),
+      linear-gradient(180deg,
+        rgba(8,4,3,.24),
+        transparent 48%,
+        rgba(8,4,3,.62));
+  }
+
+  .hv2__vignette {
+    box-shadow:
+      inset 0 0 100px rgba(0,0,0,.5),
+      inset 0 -70px 110px rgba(0,0,0,.38);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hv2 *,
+  .hv2 *::before,
+  .hv2 *::after {
+    animation: none !important;
+  }
+
+  .hv2__brick {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hv2__scan {
+    transform: translate3d(15%, 0, 0);
+    opacity: .38;
+  }
+
+  .hv2__floor-glow {
+    opacity: .18;
+  }
 }
 </style>
 </head>
@@ -84,28 +276,191 @@
   </div>
 </nav>
 
-<!-- Hero (v2 C: 에디토리얼 타이포그래피) -->
-<section class="hero hero-v2c" id="hero">
-  <div class="v2c-wrap container">
-    <p class="hero-tag v2c-tag"><span class="v2c-square" aria-hidden="true"></span><span data-i18n="heroTag">글로벌 인디게임 퍼블리셔</span></p>
-    <h1 class="v2c-title" aria-label="RED BRICK HOUSE">
-      <span class="v2c-line"><span class="v2c-word">RED</span></span>
-      <span class="v2c-line"><span class="v2c-word v2c-outline">BRICK</span></span>
-      <span class="v2c-line"><span class="v2c-word">HOUSE</span></span>
-    </h1>
-    <div class="v2c-bottom">
-      <p class="hero-sub v2c-sub" data-i18n="heroSub">레드브릭하우스는 단순 퍼블리셔가 아닙니다.<br>인디 개발자들의 든든한 동반자입니다.</p>
-      <div class="hero-actions v2c-actions">
-        <a href="#about" class="btn btn-ghost" data-i18n="heroBtn2">우리의 이야기</a>
-        <a href="#contact" class="btn btn-primary" data-i18n="heroBtn1">문의하기</a>
-      </div>
+<!-- Hero (v2 V2S: Kiro visual) -->
+<section class="hero hero-v2s" id="hero">
+<!-- 장식 전용 레이어. 히어로 콘텐츠보다 먼저 배치하세요. -->
+<div class="hv2" aria-hidden="true">
+  <div class="hv2__atmosphere"></div>
+
+  <svg class="hv2__structure"
+       viewBox="0 0 1600 900"
+       preserveAspectRatio="xMidYMid slice"
+       focusable="false">
+    <defs>
+      <linearGradient id="hv2-brick" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#f08a71"/>
+        <stop offset=".12" stop-color="#c84b3b"/>
+        <stop offset=".58" stop-color="#9f2d25"/>
+        <stop offset="1" stop-color="#5f1915"/>
+      </linearGradient>
+
+      <linearGradient id="hv2-brick-dark" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#c94a3a"/>
+        <stop offset=".5" stop-color="#86241e"/>
+        <stop offset="1" stop-color="#47100e"/>
+      </linearGradient>
+
+      <linearGradient id="hv2-edge" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffd4bd" stop-opacity=".74"/>
+        <stop offset=".14" stop-color="#e86f58" stop-opacity=".25"/>
+        <stop offset="1" stop-color="#250807" stop-opacity=".24"/>
+      </linearGradient>
+
+      <radialGradient id="hv2-light" cx="76%" cy="43%" r="53%">
+        <stop offset="0" stop-color="#ffb182" stop-opacity=".28"/>
+        <stop offset=".36" stop-color="#d34c38" stop-opacity=".11"/>
+        <stop offset="1" stop-color="#110807" stop-opacity="0"/>
+      </radialGradient>
+
+      <filter id="hv2-shadow" x="-30%" y="-40%" width="170%" height="190%">
+        <feDropShadow dx="-8" dy="18" stdDeviation="14"
+                      flood-color="#090303" flood-opacity=".55"/>
+      </filter>
+
+      <filter id="hv2-soft" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="18"/>
+      </filter>
+
+      <pattern id="hv2-lines" width="160" height="66"
+               patternUnits="userSpaceOnUse">
+        <path d="M0 65.5H160M80 0V65.5"
+              fill="none"
+              stroke="#ffd5c2"
+              stroke-opacity=".055"
+              stroke-width="1"/>
+      </pattern>
+    </defs>
+
+    <rect width="1600" height="900" fill="#150907"/>
+    <rect width="1600" height="900" fill="url(#hv2-light)"/>
+    <rect x="580" width="1020" height="900" fill="url(#hv2-lines)"/>
+
+    <g class="hv2__back-plane" opacity=".34">
+      <path d="M880 40L1600 175V900H690Z"
+            fill="#5e1814"
+            stroke="#e26350"
+            stroke-opacity=".12"/>
+      <path d="M1050 0L1600 114V213L1018 93Z"
+            fill="#a33128"
+            opacity=".28"/>
+    </g>
+
+    <g class="hv2__masonry" filter="url(#hv2-shadow)">
+      <!-- 열마다 하나의 정밀한 조적 매스 -->
+      <g class="hv2__column hv2__column--1">
+        <g class="hv2__brick" style="--i:0">
+          <rect x="690" y="674" width="248" height="90" rx="4" fill="url(#hv2-brick-dark)"/>
+          <path d="M690 674H938L920 691H708Z" fill="url(#hv2-edge)"/>
+          <path d="M938 674L920 691V768L938 764Z" fill="#53130f"/>
+        </g>
+        <g class="hv2__brick" style="--i:1">
+          <rect x="716" y="570" width="248" height="90" rx="4" fill="url(#hv2-brick)"/>
+          <path d="M716 570H964L946 587H734Z" fill="url(#hv2-edge)"/>
+          <path d="M964 570L946 587V664L964 660Z" fill="#601712"/>
+        </g>
+        <g class="hv2__brick" style="--i:2">
+          <rect x="680" y="466" width="248" height="90" rx="4" fill="url(#hv2-brick-dark)"/>
+          <path d="M680 466H928L910 483H698Z" fill="url(#hv2-edge)"/>
+          <path d="M928 466L910 483V560L928 556Z" fill="#51120f"/>
+        </g>
+        <g class="hv2__brick" style="--i:3">
+          <rect x="706" y="362" width="248" height="90" rx="4" fill="url(#hv2-brick)"/>
+          <path d="M706 362H954L936 379H724Z" fill="url(#hv2-edge)"/>
+          <path d="M954 362L936 379V456L954 452Z" fill="#641813"/>
+        </g>
+      </g>
+
+      <g class="hv2__column hv2__column--2">
+        <g class="hv2__brick" style="--i:1">
+          <rect x="954" y="706" width="280" height="98" rx="4" fill="url(#hv2-brick)"/>
+          <path d="M954 706H1234L1213 725H975Z" fill="url(#hv2-edge)"/>
+          <path d="M1234 706L1213 725V808L1234 804Z" fill="#5a1511"/>
+        </g>
+        <g class="hv2__brick" style="--i:2">
+          <rect x="986" y="593" width="280" height="98" rx="4" fill="url(#hv2-brick-dark)"/>
+          <path d="M986 593H1266L1245 612H1007Z" fill="url(#hv2-edge)"/>
+          <path d="M1266 593L1245 612V695L1266 691Z" fill="#4c100e"/>
+        </g>
+        <g class="hv2__brick" style="--i:3">
+          <rect x="944" y="480" width="280" height="98" rx="4" fill="url(#hv2-brick)"/>
+          <path d="M944 480H1224L1203 499H965Z" fill="url(#hv2-edge)"/>
+          <path d="M1224 480L1203 499V582L1224 578Z" fill="#601612"/>
+        </g>
+        <g class="hv2__brick" style="--i:4">
+          <rect x="976" y="367" width="280" height="98" rx="4" fill="url(#hv2-brick-dark)"/>
+          <path d="M976 367H1256L1235 386H997Z" fill="url(#hv2-edge)"/>
+          <path d="M1256 367L1235 386V469L1256 465Z" fill="#4b100d"/>
+        </g>
+        <g class="hv2__brick" style="--i:5">
+          <rect x="934" y="254" width="280" height="98" rx="4" fill="url(#hv2-brick)"/>
+          <path d="M934 254H1214L1193 273H955Z" fill="url(#hv2-edge)"/>
+          <path d="M1214 254L1193 273V356L1214 352Z" fill="#611612"/>
+        </g>
+      </g>
+
+      <g class="hv2__column hv2__column--3">
+        <g class="hv2__brick" style="--i:2">
+          <rect x="1250" y="650" width="326" height="108" rx="4" fill="url(#hv2-brick-dark)"/>
+          <path d="M1250 650H1576L1552 671H1274Z" fill="url(#hv2-edge)"/>
+          <path d="M1576 650L1552 671V762L1576 758Z" fill="#46100d"/>
+        </g>
+        <g class="hv2__brick" style="--i:3">
+          <rect x="1288" y="527" width="326" height="108" rx="4" fill="url(#hv2-brick)"/>
+          <path d="M1288 527H1614L1590 548H1312Z" fill="url(#hv2-edge)"/>
+          <path d="M1614 527L1590 548V639L1614 635Z" fill="#5d1611"/>
+        </g>
+        <g class="hv2__brick" style="--i:4">
+          <rect x="1240" y="404" width="326" height="108" rx="4" fill="url(#hv2-brick-dark)"/>
+          <path d="M1240 404H1566L1542 425H1264Z" fill="url(#hv2-edge)"/>
+          <path d="M1566 404L1542 425V516L1566 512Z" fill="#46100d"/>
+        </g>
+        <g class="hv2__brick" style="--i:5">
+          <rect x="1278" y="281" width="326" height="108" rx="4" fill="url(#hv2-brick)"/>
+          <path d="M1278 281H1604L1580 302H1302Z" fill="url(#hv2-edge)"/>
+          <path d="M1604 281L1580 302V393L1604 389Z" fill="#601713"/>
+        </g>
+        <g class="hv2__brick" style="--i:6">
+          <rect x="1230" y="158" width="326" height="108" rx="4" fill="url(#hv2-brick-dark)"/>
+          <path d="M1230 158H1556L1532 179H1254Z" fill="url(#hv2-edge)"/>
+          <path d="M1556 158L1532 179V270L1556 266Z" fill="#46100d"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- 구조를 훑는 얇은 장인 작업광 -->
+    <g class="hv2__scan">
+      <path d="M870 -130L1080 -130L1620 920L1410 920Z"
+            fill="#ffd2ae"
+            opacity=".115"
+            filter="url(#hv2-soft)"/>
+      <path d="M965 -120L982 -120L1510 920L1493 920Z"
+            fill="#ffe0c8"
+            opacity=".28"/>
+    </g>
+
+    <!-- 지면의 절제된 반사 -->
+    <ellipse class="hv2__floor-glow"
+             cx="1230" cy="842" rx="430" ry="94"
+             fill="#dc513b" opacity=".16"
+             filter="url(#hv2-soft)"/>
+  </svg>
+
+  <div class="hv2__scrim"></div>
+  <div class="hv2__grain"></div>
+  <div class="hv2__vignette"></div>
+</div>
+  <div class="hero-content khero-content">
+    <p class="hero-tag" data-i18n="heroTag">글로벌 인디게임 퍼블리셔</p>
+    <h1 class="hero-title" data-i18n="heroTitle">RED&nbsp;BRICK&nbsp;HOUSE</h1>
+    <p class="hero-sub" data-i18n="heroSub">레드브릭하우스는 단순 퍼블리셔가 아닙니다.<br>인디 개발자들의 든든한 동반자입니다.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary" data-i18n="heroBtn1">문의하기</a>
+      <a href="#about" class="btn btn-ghost" data-i18n="heroBtn2">우리의 이야기</a>
     </div>
   </div>
-  <div class="v2c-strip" aria-hidden="true">
-    <div class="v2c-strip-track">
-      <span class="v2c-strip-seq"><span>VOID DIVER</span><i></i><span>PROJECT B</span><i></i><span>PROJECT O</span><i></i><span>EST. 2026</span><i></i><span>GLOBAL INDIE GAME PUBLISHER</span><i></i></span>
-      <span class="v2c-strip-seq"><span>VOID DIVER</span><i></i><span>PROJECT B</span><i></i><span>PROJECT O</span><i></i><span>EST. 2026</span><i></i><span>GLOBAL INDIE GAME PUBLISHER</span><i></i></span>
-    </div>
+  <div class="hero-scroll">
+    <span data-i18n="heroScroll">스크롤</span>
+    <div class="scroll-line"></div>
   </div>
 </section>
 
@@ -395,7 +750,62 @@
 <script src="/script.js?v=20260818-1"></script>
 <div class="v2-switch" aria-label="시안 전환">
   <span><a href="/v2/" class="v2-home">시안 v2</a></span>
-  <a href="/v2/a.html">A</a><a href="/v2/b.html">B</a><a href="/v2/c.html" class="on">C</a><a href="/v2/d.html">D</a><a href="/v2/e.html">E</a><a href="/v2/f.html">F</a><a href="/v2/g.html">G</a><a href="/v2/h.html">H</a><a href="/v2/i.html">I</a><a href="/v2/j.html">J</a><a href="/v2/k.html">K</a><a href="/v2/l.html">L</a><a href="/v2/m.html">M</a><a href="/v2/n.html">N</a><a href="/v2/o.html">O</a><a href="/v2/p.html">P</a><a href="/v2/q.html">Q</a><a href="/v2/r.html">R</a><a href="/v2/s.html">S</a>
+  <a href="/v2/a.html">A</a><a href="/v2/b.html">B</a><a href="/v2/c.html">C</a><a href="/v2/d.html">D</a><a href="/v2/e.html">E</a><a href="/v2/f.html">F</a><a href="/v2/g.html">G</a><a href="/v2/h.html">H</a><a href="/v2/i.html">I</a><a href="/v2/j.html">J</a><a href="/v2/k.html">K</a><a href="/v2/l.html">L</a><a href="/v2/m.html">M</a><a href="/v2/n.html">N</a><a href="/v2/o.html">O</a><a href="/v2/p.html">P</a><a href="/v2/q.html">Q</a><a href="/v2/r.html">R</a><a href="/v2/s.html" class="on">S</a>
 </div>
+<script>
+/* CSS/SVG 전용 후보이므로 필수 JS 없음.
+   화면 밖에서는 CSS 애니메이션도 정지하도록 하는 선택적 IIFE입니다. */
+(() => {
+  const roots = document.querySelectorAll('.hv2');
+  if (!roots.length) return;
+
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const states = new WeakMap();
+
+  function sync(root) {
+    const state = states.get(root);
+    if (!state) return;
+
+    const shouldPause =
+      reducedMotion.matches ||
+      document.visibilityState !== 'visible' ||
+      !state.intersecting;
+
+    root.style.setProperty(
+      '--hv2-play-state',
+      shouldPause ? 'paused' : 'running'
+    );
+
+    root.querySelectorAll('*').forEach((element) => {
+      element.style.animationPlayState = shouldPause ? 'paused' : 'running';
+    });
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const state = states.get(entry.target);
+        state.intersecting = entry.isIntersecting;
+        sync(entry.target);
+      });
+    },
+    { threshold: .01 }
+  );
+
+  roots.forEach((root) => {
+    states.set(root, { intersecting: true });
+    observer.observe(root);
+    sync(root);
+  });
+
+  document.addEventListener('visibilitychange', () => {
+    roots.forEach(sync);
+  });
+
+  reducedMotion.addEventListener?.('change', () => {
+    roots.forEach(sync);
+  });
+})();
+</script>
 </body>
 </html>
