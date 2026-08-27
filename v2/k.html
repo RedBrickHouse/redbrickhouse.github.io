@@ -78,14 +78,6 @@
 a.v2k-featured:hover{transform:translateY(-5px);box-shadow:inset 0 0 0 3px #c0392b,inset 0 3px 10px rgba(0,0,0,0.55),0 6px 14px rgba(0,0,0,0.5),0 30px 60px rgba(0,0,0,0.5);}
 a.v2k-featured:hover .v2k-art img{transform:scale(1.05);}
 .hero-v2k .hero-scroll{display:none;}
-/* bottom lineup ticker: fills the lower band and gives the hero life */
-.v2k-ticker{width:100%;border-top:1px solid rgba(244,241,238,0.1);overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);}
-.v2k-ticker-track{display:flex;white-space:nowrap;width:max-content;animation:v2kTicker 34s linear infinite;}
-.v2k-ticker-seq{display:inline-flex;align-items:center;gap:24px;padding:15px 12px;font-size:12px;letter-spacing:3px;font-weight:600;color:rgba(244,241,238,0.5);}
-.v2k-ticker-seq span{font-family:'GmarketSans','Pretendard Variable',Pretendard,sans-serif;}
-.v2k-ticker-seq i{width:5px;height:5px;border-radius:1px;background:#c0392b;display:inline-block;}
-@keyframes v2kTicker{to{transform:translateX(-50%);}}
-@media (prefers-reduced-motion: reduce){.v2k-ticker-track{animation:none;}}
 @media (prefers-reduced-motion: reduce){
   .v2k-art img,.v2k-featured,.hero-v2k .btn-primary{transition:none;}
   a.v2k-featured:hover{transform:none;}
@@ -174,12 +166,6 @@ a.v2k-featured:hover .v2k-art img{transform:scale(1.05);}
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="v2k-ticker" aria-hidden="true">
-    <div class="v2k-ticker-track">
-      <span class="v2k-ticker-seq"><span>VOID DIVER</span><i></i><span>PROJECT B</span><i></i><span>PROJECT O</span><i></i><span>EST. 2026</span><i></i><span>SEOUL &middot; GLOBAL</span><i></i></span>
-      <span class="v2k-ticker-seq"><span>VOID DIVER</span><i></i><span>PROJECT B</span><i></i><span>PROJECT O</span><i></i><span>EST. 2026</span><i></i><span>SEOUL &middot; GLOBAL</span><i></i></span>
     </div>
   </div>
   <div class="hero-scroll">
