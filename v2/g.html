@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[시안 E] 메인 히어로 v2 - RED BRICK HOUSE</title>
+<title>[시안 G] 메인 히어로 v2 - RED BRICK HOUSE</title>
 <meta name="description" content="레드브릭하우스(RED BRICK HOUSE)는 글로벌 인디게임 퍼블리셔입니다. 사업화 전략과 투자 유치, 팬 커뮤니티와 마케팅, 글로벌 출시까지 인디 개발사의 모든 여정을 함께합니다.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#c0392b">
@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png?v=20260713">
 <link rel="apple-touch-icon" href="/img/favicon-180.png">
 <style>
-/* === v2 draft (E: 밤의 벽돌집) === */
+/* === v2 draft (G: 석양의 계곡) === */
 /* v2 draft switcher */
 .v2-switch{position:fixed;left:16px;bottom:16px;z-index:400;display:flex;gap:6px;align-items:center;background:rgba(26,26,26,0.92);border-radius:8px;padding:8px 10px;box-shadow:0 6px 24px rgba(0,0,0,0.25);}
 .v2-switch span{color:#bbb;font-size:11px;letter-spacing:1px;margin-right:4px;}
@@ -27,47 +27,39 @@
 .v2-switch a:hover{background:rgba(255,255,255,0.12);color:#fff;}
 .v2-switch a.on{background:#c0392b;border-color:#c0392b;color:#fff;}
 
-/* v2 E: night brick house */
-.hero-v2e{background:#0a0e1e;color:#fff;}
-.v2e-scene{position:absolute;inset:0;overflow:hidden;}
-.v2e-svg{position:absolute;inset:0;width:100%;height:100%;}
+/* v2 G: full-bleed dusk parallax valley */
+.hero-v2g{background:#2c192c;color:#fff;}
+.v2g-scene{position:absolute;inset:0;overflow:hidden;}
+.v2g-svg{position:absolute;inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);}
 .v2e-grain{position:absolute;inset:0;opacity:0.05;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");}
-.v2e-content{padding-bottom:26vh;}
-.hero-v2e .hero-tag{color:#e7a15c;}
-.hero-v2e .hero-title{color:#f5f3ee;}
-.hero-v2e .hero-sub{color:#c3c9da;}
-.hero-v2e .btn-ghost{border-color:rgba(255,255,255,0.42);color:#fff;}
-.hero-v2e .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,0.08);}
-.hero-v2e .hero-scroll{color:rgba(255,255,255,0.5);left:auto;right:40px;transform:none;}
-.hero-v2e .scroll-line{background:rgba(255,255,255,0.28);}
-.v2e-wind path{stroke-dasharray:80 1600;stroke-dashoffset:0;opacity:0.1;}
-.v2e-w1{animation:v2eWind 13s linear infinite;}
-.v2e-w2{animation:v2eWind 18s linear infinite -6s;}
-.v2e-w3{animation:v2eWind 22s linear infinite -12s;}
-@keyframes v2eWind{to{stroke-dashoffset:-1680;}}
-#v2eStars .tw{animation:v2eTwinkle 4s ease-in-out infinite alternate;}
-@keyframes v2eTwinkle{from{opacity:0.15;}to{opacity:0.9;}}
-.v2e-smoke circle{transform-box:fill-box;transform-origin:center;}
-.v2e-window rect[filter]{animation:v2eGlow 6s ease-in-out infinite alternate;}
-.v2e-window:nth-of-type(2) rect[filter]{animation-delay:3s;}
-@keyframes v2eGlow{from{opacity:0.42;}to{opacity:0.58;}}
-.v2e-p1{animation:v2ePuff 8s ease-out infinite;}
-.v2e-p2{animation:v2ePuff 8s ease-out infinite 2.7s;}
-.v2e-p3{animation:v2ePuff 8s ease-out infinite 5.4s;}
-@keyframes v2ePuff{0%{opacity:0;transform:translate(0,14px) scale(0.6);}16%{opacity:0.09;}100%{opacity:0;transform:translate(26px,-64px) scale(1.9);}}
-.v2e-straw{position:absolute;left:-4vw;width:16px;height:3px;border-radius:2px;background:#cfa860;opacity:0;animation:v2eFly linear infinite;}
-.v2e-st1{top:22%;animation-duration:11s;}
-.v2e-st2{top:38%;width:12px;background:#9a7448;animation-duration:14s;animation-delay:3s;}
-.v2e-st3{top:15%;width:20px;background:#c8b184;animation-duration:12s;animation-delay:6s;}
-@keyframes v2eFly{0%{transform:translate(0,0) rotate(0deg);opacity:0;}6%{opacity:0.55;}92%{opacity:0.45;}100%{transform:translate(112vw,6vh) rotate(660deg);opacity:0;}}
+.v2g-l{will-change:transform;}
+.v2g-content{padding-bottom:24vh;}
+.hero-v2g .hero-tag{color:#ffd9a0;}
+.hero-v2g .hero-title{color:#fff6ec;text-shadow:0 2px 24px rgba(60,14,20,0.35);}
+.hero-v2g .hero-sub{color:#f5d9c4;}
+.hero-v2g .btn-primary{background:#fff4e6;color:#a93226;}
+.hero-v2g .btn-primary:hover{background:#ffffff;}
+.hero-v2g .btn-ghost{border-color:rgba(255,244,230,0.55);color:#fff6ec;}
+.hero-v2g .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,0.08);}
+.hero-v2g .hero-scroll{color:rgba(255,244,230,0.6);left:auto;right:40px;transform:none;}
+.hero-v2g .scroll-line{background:rgba(255,244,230,0.35);}
+#v2gStars .tw{animation:v2gTwinkle 4.5s ease-in-out infinite alternate;}
+@keyframes v2gTwinkle{from{opacity:0.1;}to{opacity:0.6;}}
+.v2g-ember{position:absolute;bottom:-12px;width:5px;height:5px;border-radius:50%;background:#ffb36b;opacity:0;animation:v2gRise linear infinite;}
+.v2g-e1{left:12%;animation-duration:15s;}
+.v2g-e2{left:28%;width:4px;height:4px;animation-duration:19s;animation-delay:4s;}
+.v2g-e3{left:47%;animation-duration:13s;animation-delay:8s;}
+.v2g-e4{left:63%;width:4px;height:4px;animation-duration:21s;animation-delay:2s;}
+.v2g-e5{left:78%;animation-duration:16s;animation-delay:11s;}
+.v2g-e6{left:90%;width:3px;height:3px;animation-duration:18s;animation-delay:6s;}
+@keyframes v2gRise{0%{transform:translate(0,0);opacity:0;}8%{opacity:0.7;}60%{opacity:0.4;}100%{transform:translate(4vw,-78vh);opacity:0;}}
 @media (prefers-reduced-motion: reduce){
-  .v2e-wind path,.v2e-smoke circle,#v2eStars .tw,.v2e-straw,.v2e-window rect[filter]{animation:none;}
-  .v2e-wind path{opacity:0.07;}
-  .v2e-straw{opacity:0;}
+  #v2gStars .tw,.v2g-ember{animation:none;}
+  .v2g-ember{opacity:0;}
 }
 @media (max-width:768px){
-  .v2e-content{padding-bottom:34vh;}
-  .hero-v2e .hero-scroll{display:none;}
+  .v2g-content{padding-bottom:30vh;}
+  .hero-v2g .hero-scroll{display:none;}
 }
 </style>
 </head>
@@ -97,84 +89,88 @@
   </div>
 </nav>
 
-<!-- Hero (v2 E: 밤의 벽돌집) -->
-<section class="hero hero-v2e" id="hero">
-  <div class="v2e-scene" aria-hidden="true">
-    <svg class="v2e-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+<!-- Hero (v2 G: 석양의 계곡) -->
+<section class="hero hero-v2g" id="hero">
+  <div class="v2g-scene" aria-hidden="true">
+    <svg class="v2g-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
       <defs>
-        <linearGradient id="v2eSky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#0a0e1e"/>
-          <stop offset="0.5" stop-color="#121a30"/>
-          <stop offset="0.82" stop-color="#1d2340"/>
-          <stop offset="1" stop-color="#2a2a48"/>
+        <linearGradient id="v2gSky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#2c192c"/>
+          <stop offset="0.3" stop-color="#5c2531"/>
+          <stop offset="0.55" stop-color="#96322b"/>
+          <stop offset="0.72" stop-color="#c74a2f"/>
+          <stop offset="0.86" stop-color="#e8703c"/>
+          <stop offset="1" stop-color="#f6a95c"/>
         </linearGradient>
-        <linearGradient id="v2eWin" x1="0" y1="0" x2="0" y2="1">
+        <radialGradient id="v2gSunGlow" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffce8e" stop-opacity="0.6"/>
+          <stop offset="1" stop-color="#ffce8e" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="v2gSunHalo" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffb877" stop-opacity="0.32"/>
+          <stop offset="1" stop-color="#ffb877" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="v2gWin2" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stop-color="#ffd694"/>
           <stop offset="1" stop-color="#ff9d4d"/>
         </linearGradient>
-        <radialGradient id="v2ePool" cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0" stop-color="#ffb763" stop-opacity="0.5"/>
-          <stop offset="1" stop-color="#ffb763" stop-opacity="0"/>
-        </radialGradient>
-        <pattern id="v2eBrick" width="26" height="16" patternUnits="userSpaceOnUse">
-          <rect width="26" height="16" fill="none"/>
-          <path d="M0 0.5 H26 M0 8.5 H26 M13 0.5 V8 M0 8.5 V16 M26 8.5 V16" stroke="#1c0f0c" stroke-width="1" opacity="0.5"/>
-        </pattern>
-        <filter id="v2eBlur8" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="8"/></filter>
-        <filter id="v2eBlur16" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="16"/></filter>
+        <filter id="v2gBlur10" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="10"/></filter>
       </defs>
-      <rect width="1440" height="900" fill="url(#v2eSky)"/>
-      <g id="v2eStars"></g>
-      <g class="v2e-wind" fill="none" stroke="#ffffff" stroke-linecap="round">
-        <path class="v2e-w1" d="M-120 170 C 280 120, 640 230, 1000 180 S 1400 120, 1560 170" stroke-width="2"/>
-        <path class="v2e-w2" d="M-120 718 C 320 690, 700 756, 1120 700 S 1420 664, 1560 700" stroke-width="1.5"/>
-        <path class="v2e-w3" d="M-120 90 C 400 60, 800 130, 1200 80 S 1440 60, 1560 90" stroke-width="1.5"/>
+      <rect width="1440" height="900" fill="url(#v2gSky)"/>
+      <g id="v2gStars"></g>
+      <g class="v2g-l" id="v2gSun">
+        <circle cx="640" cy="618" r="430" fill="url(#v2gSunHalo)"/>
+        <circle cx="640" cy="618" r="210" fill="url(#v2gSunGlow)"/>
+        <circle cx="640" cy="618" r="72" fill="#ffe3b0"/>
+        <path d="M330 540 q160 -16 330 -8 q210 10 420 -6" stroke="#5c2028" stroke-width="10" fill="none" opacity="0.22" stroke-linecap="round"/>
+        <path d="M240 588 q220 -12 430 -4 q260 10 470 -8" stroke="#63242a" stroke-width="7" fill="none" opacity="0.2" stroke-linecap="round"/>
+        <path d="M420 648 q180 -10 340 -4" stroke="#ffc687" stroke-width="5" fill="none" opacity="0.4" stroke-linecap="round"/>
       </g>
-      <path d="M0 780 Q 300 726 620 762 Q 1000 800 1440 742 L1440 900 L0 900 Z" fill="#141a2c"/>
-      <path d="M0 828 Q 360 792 720 812 Q 1080 832 1440 796 L1440 900 L0 900 Z" fill="#0b0e18"/>
-      <g transform="translate(720,822)">
-        <g class="v2e-smoke" filter="url(#v2eBlur8)">
-          <circle class="v2e-p1" cx="86" cy="-300" r="9" fill="#c9c2b6" opacity="0"/>
-          <circle class="v2e-p2" cx="92" cy="-306" r="12" fill="#c9c2b6" opacity="0"/>
-          <circle class="v2e-p3" cx="80" cy="-296" r="7" fill="#c9c2b6" opacity="0"/>
+      <g class="v2g-l" id="v2gL1">
+        <path d="M170 150 l9 6 l9 -6 M196 140 l7 5 l7 -5 M1150 120 l9 6 l9 -6 M1178 132 l7 5 l7 -5 M1206 124 l8 5 l8 -5" stroke="#3a1620" stroke-width="2.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+        <path d="M-40 676 Q 160 618 380 650 Q 560 676 720 656 Q 940 630 1120 660 Q 1300 686 1480 654 L1480 940 L-40 940 Z" fill="#a54c32" opacity="0.85"/>
+      </g>
+      <g class="v2g-l" id="v2gL2">
+        <path d="M-40 740 Q 200 690 430 716 Q 660 742 900 712 Q 1140 684 1480 726 L1480 940 L-40 940 Z" fill="#6e2c22"/>
+        <path d="M96 716 l10 -22 l10 22 Z M120 720 l9 -19 l9 19 Z M1236 704 l11 -24 l11 24 Z M1262 708 l9 -20 l9 20 Z M1290 712 l10 -21 l10 21 Z" fill="#571f19"/>
+      </g>
+      <g class="v2g-l" id="v2gL3">
+        <path d="M-40 806 Q 240 760 520 782 Q 800 806 1060 778 Q 1260 758 1480 792 L1480 940 L-40 940 Z" fill="#3f1b15"/>
+        <g transform="translate(880,782) scale(0.82)">
+          <ellipse cx="0" cy="4" rx="190" ry="18" fill="#000000" opacity="0.25"/>
+          <rect x="66" y="-286" width="32" height="86" fill="#1c0d0b"/>
+          <rect x="61" y="-294" width="42" height="12" fill="#140908"/>
+          <rect x="-150" y="-170" width="300" height="170" fill="#221010"/>
+          <path d="M-178 -166 L 0 -302 L 178 -166 Z" fill="#170a0c"/>
+          <path d="M-178 -166 L 0 -302 L 12 -293" stroke="#ff9d5c" stroke-width="4" fill="none" opacity="0.85" stroke-linecap="round"/>
+          <rect x="-178" y="-172" width="356" height="9" fill="#0f0709"/>
+          <circle cx="0" cy="-224" r="15" fill="url(#v2gWin2)" filter="url(#v2gBlur10)" opacity="0.7"/>
+          <circle cx="0" cy="-224" r="12" fill="url(#v2gWin2)"/>
+          <rect x="-116" y="-100" width="54" height="60" fill="#ffbe6e" filter="url(#v2gBlur10)" opacity="0.55"/>
+          <rect x="-112" y="-98" width="46" height="56" rx="2" fill="url(#v2gWin2)"/>
+          <path d="M-89 -98 V-42 M-112 -70 H-66" stroke="#7c3a1e" stroke-width="3"/>
+          <rect x="62" y="-100" width="54" height="60" fill="#ffbe6e" filter="url(#v2gBlur10)" opacity="0.55"/>
+          <rect x="66" y="-98" width="46" height="56" rx="2" fill="url(#v2gWin2)"/>
+          <path d="M89 -98 V-42 M66 -70 H112" stroke="#7c3a1e" stroke-width="3"/>
+          <path d="M-24 0 L-24 -78 Q-24 -92 -10 -92 L10 -92 Q24 -92 24 -78 L24 0 Z" fill="#120807"/>
         </g>
-        <rect x="66" y="-286" width="32" height="86" fill="#2c1a16"/>
-        <rect x="61" y="-294" width="42" height="12" fill="#1f1210"/>
-        <ellipse cx="0" cy="4" rx="230" ry="26" fill="url(#v2ePool)" opacity="0.35"/>
-        <rect x="-150" y="-170" width="300" height="170" fill="#3f231e"/>
-        <rect x="-150" y="-170" width="300" height="170" fill="url(#v2eBrick)" opacity="0.55"/>
-        <rect x="-150" y="-170" width="300" height="170" fill="#000000" opacity="0.08"/>
-        <path d="M-178 -166 L 0 -302 L 178 -166 Z" fill="#1e1420"/>
-        <rect x="-178" y="-172" width="356" height="9" fill="#161020"/>
-        <circle cx="0" cy="-224" r="17" fill="url(#v2eWin)" filter="url(#v2eBlur8)" opacity="0.6"/>
-        <circle cx="0" cy="-224" r="14" fill="url(#v2eWin)"/>
-        <path d="M-14 -224 H14 M0 -238 V-210" stroke="#5a3120" stroke-width="2.5"/>
-        <circle cx="0" cy="-224" r="14" fill="none" stroke="#241310" stroke-width="3"/>
-        <g class="v2e-window">
-          <rect x="-121" y="-104" width="62" height="66" fill="#ffbe6e" filter="url(#v2eBlur16)" opacity="0.5"/>
-          <rect x="-118" y="-102" width="56" height="62" rx="2" fill="url(#v2eWin)"/>
-          <path d="M-90 -102 V-40 M-118 -71 H-62" stroke="#5a3120" stroke-width="3"/>
-          <rect x="-118" y="-102" width="56" height="62" rx="2" fill="none" stroke="#241310" stroke-width="4"/>
-          <rect x="-122" y="-40" width="64" height="7" fill="#241310"/>
-        </g>
-        <g class="v2e-window">
-          <rect x="59" y="-104" width="62" height="66" fill="#ffbe6e" filter="url(#v2eBlur16)" opacity="0.5"/>
-          <rect x="62" y="-102" width="56" height="62" rx="2" fill="url(#v2eWin)"/>
-          <path d="M90 -102 V-40 M62 -71 H118" stroke="#5a3120" stroke-width="3"/>
-          <rect x="62" y="-102" width="56" height="62" rx="2" fill="none" stroke="#241310" stroke-width="4"/>
-          <rect x="58" y="-40" width="64" height="7" fill="#241310"/>
-        </g>
-        <path d="M-27 0 L-27 -84 Q-27 -98 -13 -98 L13 -98 Q27 -98 27 -84 L27 0 Z" fill="#241310"/>
-        <circle cx="16" cy="-46" r="3" fill="#8a5a30"/>
-        <rect x="-36" y="0" width="72" height="9" fill="#1a100d"/>
+      </g>
+      <g class="v2g-l" id="v2gL4">
+        <path d="M-40 872 Q 260 836 560 856 Q 880 876 1180 848 Q 1330 836 1480 856 L1480 940 L-40 940 Z" fill="#170a08"/>
+        <path d="M60 850 q4 -30 8 0 M76 854 q4 -24 8 0 M92 851 q3 -20 6 0 M1330 844 q4 -28 8 0 M1348 848 q4 -22 8 0 M1366 851 q3 -18 6 0 M620 862 q4 -22 8 0 M638 865 q3 -17 6 0" stroke="#0d0504" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M180 856 c-30 -10 -44 -40 -34 -74 c8 24 20 30 26 34 c-2 -22 6 -44 24 -56 c-4 22 2 34 8 44 c10 -10 24 -14 38 -12 c-12 8 -18 18 -20 30 c-14 22 -26 30 -42 34 Z" fill="#0d0504"/>
+        <path d="M1268 852 c26 -8 38 -34 30 -62 c-7 20 -17 25 -22 28 c2 -18 -5 -37 -20 -47 c3 18 -2 28 -7 36 c-8 -8 -20 -11 -32 -10 c10 7 15 15 17 25 c12 18 22 26 34 30 Z" fill="#0d0504"/>
       </g>
     </svg>
-    <span class="v2e-straw v2e-st1"></span>
-    <span class="v2e-straw v2e-st2"></span>
-    <span class="v2e-straw v2e-st3"></span>
+    <span class="v2g-ember v2g-e1"></span>
+    <span class="v2g-ember v2g-e2"></span>
+    <span class="v2g-ember v2g-e3"></span>
+    <span class="v2g-ember v2g-e4"></span>
+    <span class="v2g-ember v2g-e5"></span>
+    <span class="v2g-ember v2g-e6"></span>
     <div class="v2e-grain"></div>
   </div>
-  <div class="hero-content v2e-content">
+  <div class="hero-content v2g-content">
     <p class="hero-tag" data-i18n="heroTag">글로벌 인디게임 퍼블리셔</p>
     <h1 class="hero-title" data-i18n="heroTitle">RED&nbsp;BRICK&nbsp;HOUSE</h1>
     <p class="hero-sub" data-i18n="heroSub">레드브릭하우스는 단순 퍼블리셔가 아닙니다.<br>인디 개발자들의 든든한 동반자입니다.</p>
@@ -475,24 +471,49 @@
 <script src="/script.js?v=20260818-1"></script>
 <div class="v2-switch" aria-label="시안 전환">
   <span><a href="/v2/" class="v2-home">시안 v2</a></span>
-  <a href="/v2/a.html">A</a><a href="/v2/b.html">B</a><a href="/v2/c.html">C</a><a href="/v2/d.html">D</a><a href="/v2/e.html" class="on">E</a><a href="/v2/f.html">F</a><a href="/v2/g.html">G</a>
+  <a href="/v2/a.html">A</a><a href="/v2/b.html">B</a><a href="/v2/c.html">C</a><a href="/v2/d.html">D</a><a href="/v2/e.html">E</a><a href="/v2/f.html">F</a><a href="/v2/g.html" class="on">G</a>
 </div>
 <script>
 (function(){
-  var g=document.getElementById('v2eStars');
-  if(!g)return;
-  var NS='http://www.w3.org/2000/svg';
-  for(var i=0;i<110;i++){
-    var c=document.createElementNS(NS,'circle');
-    var y=Math.random();
-    c.setAttribute('cx',(Math.random()*1440).toFixed(1));
-    c.setAttribute('cy',(y*y*560).toFixed(1));
-    c.setAttribute('r',(0.5+Math.random()*0.9).toFixed(2));
-    c.setAttribute('fill','#cdd6ff');
-    c.setAttribute('opacity',(0.2+Math.random()*0.6).toFixed(2));
-    if(Math.random()<0.22){c.setAttribute('class','tw');c.style.animationDelay=(Math.random()*4).toFixed(2)+'s';c.style.animationDuration=(3+Math.random()*3).toFixed(2)+'s';}
-    g.appendChild(c);
+  var g=document.getElementById('v2gStars');
+  if(g){
+    var NS='http://www.w3.org/2000/svg';
+    for(var i=0;i<46;i++){
+      var c=document.createElementNS(NS,'circle');
+      var y=Math.random();
+      c.setAttribute('cx',(Math.random()*1440).toFixed(1));
+      c.setAttribute('cy',(y*y*240).toFixed(1));
+      c.setAttribute('r',(0.5+Math.random()*0.8).toFixed(2));
+      c.setAttribute('fill','#ffe6c8');
+      c.setAttribute('opacity',(0.1+Math.random()*0.4).toFixed(2));
+      if(Math.random()<0.25){c.setAttribute('class','tw');c.style.animationDelay=(Math.random()*4).toFixed(2)+'s';}
+      g.appendChild(c);
+    }
   }
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  if(window.matchMedia('(pointer: coarse)').matches)return;
+  var layers=[
+    {el:document.getElementById('v2gSun'),f:5},
+    {el:document.getElementById('v2gL1'),f:9},
+    {el:document.getElementById('v2gL2'),f:14},
+    {el:document.getElementById('v2gL3'),f:20},
+    {el:document.getElementById('v2gL4'),f:28}
+  ];
+  var tx=0,ty=0,cx=0,cy=0,raf=null;
+  function tick(){
+    cx+=(tx-cx)*0.07;cy+=(ty-cy)*0.07;
+    for(var i=0;i<layers.length;i++){
+      var l=layers[i];
+      if(l.el)l.el.style.transform='translate('+(cx*l.f).toFixed(2)+'px,'+(cy*l.f*0.5).toFixed(2)+'px)';
+    }
+    if(Math.abs(tx-cx)>0.001||Math.abs(ty-cy)>0.001)raf=requestAnimationFrame(tick);
+    else raf=null;
+  }
+  window.addEventListener('mousemove',function(e){
+    tx=(e.clientX/window.innerWidth-0.5)*-1;
+    ty=(e.clientY/window.innerHeight-0.5)*-1;
+    if(!raf)raf=requestAnimationFrame(tick);
+  },{passive:true});
 })();
 </script>
 </body>
