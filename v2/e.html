@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[시안 D] 메인 히어로 v2 - RED BRICK HOUSE</title>
+<title>[시안 E] 메인 히어로 v2 - RED BRICK HOUSE</title>
 <meta name="description" content="레드브릭하우스(RED BRICK HOUSE)는 글로벌 인디게임 퍼블리셔입니다. 사업화 전략과 투자 유치, 팬 커뮤니티와 마케팅, 글로벌 출시까지 인디 개발사의 모든 여정을 함께합니다.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#c0392b">
@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png?v=20260713">
 <link rel="apple-touch-icon" href="/img/favicon-180.png">
 <style>
-/* === v2 draft (D: 게임 쇼케이스) === */
+/* === v2 draft (E: 밤의 벽돌집) === */
 /* v2 draft switcher */
 .v2-switch{position:fixed;left:16px;bottom:16px;z-index:400;display:flex;gap:6px;align-items:center;background:rgba(26,26,26,0.92);border-radius:8px;padding:8px 10px;box-shadow:0 6px 24px rgba(0,0,0,0.25);}
 .v2-switch span{color:#bbb;font-size:11px;letter-spacing:1px;margin-right:4px;}
@@ -27,33 +27,47 @@
 .v2-switch a:hover{background:rgba(255,255,255,0.12);color:#fff;}
 .v2-switch a.on{background:#c0392b;border-color:#c0392b;color:#fff;}
 
-/* v2 D: game showcase */
-.hero-v2d{background:linear-gradient(160deg,#faf9f7 0%,#f6efe6 100%);text-align:left;}
-.v2d-inner{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center;width:100%;padding-top:80px;}
-.hero-v2d .hero-title{font-size:clamp(34px,3.6vw,54px);}
-.v2d-sub{margin-left:0;margin-right:0;max-width:480px;}
-.v2d-actions{justify-content:flex-start;}
-.v2d-art{position:relative;height:480px;}
-.v2d-art::before{content:'';position:absolute;top:-26px;right:-14px;width:16px;height:16px;background:#c0392b;transform:rotate(12deg);}
-.v2d-art::after{content:'';position:absolute;bottom:-30px;left:8%;width:11px;height:11px;background:#e0c9a8;transform:rotate(-8deg);}
-.v2d-card{position:absolute;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 18px 48px rgba(60,30,20,0.22);}
-.v2d-card img{width:100%;height:100%;object-fit:cover;display:block;}
-.v2d-c1{width:78%;aspect-ratio:16/9;left:0;bottom:7%;transform:rotate(-3.5deg);z-index:3;animation:v2dFloat 7s ease-in-out infinite alternate;}
-.v2d-c2{width:52%;aspect-ratio:16/10;right:0;top:2%;transform:rotate(4deg);z-index:2;animation:v2dFloat 9s ease-in-out infinite alternate -2s;}
-.v2d-c3{width:44%;aspect-ratio:16/10;right:2%;bottom:2%;transform:rotate(-2deg);z-index:1;animation:v2dFloat 8s ease-in-out infinite alternate -4s;}
-@keyframes v2dFloat{from{translate:0 0;}to{translate:0 -14px;}}
-.v2d-chip{position:absolute;left:12px;bottom:12px;background:rgba(26,26,26,0.82);color:#fff;font-size:11px;letter-spacing:2px;font-weight:700;padding:6px 10px;border-radius:4px;}
-@media (prefers-reduced-motion: reduce){.v2d-card{animation:none;}}
-@media (max-width:900px){
-  .v2d-inner{grid-template-columns:1fr;gap:40px;text-align:center;padding-top:104px;padding-bottom:90px;}
-  .hero-v2d .hero-title{font-size:clamp(24px,7.4vw,30px);}
-  .v2d-sub{margin:0 auto;}
-  .v2d-actions{justify-content:center;}
-  .v2d-art{height:280px;max-width:520px;width:100%;margin:0 auto;}
-  .v2d-c1{left:1%;}
-  .v2d-c2{right:3%;}
-  .v2d-c3{right:7%;}
-  .hero-v2d .hero-scroll{display:none;}
+/* v2 E: night brick house */
+.hero-v2e{background:#0a0e1e;color:#fff;}
+.v2e-scene{position:absolute;inset:0;overflow:hidden;}
+.v2e-svg{position:absolute;inset:0;width:100%;height:100%;}
+.v2e-grain{position:absolute;inset:0;opacity:0.05;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");}
+.v2e-content{padding-bottom:26vh;}
+.hero-v2e .hero-tag{color:#e7a15c;}
+.hero-v2e .hero-title{color:#f5f3ee;}
+.hero-v2e .hero-sub{color:#c3c9da;}
+.hero-v2e .btn-ghost{border-color:rgba(255,255,255,0.42);color:#fff;}
+.hero-v2e .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,0.08);}
+.hero-v2e .hero-scroll{color:rgba(255,255,255,0.5);left:auto;right:40px;transform:none;}
+.hero-v2e .scroll-line{background:rgba(255,255,255,0.28);}
+.v2e-wind path{stroke-dasharray:80 1600;stroke-dashoffset:0;opacity:0.1;}
+.v2e-w1{animation:v2eWind 13s linear infinite;}
+.v2e-w2{animation:v2eWind 18s linear infinite -6s;}
+.v2e-w3{animation:v2eWind 22s linear infinite -12s;}
+@keyframes v2eWind{to{stroke-dashoffset:-1680;}}
+#v2eStars .tw{animation:v2eTwinkle 4s ease-in-out infinite alternate;}
+@keyframes v2eTwinkle{from{opacity:0.15;}to{opacity:0.9;}}
+.v2e-smoke circle{transform-box:fill-box;transform-origin:center;}
+.v2e-window rect[filter]{animation:v2eGlow 6s ease-in-out infinite alternate;}
+.v2e-window:nth-of-type(2) rect[filter]{animation-delay:3s;}
+@keyframes v2eGlow{from{opacity:0.42;}to{opacity:0.58;}}
+.v2e-p1{animation:v2ePuff 8s ease-out infinite;}
+.v2e-p2{animation:v2ePuff 8s ease-out infinite 2.7s;}
+.v2e-p3{animation:v2ePuff 8s ease-out infinite 5.4s;}
+@keyframes v2ePuff{0%{opacity:0;transform:translate(0,14px) scale(0.6);}16%{opacity:0.09;}100%{opacity:0;transform:translate(26px,-64px) scale(1.9);}}
+.v2e-straw{position:absolute;left:-4vw;width:16px;height:3px;border-radius:2px;background:#cfa860;opacity:0;animation:v2eFly linear infinite;}
+.v2e-st1{top:22%;animation-duration:11s;}
+.v2e-st2{top:38%;width:12px;background:#9a7448;animation-duration:14s;animation-delay:3s;}
+.v2e-st3{top:15%;width:20px;background:#c8b184;animation-duration:12s;animation-delay:6s;}
+@keyframes v2eFly{0%{transform:translate(0,0) rotate(0deg);opacity:0;}6%{opacity:0.55;}92%{opacity:0.45;}100%{transform:translate(112vw,6vh) rotate(660deg);opacity:0;}}
+@media (prefers-reduced-motion: reduce){
+  .v2e-wind path,.v2e-smoke circle,#v2eStars .tw,.v2e-straw,.v2e-window rect[filter]{animation:none;}
+  .v2e-wind path{opacity:0.07;}
+  .v2e-straw{opacity:0;}
+}
+@media (max-width:768px){
+  .v2e-content{padding-bottom:34vh;}
+  .hero-v2e .hero-scroll{display:none;}
 }
 </style>
 </head>
@@ -83,22 +97,98 @@
   </div>
 </nav>
 
-<!-- Hero (v2 D: 게임 쇼케이스) -->
-<section class="hero hero-v2d" id="hero">
-  <div class="v2d-inner container">
-    <div class="v2d-copy">
-      <p class="hero-tag" data-i18n="heroTag">글로벌 인디게임 퍼블리셔</p>
-      <h1 class="hero-title v2d-title" data-i18n="heroTitle">RED&nbsp;BRICK&nbsp;HOUSE</h1>
-      <p class="hero-sub v2d-sub" data-i18n="heroSub">레드브릭하우스는 단순 퍼블리셔가 아닙니다.<br>인디 개발자들의 든든한 동반자입니다.</p>
-      <div class="hero-actions v2d-actions">
-        <a href="#about" class="btn btn-ghost" data-i18n="heroBtn2">우리의 이야기</a>
-        <a href="#contact" class="btn btn-primary" data-i18n="heroBtn1">문의하기</a>
-      </div>
-    </div>
-    <div class="v2d-art" aria-hidden="true">
-      <div class="v2d-card v2d-c2"><img src="/img/project-b.png" alt=""><span class="v2d-chip">PROJECT B</span></div>
-      <div class="v2d-card v2d-c3"><img src="/img/project-o.png" alt=""><span class="v2d-chip">PROJECT O</span></div>
-      <div class="v2d-card v2d-c1"><img src="/img/void-diver.jpg" alt=""><span class="v2d-chip">VOID DIVER</span></div>
+<!-- Hero (v2 E: 밤의 벽돌집) -->
+<section class="hero hero-v2e" id="hero">
+  <div class="v2e-scene" aria-hidden="true">
+    <svg class="v2e-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="v2eSky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#0a0e1e"/>
+          <stop offset="0.5" stop-color="#121a30"/>
+          <stop offset="0.82" stop-color="#1d2340"/>
+          <stop offset="1" stop-color="#2a2a48"/>
+        </linearGradient>
+        <linearGradient id="v2eWin" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffd694"/>
+          <stop offset="1" stop-color="#ff9d4d"/>
+        </linearGradient>
+        <radialGradient id="v2ePool" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffb763" stop-opacity="0.5"/>
+          <stop offset="1" stop-color="#ffb763" stop-opacity="0"/>
+        </radialGradient>
+        <pattern id="v2eBrick" width="26" height="16" patternUnits="userSpaceOnUse">
+          <rect width="26" height="16" fill="none"/>
+          <path d="M0 0.5 H26 M0 8.5 H26 M13 0.5 V8 M0 8.5 V16 M26 8.5 V16" stroke="#1c0f0c" stroke-width="1" opacity="0.5"/>
+        </pattern>
+        <filter id="v2eBlur8" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="8"/></filter>
+        <filter id="v2eBlur16" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="16"/></filter>
+      </defs>
+      <rect width="1440" height="900" fill="url(#v2eSky)"/>
+      <g id="v2eStars"></g>
+      <g class="v2e-wind" fill="none" stroke="#ffffff" stroke-linecap="round">
+        <path class="v2e-w1" d="M-120 170 C 280 120, 640 230, 1000 180 S 1400 120, 1560 170" stroke-width="2"/>
+        <path class="v2e-w2" d="M-120 718 C 320 690, 700 756, 1120 700 S 1420 664, 1560 700" stroke-width="1.5"/>
+        <path class="v2e-w3" d="M-120 90 C 400 60, 800 130, 1200 80 S 1440 60, 1560 90" stroke-width="1.5"/>
+      </g>
+      <path d="M0 780 Q 300 726 620 762 Q 1000 800 1440 742 L1440 900 L0 900 Z" fill="#141a2c"/>
+      <g class="v2e-far" transform="translate(268,776) scale(0.5)">
+        <path d="M-60 0 L-60 -52 L0 -88 L60 -52 L60 0 Z" fill="#0d1120"/>
+        <rect x="-14" y="-44" width="26" height="26" fill="url(#v2eWin)" opacity="0.85"/>
+      </g>
+      <g class="v2e-far" transform="translate(1132,762) scale(0.42)">
+        <path d="M-60 0 L-60 -52 L0 -88 L60 -52 L60 0 Z" fill="#0d1120"/>
+        <rect x="-12" y="-46" width="24" height="26" fill="url(#v2eWin)" opacity="0.8"/>
+      </g>
+      <path d="M0 828 Q 360 792 720 812 Q 1080 832 1440 796 L1440 900 L0 900 Z" fill="#0b0e18"/>
+      <g transform="translate(720,822)">
+        <g class="v2e-smoke" filter="url(#v2eBlur8)">
+          <circle class="v2e-p1" cx="86" cy="-300" r="9" fill="#c9c2b6" opacity="0"/>
+          <circle class="v2e-p2" cx="92" cy="-306" r="12" fill="#c9c2b6" opacity="0"/>
+          <circle class="v2e-p3" cx="80" cy="-296" r="7" fill="#c9c2b6" opacity="0"/>
+        </g>
+        <rect x="66" y="-286" width="32" height="86" fill="#2c1a16"/>
+        <rect x="61" y="-294" width="42" height="12" fill="#1f1210"/>
+        <ellipse cx="0" cy="4" rx="230" ry="26" fill="url(#v2ePool)" opacity="0.35"/>
+        <rect x="-150" y="-170" width="300" height="170" fill="#3f231e"/>
+        <rect x="-150" y="-170" width="300" height="170" fill="url(#v2eBrick)" opacity="0.55"/>
+        <rect x="-150" y="-170" width="300" height="170" fill="#000000" opacity="0.08"/>
+        <path d="M-178 -166 L 0 -302 L 178 -166 Z" fill="#1e1420"/>
+        <rect x="-178" y="-172" width="356" height="9" fill="#161020"/>
+        <circle cx="0" cy="-224" r="17" fill="url(#v2eWin)" filter="url(#v2eBlur8)" opacity="0.6"/>
+        <circle cx="0" cy="-224" r="14" fill="url(#v2eWin)"/>
+        <path d="M-14 -224 H14 M0 -238 V-210" stroke="#5a3120" stroke-width="2.5"/>
+        <circle cx="0" cy="-224" r="14" fill="none" stroke="#241310" stroke-width="3"/>
+        <g class="v2e-window">
+          <rect x="-121" y="-104" width="62" height="66" fill="#ffbe6e" filter="url(#v2eBlur16)" opacity="0.5"/>
+          <rect x="-118" y="-102" width="56" height="62" rx="2" fill="url(#v2eWin)"/>
+          <path d="M-90 -102 V-40 M-118 -71 H-62" stroke="#5a3120" stroke-width="3"/>
+          <rect x="-118" y="-102" width="56" height="62" rx="2" fill="none" stroke="#241310" stroke-width="4"/>
+          <rect x="-122" y="-40" width="64" height="7" fill="#241310"/>
+        </g>
+        <g class="v2e-window">
+          <rect x="59" y="-104" width="62" height="66" fill="#ffbe6e" filter="url(#v2eBlur16)" opacity="0.5"/>
+          <rect x="62" y="-102" width="56" height="62" rx="2" fill="url(#v2eWin)"/>
+          <path d="M90 -102 V-40 M62 -71 H118" stroke="#5a3120" stroke-width="3"/>
+          <rect x="62" y="-102" width="56" height="62" rx="2" fill="none" stroke="#241310" stroke-width="4"/>
+          <rect x="58" y="-40" width="64" height="7" fill="#241310"/>
+        </g>
+        <path d="M-27 0 L-27 -84 Q-27 -98 -13 -98 L13 -98 Q27 -98 27 -84 L27 0 Z" fill="#241310"/>
+        <circle cx="16" cy="-46" r="3" fill="#8a5a30"/>
+        <rect x="-36" y="0" width="72" height="9" fill="#1a100d"/>
+      </g>
+    </svg>
+    <span class="v2e-straw v2e-st1"></span>
+    <span class="v2e-straw v2e-st2"></span>
+    <span class="v2e-straw v2e-st3"></span>
+    <div class="v2e-grain"></div>
+  </div>
+  <div class="hero-content v2e-content">
+    <p class="hero-tag" data-i18n="heroTag">글로벌 인디게임 퍼블리셔</p>
+    <h1 class="hero-title" data-i18n="heroTitle">RED&nbsp;BRICK&nbsp;HOUSE</h1>
+    <p class="hero-sub" data-i18n="heroSub">레드브릭하우스는 단순 퍼블리셔가 아닙니다.<br>인디 개발자들의 든든한 동반자입니다.</p>
+    <div class="hero-actions">
+      <a href="#about" class="btn btn-ghost" data-i18n="heroBtn2">우리의 이야기</a>
+      <a href="#contact" class="btn btn-primary" data-i18n="heroBtn1">문의하기</a>
     </div>
   </div>
   <div class="hero-scroll">
@@ -393,7 +483,25 @@
 <script src="/script.js?v=20260818-1"></script>
 <div class="v2-switch" aria-label="시안 전환">
   <span><a href="/v2/" class="v2-home">시안 v2</a></span>
-  <a href="/v2/a.html">A</a><a href="/v2/b.html">B</a><a href="/v2/c.html">C</a><a href="/v2/d.html" class="on">D</a><a href="/v2/e.html">E</a>
+  <a href="/v2/a.html">A</a><a href="/v2/b.html">B</a><a href="/v2/c.html">C</a><a href="/v2/d.html">D</a><a href="/v2/e.html" class="on">E</a>
 </div>
+<script>
+(function(){
+  var g=document.getElementById('v2eStars');
+  if(!g)return;
+  var NS='http://www.w3.org/2000/svg';
+  for(var i=0;i<110;i++){
+    var c=document.createElementNS(NS,'circle');
+    var y=Math.random();
+    c.setAttribute('cx',(Math.random()*1440).toFixed(1));
+    c.setAttribute('cy',(y*y*560).toFixed(1));
+    c.setAttribute('r',(0.5+Math.random()*0.9).toFixed(2));
+    c.setAttribute('fill','#cdd6ff');
+    c.setAttribute('opacity',(0.2+Math.random()*0.6).toFixed(2));
+    if(Math.random()<0.22){c.setAttribute('class','tw');c.style.animationDelay=(Math.random()*4).toFixed(2)+'s';c.style.animationDuration=(3+Math.random()*3).toFixed(2)+'s';}
+    g.appendChild(c);
+  }
+})();
+</script>
 </body>
 </html>
