@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[시안 I] 메인 히어로 v2 - RED BRICK HOUSE</title>
+<title>[시안 Q] 메인 히어로 v2 - RED BRICK HOUSE</title>
 <meta name="description" content="레드브릭하우스(RED BRICK HOUSE)는 글로벌 인디게임 퍼블리셔입니다. 사업화 전략과 투자 유치, 팬 커뮤니티와 마케팅, 글로벌 출시까지 인디 개발사의 모든 여정을 함께합니다.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#c0392b">
@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png?v=20260713">
 <link rel="apple-touch-icon" href="/img/favicon-180.png">
 <style>
-/* === v2 draft (I: 스포트라이트 다크) === */
+/* === v2 draft (Q: Kiro 배경 · 블루프린트) === */
 /* v2 draft switcher */
 .v2-switch{position:fixed;left:16px;bottom:16px;z-index:400;display:flex;gap:6px;align-items:center;background:rgba(26,26,26,0.92);border-radius:8px;padding:8px 10px;box-shadow:0 6px 24px rgba(0,0,0,0.25);}
 .v2-switch span{color:#bbb;font-size:11px;letter-spacing:1px;margin-right:4px;}
@@ -27,48 +27,234 @@
 .v2-switch a:hover{background:rgba(255,255,255,0.12);color:#fff;}
 .v2-switch a.on{background:#c0392b;border-color:#c0392b;color:#fff;}
 
-/* v2 I: spotlight dark */
-.hero-v2i{background:#100d0e;color:#fff;text-align:left;overflow:hidden;}
-.v2i-bg{position:absolute;inset:0;overflow:hidden;}
-.v2i-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(120% 100% at 70% 40%,#000 30%,transparent 78%);mask-image:radial-gradient(120% 100% at 70% 40%,#000 30%,transparent 78%);}
-.v2i-spot{position:absolute;inset:0;background:radial-gradient(460px 460px at var(--mx,68%) var(--my,42%),rgba(224,74,47,0.22),rgba(224,74,47,0.05) 40%,transparent 62%);transition:background 0.15s ease;}
-.v2i-noise{position:absolute;inset:0;opacity:0.05;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='150' height='150' filter='url(%23n)'/%3E%3C/svg%3E");}
-.v2i-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:center;width:100%;padding-top:80px;}
-.v2i-tag{display:inline-flex;align-items:center;gap:10px;color:#f2b6a3;}
-.v2i-live{width:8px;height:8px;border-radius:50%;background:#ff6a3d;box-shadow:0 0 0 0 rgba(255,106,61,0.6);animation:v2iLive 2.2s ease-out infinite;}
-@keyframes v2iLive{0%{box-shadow:0 0 0 0 rgba(255,106,61,0.55);}70%{box-shadow:0 0 0 10px rgba(255,106,61,0);}100%{box-shadow:0 0 0 0 rgba(255,106,61,0);}}
-.v2i-title{color:#fff;margin-bottom:22px;}
-.v2i-sub{color:rgba(255,255,255,0.66);max-width:460px;margin-left:0;}
-.v2i-actions{justify-content:flex-start;}
-.hero-v2i .btn-primary{background:#e0492f;color:#fff;}
-.hero-v2i .btn-primary:hover{background:#c93d27;}
-.hero-v2i .btn-ghost{border-color:rgba(255,255,255,0.28);color:#fff;}
-.hero-v2i .btn-ghost:hover{border-color:rgba(255,255,255,0.6);background:rgba(255,255,255,0.05);}
-.v2i-panel{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:12px;backdrop-filter:blur(8px);box-shadow:0 24px 60px rgba(0,0,0,0.4);}
-.v2i-panel-label{font-size:11px;letter-spacing:3px;color:rgba(255,255,255,0.4);font-weight:700;padding:12px 14px 14px;}
-.v2i-row{display:flex;align-items:center;gap:12px;padding:16px 14px;border-radius:10px;border-top:1px solid rgba(255,255,255,0.07);transition:background 0.2s;}
-.v2i-row-name{font-family:'GmarketSans','Pretendard Variable',Pretendard,sans-serif;font-size:16px;font-weight:700;letter-spacing:0.5px;color:#fff;}
-.v2i-row-meta{font-size:12.5px;color:rgba(255,255,255,0.45);margin-left:auto;}
-.v2i-row-go{color:#ff8a5c;font-size:15px;margin-left:4px;}
-a.v2i-row:hover{background:rgba(224,73,47,0.12);}
-a.v2i-row:hover .v2i-row-meta{color:rgba(255,255,255,0.7);}
-.v2i-row-static{cursor:default;}
-.hero-v2i .hero-scroll{color:rgba(255,255,255,0.4);left:40px;transform:none;}
-.hero-v2i .scroll-line{background:rgba(255,255,255,0.24);}
-@media (prefers-reduced-motion: reduce){.v2i-live{animation:none;}}
+/* v2 M: publisher-forward (brand = subject, games = portfolio) */
+.hero-v2m{position:relative;min-height:100svh;display:flex;align-items:center;text-align:left;
+  background:#f7f3ee;color:#1a1512;overflow:hidden;}
+.v2m-bg{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    repeating-linear-gradient(0deg,rgba(120,70,45,0.05) 0 1px,transparent 1px 46px),
+    repeating-linear-gradient(90deg,rgba(120,70,45,0.05) 0 1px,transparent 1px 96px),
+    radial-gradient(120% 90% at 78% 30%,rgba(192,57,43,0.06),transparent 60%),
+    radial-gradient(100% 100% at 50% 100%,rgba(120,70,45,0.05),transparent 55%);}
+.v2m-bg::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(120,70,45,0.045) 0 1px,transparent 1px 96px);background-position:48px 23px;background-size:96px 46px;}
+.v2m-grain{position:absolute;inset:0;z-index:1;opacity:0.04;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='150' height='150' filter='url(%23n)'/%3E%3C/svg%3E");}
+.v2m-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.02fr 0.98fr;gap:64px;align-items:center;width:100%;padding-top:84px;padding-bottom:40px;}
+/* left: brand identity (the subject) */
+.v2m-kicker{display:inline-flex;align-items:center;gap:10px;font-family:'Space Mono',ui-monospace,monospace;font-weight:700;text-transform:uppercase;font-size:0.72rem;letter-spacing:0.18em;color:#a93226;margin-bottom:24px;}
+.v2m-mark{width:16px;height:11px;flex:0 0 auto;background:#c0392b;border-radius:1px;box-shadow:3px 0 0 #e0705a,-3px 0 0 #8f251b;}
+.v2m-headline{font-family:'GmarketSans','Pretendard Variable',Pretendard,sans-serif;font-weight:700;
+  font-size:clamp(2.4rem,5vw,3.9rem);line-height:1.1;letter-spacing:0.005em;color:#191410;margin-bottom:24px;}
+.v2m-sub{font-size:clamp(15px,1.15vw,18px);line-height:1.75;color:#6a625b;max-width:46ch;margin-bottom:34px;text-wrap:pretty;}
+.v2m-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px;}
+.v2m-cred{font-family:'Space Mono',ui-monospace,monospace;font-size:0.74rem;letter-spacing:0.04em;color:#a79d92;}
+.hero-v2m .btn{border-radius:5px;}
+.hero-v2m .btn-primary.v2m-cta{background:#c0392b;color:#fff;}
+.hero-v2m .btn-primary.v2m-cta:hover{background:#a93226;transform:translateY(-2px);box-shadow:0 10px 26px rgba(192,57,43,0.24);}
+.hero-v2m .btn-ghost.v2m-ghost{border:1px solid rgba(26,21,18,0.22);color:#1a1512;background:transparent;}
+.hero-v2m .btn-ghost.v2m-ghost:hover{border-color:rgba(26,21,18,0.5);background:rgba(26,21,18,0.04);}
+/* right: portfolio slate (supporting, balanced) */
+.v2m-slate{background:#fffdfb;border:1px solid #ece2d6;border-radius:16px;padding:12px;
+  box-shadow:0 2px 8px rgba(90,50,30,0.05),0 26px 60px rgba(90,50,30,0.12);}
+.v2m-slate-head{display:flex;align-items:baseline;gap:12px;padding:16px 16px 18px;}
+.v2m-slate-title{font-family:'Space Mono',ui-monospace,monospace;font-weight:700;font-size:0.82rem;letter-spacing:0.18em;color:#191410;}
+.v2m-slate-note{font-size:0.82rem;color:#a79d92;}
+.v2m-game{display:flex;align-items:center;gap:18px;padding:16px 14px;border-radius:11px;border-top:1px solid #f1e9df;transition:background 0.2s;}
+.v2m-thumb{flex:0 0 auto;width:120px;height:74px;border-radius:8px;overflow:hidden;background:#efe7dc;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.05);}
+.v2m-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+.v2m-gmeta{display:flex;flex-direction:column;gap:2px;min-width:0;}
+.v2m-gmeta b{font-family:'GmarketSans','Pretendard Variable',Pretendard,sans-serif;font-size:15px;font-weight:700;letter-spacing:0.3px;color:#191410;}
+.v2m-gmeta i{font-style:normal;font-size:11.5px;color:#8a8078;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.v2m-status{margin-left:auto;flex:0 0 auto;font-size:11px;font-weight:700;letter-spacing:0.06em;color:#a79d92;
+  border:1px solid #e6dccf;border-radius:999px;padding:4px 11px;}
+.v2m-status.v2m-live{color:#c0392b;border-color:rgba(192,57,43,0.4);}
+a.v2m-game:hover{background:#fbf4ec;}
+a.v2m-game:hover .v2m-gmeta b{color:#c0392b;}
+.v2m-soon{cursor:default;}
+.v2m-soon .v2m-thumb img{filter:grayscale(0.7) brightness(0.92) contrast(0.95);opacity:0.72;}
+.v2m-seam{position:absolute;left:0;right:0;bottom:0;height:2px;background:#c0392b;z-index:2;opacity:0.85;}
+/* motion */
+.v2m-copy>*,.v2m-slate{opacity:0;transform:translateY(12px);animation:v2mRise 0.6s ease forwards;}
+.v2m-kicker{animation-delay:0.04s;}.v2m-headline{animation-delay:0.1s;}.v2m-sub{animation-delay:0.18s;}
+.v2m-actions{animation-delay:0.26s;}.v2m-slate{animation-delay:0.32s;}
+@keyframes v2mRise{to{opacity:1;transform:translateY(0);}}
+@media (prefers-reduced-motion: reduce){.v2m-copy>*,.v2m-slate{animation:none;opacity:1;transform:none;}.hero-v2m .btn-primary.v2m-cta:hover{transform:none;}}
 @media (max-width:900px){
-  .hero-v2i{text-align:center;}
-  .v2i-wrap{grid-template-columns:1fr;gap:36px;padding-top:104px;padding-bottom:80px;}
-  .v2i-tag{justify-content:center;}
-  .v2i-sub{margin:0 auto;}
-  .v2i-actions{justify-content:center;}
-  .hero-v2i .hero-actions{flex-direction:row;}
-  .v2i-panel{text-align:left;max-width:440px;margin:0 auto;width:100%;}
-  .v2i-spot{display:none;}
-  .hero-v2i .hero-scroll{display:none;}
+  .v2m-inner{grid-template-columns:1fr;gap:36px;padding-top:104px;padding-bottom:70px;}
+  .v2m-headline br{display:none;}
+  .v2m-sub{max-width:none;}
 }
-@media (max-width:480px){
-  .hero-v2i .hero-actions{flex-direction:column;align-items:stretch;}
+@media (max-width:768px){
+  .v2m-headline{font-size:clamp(1.9rem,8.4vw,2.6rem);}
+  .v2m-headline br{display:inline;}
+  .v2m-actions{flex-direction:column;align-items:stretch;}
+  .v2m-actions .btn{width:100%;text-align:center;}
+  .v2m-thumb{width:78px;height:50px;}
+  .v2m-status{display:none;}
+  .v2m-gmeta i{white-space:normal;}
+}
+
+/* --- Kiro-generated background 3 --- */
+/* 히어로 내부의 장식용 배경 요소에 class="kbg3"을 적용하세요. */
+.kbg3 {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: #f7f3ee;
+  background-image:
+    radial-gradient(
+      ellipse at 25% 27%,
+      rgba(255, 253, 250, 0.92) 0%,
+      rgba(255, 253, 250, 0.64) 19%,
+      transparent 48%
+    ),
+    linear-gradient(rgba(192, 57, 43, 0.068) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(192, 57, 43, 0.068) 1px, transparent 1px),
+    linear-gradient(rgba(112, 75, 65, 0.026) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(112, 75, 65, 0.026) 1px, transparent 1px),
+    linear-gradient(135deg, transparent 0%, rgba(192, 57, 43, 0.022) 100%);
+  background-size:
+    auto,
+    80px 80px,
+    80px 80px,
+    10px 10px,
+    10px 10px,
+    auto;
+  background-position:
+    center,
+    -1px -1px,
+    -1px -1px,
+    -1px -1px,
+    -1px -1px,
+    center;
+}
+
+.kbg3::before,
+.kbg3::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.kbg3::before {
+  top: 0;
+  bottom: 0;
+  left: -38%;
+  width: 32%;
+  opacity: 0.32;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(192, 57, 43, 0.025) 36%,
+    rgba(192, 57, 43, 0.15) 50%,
+    rgba(192, 57, 43, 0.025) 64%,
+    transparent 100%
+  );
+  filter: blur(0.5px);
+  animation: kbg3scan 18s ease-in-out infinite;
+}
+
+.kbg3::after {
+  top: clamp(-190px, -12vw, -90px);
+  left: clamp(-170px, -9vw, -70px);
+  width: clamp(330px, 39vw, 620px);
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  border: 1px solid rgba(192, 57, 43, 0.16);
+  border-radius: 50%;
+  opacity: 0.52;
+  background:
+    linear-gradient(
+      90deg,
+      transparent calc(50% - 0.5px),
+      rgba(192, 57, 43, 0.2) calc(50% - 0.5px),
+      rgba(192, 57, 43, 0.2) calc(50% + 0.5px),
+      transparent calc(50% + 0.5px)
+    ),
+    linear-gradient(
+      0deg,
+      transparent calc(50% - 0.5px),
+      rgba(192, 57, 43, 0.2) calc(50% - 0.5px),
+      rgba(192, 57, 43, 0.2) calc(50% + 0.5px),
+      transparent calc(50% + 0.5px)
+    ),
+    repeating-conic-gradient(
+      from 0deg,
+      rgba(192, 57, 43, 0.22) 0deg 0.7deg,
+      transparent 0.7deg 10deg
+    );
+  box-shadow:
+    0 0 0 42px rgba(192, 57, 43, 0.035),
+    0 0 0 43px rgba(192, 57, 43, 0.1),
+    0 0 0 88px rgba(192, 57, 43, 0.018),
+    0 0 0 89px rgba(192, 57, 43, 0.075);
+  -webkit-mask-image: radial-gradient(
+    circle,
+    transparent 0%,
+    transparent 27%,
+    #000 28%,
+    #000 73%,
+    transparent 74%
+  );
+  mask-image: radial-gradient(
+    circle,
+    transparent 0%,
+    transparent 27%,
+    #000 28%,
+    #000 73%,
+    transparent 74%
+  );
+}
+
+@keyframes kbg3scan {
+  0%,
+  12% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  24% {
+    opacity: 0.32;
+  }
+  78% {
+    opacity: 0.24;
+  }
+  88%,
+  100% {
+    transform: translate3d(435%, 0, 0);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .kbg3 {
+    background-size:
+      auto,
+      64px 64px,
+      64px 64px,
+      8px 8px,
+      8px 8px,
+      auto;
+  }
+
+  .kbg3::after {
+    top: -115px;
+    left: -150px;
+    width: 390px;
+    opacity: 0.34;
+  }
+
+  .kbg3::before {
+    opacity: 0.22;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kbg3::before {
+    animation: none;
+    opacity: 0;
+  }
 }
 </style>
 </head>
@@ -98,46 +284,41 @@ a.v2i-row:hover .v2i-row-meta{color:rgba(255,255,255,0.7);}
   </div>
 </nav>
 
-<!-- Hero (v2 I: 스포트라이트 다크) -->
-<section class="hero hero-v2i" id="hero">
-  <div class="v2i-bg" aria-hidden="true">
-    <div class="v2i-grid"></div>
-    <div class="v2i-spot" id="v2iSpot"></div>
-    <div class="v2i-noise"></div>
-  </div>
-  <div class="v2i-wrap container">
-    <div class="v2i-left">
-      <p class="hero-tag v2i-tag"><span class="v2i-live"></span><span data-i18n="heroTag">글로벌 인디게임 퍼블리셔</span></p>
-      <h1 class="hero-title v2i-title" data-i18n="heroTitle">RED&nbsp;BRICK&nbsp;HOUSE</h1>
-      <p class="hero-sub v2i-sub" data-i18n="heroSub">레드브릭하우스는 단순 퍼블리셔가 아닙니다.<br>인디 개발자들의 든든한 동반자입니다.</p>
-      <div class="hero-actions v2i-actions">
-        <a href="#contact" class="btn btn-primary" data-i18n="heroBtn1">문의하기</a>
-        <a href="#about" class="btn btn-ghost" data-i18n="heroBtn2">우리의 이야기</a>
+<!-- Hero (v2 M: 퍼블리셔 중심) -->
+<section class="hero hero-v2m" id="hero">
+  <div class="kbg3" aria-hidden="true"></div>
+  <div class="v2m-inner container">
+    <div class="v2m-copy">
+      <p class="v2m-kicker"><span class="v2m-mark" aria-hidden="true"></span><span data-i18n="heroTag">글로벌 인디게임 퍼블리셔</span></p>
+      <h1 class="v2m-headline">RED BRICK HOUSE</h1>
+      <p class="v2m-sub" data-i18n="heroSub">레드브릭하우스는 단순 퍼블리셔가 아닙니다.<br>인디 개발자들의 든든한 동반자입니다.</p>
+      <div class="v2m-actions">
+        <a href="#contact" class="btn btn-primary v2m-cta" data-i18n="heroBtn1">문의하기</a>
+        <a href="#about" class="btn btn-ghost v2m-ghost" data-i18n="heroBtn2">우리의 이야기</a>
       </div>
     </div>
-    <div class="v2i-right">
-      <div class="v2i-panel">
-        <div class="v2i-panel-label">LINE&nbsp;UP</div>
-        <a class="v2i-row" href="https://store.steampowered.com/app/3438920/" target="_blank" rel="noopener">
-          <span class="v2i-row-name">VOID DIVER</span>
-          <span class="v2i-row-meta">Extraction · Steam</span>
-          <span class="v2i-row-go" aria-hidden="true">&#8599;</span>
-        </a>
-        <div class="v2i-row v2i-row-static">
-          <span class="v2i-row-name">PROJECT B</span>
-          <span class="v2i-row-meta">Roguelite · Upcoming</span>
-        </div>
-        <div class="v2i-row v2i-row-static">
-          <span class="v2i-row-name">PROJECT O</span>
-          <span class="v2i-row-meta">Dark Fantasy · Upcoming</span>
-        </div>
+    <div class="v2m-slate">
+      <div class="v2m-slate-head">
+        <span class="v2m-slate-title" data-i18n="portLabel">레드브릭하우스의 게임</span>
+      </div>
+      <a class="v2m-game" href="https://store.steampowered.com/app/3438920/" target="_blank" rel="noopener">
+        <span class="v2m-thumb"><img src="/img/void-diver.jpg" alt="" style="object-position:64% center"></span>
+        <span class="v2m-gmeta"><b>VOID DIVER</b><i>#Extraction #DungeonCrawler #Multiplayer</i></span>
+        <span class="v2m-status v2m-live">Steam</span>
+      </a>
+      <div class="v2m-game v2m-soon">
+        <span class="v2m-thumb"><img src="/img/project-b.png" alt=""></span>
+        <span class="v2m-gmeta"><b>PROJECT B</b><i>#OnlineCoOp #Roguelite #ActionShooter</i></span>
+        <span class="v2m-status" data-i18n="portUpcoming">Upcoming</span>
+      </div>
+      <div class="v2m-game v2m-soon">
+        <span class="v2m-thumb"><img src="/img/project-o.png" alt=""></span>
+        <span class="v2m-gmeta"><b>PROJECT O</b><i>#2DPlatformer #DarkFantasy #Action</i></span>
+        <span class="v2m-status" data-i18n="portUpcoming">Upcoming</span>
       </div>
     </div>
   </div>
-  <div class="hero-scroll">
-    <span data-i18n="heroScroll">스크롤</span>
-    <div class="scroll-line"></div>
-  </div>
+  <div class="v2m-seam" aria-hidden="true"></div>
 </section>
 
 <!-- About -->
@@ -426,24 +607,7 @@ a.v2i-row:hover .v2i-row-meta{color:rgba(255,255,255,0.7);}
 <script src="/script.js?v=20260818-1"></script>
 <div class="v2-switch" aria-label="시안 전환">
   <span><a href="/v2/" class="v2-home">시안 v2</a></span>
-  <a href="/v2/a.html">A</a><a href="/v2/b.html">B</a><a href="/v2/c.html">C</a><a href="/v2/d.html">D</a><a href="/v2/e.html">E</a><a href="/v2/f.html">F</a><a href="/v2/g.html">G</a><a href="/v2/h.html">H</a><a href="/v2/i.html" class="on">I</a><a href="/v2/j.html">J</a><a href="/v2/k.html">K</a><a href="/v2/l.html">L</a><a href="/v2/m.html">M</a><a href="/v2/n.html">N</a><a href="/v2/o.html">O</a><a href="/v2/p.html">P</a><a href="/v2/q.html">Q</a>
+  <a href="/v2/a.html">A</a><a href="/v2/b.html">B</a><a href="/v2/c.html">C</a><a href="/v2/d.html">D</a><a href="/v2/e.html">E</a><a href="/v2/f.html">F</a><a href="/v2/g.html">G</a><a href="/v2/h.html">H</a><a href="/v2/i.html">I</a><a href="/v2/j.html">J</a><a href="/v2/k.html">K</a><a href="/v2/l.html">L</a><a href="/v2/m.html">M</a><a href="/v2/n.html">N</a><a href="/v2/o.html">O</a><a href="/v2/p.html">P</a><a href="/v2/q.html" class="on">Q</a>
 </div>
-<script>
-(function(){
-  var spot=document.getElementById('v2iSpot');
-  if(!spot)return;
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  if(window.matchMedia('(pointer: coarse)').matches)return;
-  var hero=spot.closest('.hero');
-  window.addEventListener('mousemove',function(e){
-    var r=hero.getBoundingClientRect();
-    if(e.clientY<r.top||e.clientY>r.bottom)return;
-    var x=((e.clientX-r.left)/r.width*100).toFixed(1);
-    var y=((e.clientY-r.top)/r.height*100).toFixed(1);
-    spot.style.setProperty('--mx',x+'%');
-    spot.style.setProperty('--my',y+'%');
-  },{passive:true});
-})();
-</script>
 </body>
 </html>
