@@ -28,14 +28,14 @@
 .v2-switch a.on{background:#c0392b;border-color:#c0392b;color:#fff;}
 
 /* v2 K: games live in the house (research-refined, warm-dark) */
-.hero-v2k{background:#16110f;color:#f4f1ee;text-align:left;overflow:hidden;}
-.v2k-inner{display:grid;grid-template-columns:0.92fr 1.08fr;gap:56px;align-items:center;width:100%;padding-top:80px;}
+.hero-v2k{background:#16110f;color:#f4f1ee;text-align:left;overflow:hidden;flex-direction:column;}
+.v2k-inner{flex:1;display:grid;grid-template-columns:0.86fr 1.14fr;gap:52px;align-items:center;align-content:center;width:100%;padding-top:84px;padding-bottom:20px;}
 /* left column: clean, no texture */
 .v2k-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:0.16em;font-weight:700;text-transform:uppercase;color:#e08a5c;margin-bottom:22px;}
 .v2k-mark{width:16px;height:11px;flex:0 0 auto;background:#c0392b;border-radius:1px;box-shadow:3px 0 0 #e0705a,-3px 0 0 #8f251b;}
 .v2k-wordmark{font-family:'GmarketSans','Pretendard Variable',Pretendard,sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(44px,5.4vw,82px);line-height:0.94;letter-spacing:-0.01em;color:#f6f1ec;margin-bottom:26px;white-space:normal;}
 .v2k-sub{font-size:clamp(15px,1.2vw,18px);line-height:1.7;color:#b3aaa2;max-width:44ch;margin-bottom:32px;text-wrap:pretty;}
-.v2k-actions{justify-content:flex-start;margin-bottom:36px;}
+.v2k-actions{justify-content:flex-start;margin-bottom:0;}
 .hero-v2k .btn-primary{background:#c0392b;color:#fff;}
 .hero-v2k .btn-primary:hover{background:#a93226;transform:translateY(-2px);}
 .hero-v2k .btn-ghost{border-color:rgba(244,241,238,0.28);color:#f4f1ee;}
@@ -60,9 +60,9 @@
   box-shadow:inset 0 0 0 3px #2b1f1a,inset 0 3px 10px rgba(0,0,0,0.65),0 3px 8px rgba(0,0,0,0.5),0 22px 44px rgba(0,0,0,0.4);}
 .v2k-art{position:absolute;inset:0;display:block;overflow:hidden;}
 .v2k-art img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;}
-.v2k-featured{position:relative;z-index:2;aspect-ratio:16/9;margin-bottom:16px;}
+.v2k-featured{position:relative;z-index:2;aspect-ratio:16/10;margin-bottom:16px;}
 .v2k-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.v2k-soon{aspect-ratio:16/10;}
+.v2k-soon{aspect-ratio:16/11;}
 .v2k-soon .v2k-art img{filter:grayscale(0.65) brightness(0.52) contrast(0.95);}
 .v2k-soon::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,17,15,0.35),rgba(22,17,15,0.72));}
 .v2k-plate{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;flex-direction:column;gap:3px;padding:16px 16px 14px;background:linear-gradient(180deg,transparent,rgba(9,6,5,0.9));}
@@ -77,8 +77,15 @@
 .v2k-featured{transition:transform .3s ease,box-shadow .3s ease;}
 a.v2k-featured:hover{transform:translateY(-5px);box-shadow:inset 0 0 0 3px #c0392b,inset 0 3px 10px rgba(0,0,0,0.55),0 6px 14px rgba(0,0,0,0.5),0 30px 60px rgba(0,0,0,0.5);}
 a.v2k-featured:hover .v2k-art img{transform:scale(1.05);}
-.hero-v2k .hero-scroll{color:rgba(244,241,238,0.4);left:auto;right:40px;transform:none;}
-.hero-v2k .scroll-line{background:rgba(244,241,238,0.24);}
+.hero-v2k .hero-scroll{display:none;}
+/* bottom lineup ticker: fills the lower band and gives the hero life */
+.v2k-ticker{width:100%;border-top:1px solid rgba(244,241,238,0.1);overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);}
+.v2k-ticker-track{display:flex;white-space:nowrap;width:max-content;animation:v2kTicker 34s linear infinite;}
+.v2k-ticker-seq{display:inline-flex;align-items:center;gap:24px;padding:15px 12px;font-size:12px;letter-spacing:3px;font-weight:600;color:rgba(244,241,238,0.5);}
+.v2k-ticker-seq span{font-family:'GmarketSans','Pretendard Variable',Pretendard,sans-serif;}
+.v2k-ticker-seq i{width:5px;height:5px;border-radius:1px;background:#c0392b;display:inline-block;}
+@keyframes v2kTicker{to{transform:translateX(-50%);}}
+@media (prefers-reduced-motion: reduce){.v2k-ticker-track{animation:none;}}
 @media (prefers-reduced-motion: reduce){
   .v2k-art img,.v2k-featured,.hero-v2k .btn-primary{transition:none;}
   a.v2k-featured:hover{transform:none;}
@@ -89,7 +96,6 @@ a.v2k-featured:hover .v2k-art img{transform:scale(1.05);}
   .v2k-eyebrow{justify-content:center;}
   .v2k-sub{margin:0 auto 32px;}
   .v2k-actions{justify-content:center;}
-  .v2k-stats{justify-content:center;}
   .v2k-stage{max-width:540px;width:100%;margin:0 auto;}
   .v2k-plate{text-align:left;}
   .hero-v2k .hero-scroll{display:none;}
@@ -137,13 +143,8 @@ a.v2k-featured:hover .v2k-art img{transform:scale(1.05);}
         <a href="#contact" class="btn btn-primary" data-i18n="heroBtn1">문의하기</a>
         <a href="#portfolio" class="btn btn-ghost" data-i18n="heroBtn2">우리의 이야기</a>
       </div>
-      <div class="v2k-stats">
-        <div class="v2k-stat"><b>3</b><span>TITLES IN THE WORKS</span></div>
-        <span class="v2k-stat-rule"></span>
-        <div class="v2k-stat"><b>2026</b><span>ESTABLISHED</span></div>
-      </div>
     </div>
-    <div class="v2k-stage">
+    <div class="v2k-stage"><!-- STAGE -->
       <div class="v2k-wall">
         <span class="v2k-coping" aria-hidden="true"></span>
         <a class="v2k-win v2k-featured" href="https://store.steampowered.com/app/3438920/" target="_blank" rel="noopener" aria-label="VOID DIVER on Steam">
@@ -173,6 +174,12 @@ a.v2k-featured:hover .v2k-art img{transform:scale(1.05);}
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="v2k-ticker" aria-hidden="true">
+    <div class="v2k-ticker-track">
+      <span class="v2k-ticker-seq"><span>VOID DIVER</span><i></i><span>PROJECT B</span><i></i><span>PROJECT O</span><i></i><span>EST. 2026</span><i></i><span>SEOUL &middot; GLOBAL</span><i></i></span>
+      <span class="v2k-ticker-seq"><span>VOID DIVER</span><i></i><span>PROJECT B</span><i></i><span>PROJECT O</span><i></i><span>EST. 2026</span><i></i><span>SEOUL &middot; GLOBAL</span><i></i></span>
     </div>
   </div>
   <div class="hero-scroll">
