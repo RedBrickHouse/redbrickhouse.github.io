@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[시안 G] 메인 히어로 v2 - RED BRICK HOUSE</title>
+<title>[시안 N] 메인 히어로 v2 - RED BRICK HOUSE</title>
 <meta name="description" content="레드브릭하우스(RED BRICK HOUSE)는 글로벌 인디게임 퍼블리셔입니다. 사업화 전략과 투자 유치, 팬 커뮤니티와 마케팅, 글로벌 출시까지 인디 개발사의 모든 여정을 함께합니다.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#c0392b">
@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png?v=20260713">
 <link rel="apple-touch-icon" href="/img/favicon-180.png">
 <style>
-/* === v2 draft (G: 석양의 계곡) === */
+/* === v2 draft (N: 강점 전면) === */
 /* v2 draft switcher */
 .v2-switch{position:fixed;left:16px;bottom:16px;z-index:400;display:flex;gap:6px;align-items:center;background:rgba(26,26,26,0.92);border-radius:8px;padding:8px 10px;box-shadow:0 6px 24px rgba(0,0,0,0.25);}
 .v2-switch span{color:#bbb;font-size:11px;letter-spacing:1px;margin-right:4px;}
@@ -27,39 +27,74 @@
 .v2-switch a:hover{background:rgba(255,255,255,0.12);color:#fff;}
 .v2-switch a.on{background:#c0392b;border-color:#c0392b;color:#fff;}
 
-/* v2 G: full-bleed dusk parallax valley */
-.hero-v2g{background:#2c192c;color:#fff;}
-.v2g-scene{position:absolute;inset:0;overflow:hidden;}
-.v2g-svg{position:absolute;inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);}
-.v2e-grain{position:absolute;inset:0;opacity:0.05;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");}
-.v2g-l{will-change:transform;}
-.v2g-content{padding-bottom:24vh;}
-.hero-v2g .hero-tag{color:#ffd9a0;}
-.hero-v2g .hero-title{color:#fff6ec;text-shadow:0 2px 24px rgba(60,14,20,0.35);}
-.hero-v2g .hero-sub{color:#f5d9c4;}
-.hero-v2g .btn-primary{background:#fff4e6;color:#a93226;}
-.hero-v2g .btn-primary:hover{background:#ffffff;}
-.hero-v2g .btn-ghost{border-color:rgba(255,244,230,0.55);color:#fff6ec;}
-.hero-v2g .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,0.08);}
-.hero-v2g .hero-scroll{color:rgba(255,244,230,0.6);left:auto;right:40px;transform:none;}
-.hero-v2g .scroll-line{background:rgba(255,244,230,0.35);}
-#v2gStars .tw{animation:v2gTwinkle 4.5s ease-in-out infinite alternate;}
-@keyframes v2gTwinkle{from{opacity:0.1;}to{opacity:0.6;}}
-.v2g-ember{position:absolute;bottom:-12px;width:5px;height:5px;border-radius:50%;background:#ffb36b;opacity:0;animation:v2gRise linear infinite;}
-.v2g-e1{left:12%;animation-duration:15s;}
-.v2g-e2{left:28%;width:4px;height:4px;animation-duration:19s;animation-delay:4s;}
-.v2g-e3{left:47%;animation-duration:13s;animation-delay:8s;}
-.v2g-e4{left:63%;width:4px;height:4px;animation-duration:21s;animation-delay:2s;}
-.v2g-e5{left:78%;animation-duration:16s;animation-delay:11s;}
-.v2g-e6{left:90%;width:3px;height:3px;animation-duration:18s;animation-delay:6s;}
-@keyframes v2gRise{0%{transform:translate(0,0);opacity:0;}8%{opacity:0.7;}60%{opacity:0.4;}100%{transform:translate(4vw,-78vh);opacity:0;}}
-@media (prefers-reduced-motion: reduce){
-  #v2gStars .tw,.v2g-ember{animation:none;}
-  .v2g-ember{opacity:0;}
+/* v2 N: strengths-forward */
+.hero-v2n{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;text-align:left;
+  background:#f7f3ee;color:#1a1512;overflow:hidden;}
+.v2n-bg{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:repeating-linear-gradient(0deg,rgba(120,70,45,0.05) 0 1px,transparent 1px 46px),
+    repeating-linear-gradient(90deg,rgba(120,70,45,0.05) 0 1px,transparent 1px 96px),
+    radial-gradient(120% 90% at 80% 26%,rgba(192,57,43,0.06),transparent 58%);}
+.v2n-bg::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(120,70,45,0.045) 0 1px,transparent 1px 96px);background-position:48px 23px;background-size:96px 46px;}
+.v2n-grain{position:absolute;inset:0;z-index:1;opacity:0.04;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='150' height='150' filter='url(%23n)'/%3E%3C/svg%3E");}
+.v2n-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr 0.95fr;gap:60px;align-items:center;width:100%;flex:1;padding-top:88px;padding-bottom:20px;}
+/* left */
+.v2n-kicker{display:inline-flex;align-items:center;gap:10px;font-size:0.82rem;font-weight:700;letter-spacing:0.02em;color:#a93226;margin-bottom:20px;}
+.v2n-mark{width:16px;height:11px;flex:0 0 auto;background:#c0392b;border-radius:1px;box-shadow:3px 0 0 #e0705a,-3px 0 0 #8f251b;}
+.v2n-headline{font-family:'GmarketSans','Pretendard Variable',Pretendard,sans-serif;font-weight:700;font-size:clamp(2.4rem,5vw,3.9rem);line-height:1.1;letter-spacing:0.005em;color:#191410;margin-bottom:18px;}
+.v2n-sub{font-size:clamp(15px,1.15vw,17.5px);line-height:1.7;color:#6a625b;max-width:46ch;margin-bottom:24px;text-wrap:pretty;}
+.v2n-creds{display:flex;flex-direction:column;gap:9px;margin-bottom:30px;}
+.v2n-creds li{display:flex;align-items:center;gap:11px;font-size:14.5px;color:#4a423b;}
+.v2n-creds b{font-weight:700;color:#191410;}
+.v2n-cbullet{width:7px;height:7px;flex:0 0 auto;background:#c0392b;transform:rotate(45deg);border-radius:1px;}
+.v2n-actions{display:flex;gap:14px;flex-wrap:wrap;}
+.hero-v2n .btn{border-radius:5px;}
+.hero-v2n .btn-primary.v2n-cta{background:#c0392b;color:#fff;}
+.hero-v2n .btn-primary.v2n-cta:hover{background:#a93226;transform:translateY(-2px);box-shadow:0 10px 26px rgba(192,57,43,0.24);}
+.hero-v2n .btn-ghost.v2n-ghost{border:1px solid rgba(26,21,18,0.22);color:#1a1512;background:transparent;}
+.hero-v2n .btn-ghost.v2n-ghost:hover{border-color:rgba(26,21,18,0.5);background:rgba(26,21,18,0.04);}
+/* right: games slate */
+.v2n-slate{background:#fffdfb;border:1px solid #ece2d6;border-radius:16px;padding:12px;box-shadow:0 2px 8px rgba(90,50,30,0.05),0 26px 60px rgba(90,50,30,0.12);}
+.v2n-slate-head{padding:15px 15px 16px;}
+.v2n-slate-title{font-size:0.82rem;font-weight:700;letter-spacing:0.1em;color:#191410;}
+.v2n-game{display:flex;align-items:center;gap:16px;padding:14px 12px;border-radius:11px;border-top:1px solid #f1e9df;transition:background 0.2s;}
+.v2n-thumb{flex:0 0 auto;width:104px;height:64px;border-radius:8px;overflow:hidden;background:#efe7dc;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.05);}
+.v2n-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+.v2n-gmeta{display:flex;flex-direction:column;gap:2px;min-width:0;}
+.v2n-gmeta b{font-family:'GmarketSans','Pretendard Variable',Pretendard,sans-serif;font-size:15px;font-weight:700;letter-spacing:0.3px;color:#191410;}
+.v2n-gmeta i{font-style:normal;font-size:11.5px;color:#8a8078;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.v2n-status{margin-left:auto;flex:0 0 auto;font-size:11px;font-weight:700;letter-spacing:0.05em;color:#a79d92;border:1px solid #e6dccf;border-radius:999px;padding:4px 11px;}
+.v2n-status.v2n-live{color:#c0392b;border-color:rgba(192,57,43,0.4);}
+a.v2n-game:hover{background:#fbf4ec;}
+a.v2n-game:hover .v2n-gmeta b{color:#c0392b;}
+.v2n-soon{cursor:default;}
+.v2n-soon .v2n-thumb img{filter:grayscale(0.7) brightness(0.92) contrast(0.95);opacity:0.72;}
+/* bottom press bar */
+.v2n-press{position:relative;z-index:2;display:flex;align-items:center;gap:22px;flex-wrap:wrap;
+  border-top:1px solid rgba(120,70,45,0.14);padding:18px 0 20px;}
+.v2n-press-label{font-size:0.76rem;font-weight:700;letter-spacing:0.06em;color:#a79d92;flex:0 0 auto;}
+.v2n-press-list{display:flex;gap:22px;flex-wrap:wrap;}
+.v2n-press-list span{font-family:'GmarketSans','Pretendard Variable',Pretendard,sans-serif;font-weight:500;font-size:0.94rem;color:#8a8078;letter-spacing:0.02em;}
+.v2n-seam{position:absolute;left:0;right:0;bottom:0;height:2px;background:#c0392b;z-index:2;opacity:0.85;}
+/* motion */
+.v2n-copy>*,.v2n-slate{opacity:0;transform:translateY(12px);animation:v2nRise 0.6s ease forwards;}
+.v2n-kicker{animation-delay:0.04s;}.v2n-headline{animation-delay:0.1s;}.v2n-sub{animation-delay:0.16s;}
+.v2n-creds{animation-delay:0.22s;}.v2n-actions{animation-delay:0.28s;}.v2n-slate{animation-delay:0.34s;}
+@keyframes v2nRise{to{opacity:1;transform:translateY(0);}}
+@media (prefers-reduced-motion: reduce){.v2n-copy>*,.v2n-slate{animation:none;opacity:1;transform:none;}.hero-v2n .btn-primary.v2n-cta:hover{transform:none;}}
+@media (max-width:900px){
+  .hero-v2n{justify-content:flex-start;}
+  .v2n-inner{grid-template-columns:1fr;gap:34px;flex:0 0 auto;padding-top:104px;padding-bottom:36px;}
+  .v2n-sub{max-width:none;}
+  .v2n-press{padding:16px 0 22px;gap:14px;}
 }
 @media (max-width:768px){
-  .v2g-content{padding-bottom:30vh;}
-  .hero-v2g .hero-scroll{display:none;}
+  .v2n-headline{font-size:clamp(1.9rem,8.4vw,2.6rem);}
+  .v2n-actions{flex-direction:column;align-items:stretch;}
+  .v2n-actions .btn{width:100%;text-align:center;}
+  .v2n-thumb{width:80px;height:50px;}
+  .v2n-status{display:none;}
+  .v2n-gmeta i{white-space:normal;}
+  .v2n-press-list span{font-size:0.85rem;}
 }
 </style>
 </head>
@@ -89,100 +124,48 @@
   </div>
 </nav>
 
-<!-- Hero (v2 G: 석양의 계곡) -->
-<section class="hero hero-v2g" id="hero">
-  <div class="v2g-scene" aria-hidden="true">
-    <svg class="v2g-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
-      <defs>
-        <linearGradient id="v2gSky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#2c192c"/>
-          <stop offset="0.3" stop-color="#5c2531"/>
-          <stop offset="0.55" stop-color="#96322b"/>
-          <stop offset="0.72" stop-color="#c74a2f"/>
-          <stop offset="0.86" stop-color="#e8703c"/>
-          <stop offset="1" stop-color="#f6a95c"/>
-        </linearGradient>
-        <radialGradient id="v2gSunGlow" cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0" stop-color="#ffce8e" stop-opacity="0.6"/>
-          <stop offset="1" stop-color="#ffce8e" stop-opacity="0"/>
-        </radialGradient>
-        <radialGradient id="v2gSunHalo" cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0" stop-color="#ffb877" stop-opacity="0.32"/>
-          <stop offset="1" stop-color="#ffb877" stop-opacity="0"/>
-        </radialGradient>
-        <linearGradient id="v2gWin2" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#ffd694"/>
-          <stop offset="1" stop-color="#ff9d4d"/>
-        </linearGradient>
-        <filter id="v2gBlur10" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="10"/></filter>
-      </defs>
-      <rect width="1440" height="900" fill="url(#v2gSky)"/>
-      <g id="v2gStars"></g>
-      <g class="v2g-l" id="v2gSun">
-        <circle cx="640" cy="618" r="430" fill="url(#v2gSunHalo)"/>
-        <circle cx="640" cy="618" r="210" fill="url(#v2gSunGlow)"/>
-        <circle cx="640" cy="618" r="72" fill="#ffe3b0"/>
-        <path d="M330 540 q160 -16 330 -8 q210 10 420 -6" stroke="#5c2028" stroke-width="10" fill="none" opacity="0.22" stroke-linecap="round"/>
-        <path d="M240 588 q220 -12 430 -4 q260 10 470 -8" stroke="#63242a" stroke-width="7" fill="none" opacity="0.2" stroke-linecap="round"/>
-        <path d="M420 648 q180 -10 340 -4" stroke="#ffc687" stroke-width="5" fill="none" opacity="0.4" stroke-linecap="round"/>
-      </g>
-      <g class="v2g-l" id="v2gL1">
-        <path d="M170 150 l9 6 l9 -6 M196 140 l7 5 l7 -5 M1150 120 l9 6 l9 -6 M1178 132 l7 5 l7 -5 M1206 124 l8 5 l8 -5" stroke="#3a1620" stroke-width="2.5" fill="none" opacity="0.5" stroke-linecap="round"/>
-        <path d="M-40 676 Q 160 618 380 650 Q 560 676 720 656 Q 940 630 1120 660 Q 1300 686 1480 654 L1480 940 L-40 940 Z" fill="#a54c32" opacity="0.85"/>
-      </g>
-      <g class="v2g-l" id="v2gL2">
-        <path d="M-40 740 Q 200 690 430 716 Q 660 742 900 712 Q 1140 684 1480 726 L1480 940 L-40 940 Z" fill="#6e2c22"/>
-        <path d="M96 716 l10 -22 l10 22 Z M120 720 l9 -19 l9 19 Z M1236 704 l11 -24 l11 24 Z M1262 708 l9 -20 l9 20 Z M1290 712 l10 -21 l10 21 Z" fill="#571f19"/>
-      </g>
-      <g class="v2g-l" id="v2gL3">
-        <path d="M-40 806 Q 240 760 520 782 Q 800 806 1060 778 Q 1260 758 1480 792 L1480 940 L-40 940 Z" fill="#3f1b15"/>
-        <g transform="translate(880,782) scale(0.82)">
-          <ellipse cx="0" cy="4" rx="190" ry="18" fill="#000000" opacity="0.25"/>
-          <rect x="66" y="-286" width="32" height="86" fill="#1c0d0b"/>
-          <rect x="61" y="-294" width="42" height="12" fill="#140908"/>
-          <rect x="-150" y="-170" width="300" height="170" fill="#221010"/>
-          <path d="M-178 -166 L 0 -302 L 178 -166 Z" fill="#170a0c"/>
-          <path d="M-178 -166 L 0 -302 L 12 -293" stroke="#ff9d5c" stroke-width="4" fill="none" opacity="0.85" stroke-linecap="round"/>
-          <rect x="-178" y="-172" width="356" height="9" fill="#0f0709"/>
-          <circle cx="0" cy="-224" r="15" fill="url(#v2gWin2)" filter="url(#v2gBlur10)" opacity="0.7"/>
-          <circle cx="0" cy="-224" r="12" fill="url(#v2gWin2)"/>
-          <rect x="-116" y="-100" width="54" height="60" fill="#ffbe6e" filter="url(#v2gBlur10)" opacity="0.55"/>
-          <rect x="-112" y="-98" width="46" height="56" rx="2" fill="url(#v2gWin2)"/>
-          <path d="M-89 -98 V-42 M-112 -70 H-66" stroke="#7c3a1e" stroke-width="3"/>
-          <rect x="62" y="-100" width="54" height="60" fill="#ffbe6e" filter="url(#v2gBlur10)" opacity="0.55"/>
-          <rect x="66" y="-98" width="46" height="56" rx="2" fill="url(#v2gWin2)"/>
-          <path d="M89 -98 V-42 M66 -70 H112" stroke="#7c3a1e" stroke-width="3"/>
-          <path d="M-24 0 L-24 -78 Q-24 -92 -10 -92 L10 -92 Q24 -92 24 -78 L24 0 Z" fill="#120807"/>
-        </g>
-      </g>
-      <g class="v2g-l" id="v2gL4">
-        <path d="M-40 872 Q 260 836 560 856 Q 880 876 1180 848 Q 1330 836 1480 856 L1480 940 L-40 940 Z" fill="#170a08"/>
-        <path d="M60 850 q4 -30 8 0 M76 854 q4 -24 8 0 M92 851 q3 -20 6 0 M1330 844 q4 -28 8 0 M1348 848 q4 -22 8 0 M1366 851 q3 -18 6 0 M620 862 q4 -22 8 0 M638 865 q3 -17 6 0" stroke="#0d0504" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <path d="M180 856 c-30 -10 -44 -40 -34 -74 c8 24 20 30 26 34 c-2 -22 6 -44 24 -56 c-4 22 2 34 8 44 c10 -10 24 -14 38 -12 c-12 8 -18 18 -20 30 c-14 22 -26 30 -42 34 Z" fill="#0d0504"/>
-        <path d="M1268 852 c26 -8 38 -34 30 -62 c-7 20 -17 25 -22 28 c2 -18 -5 -37 -20 -47 c3 18 -2 28 -7 36 c-8 -8 -20 -11 -32 -10 c10 7 15 15 17 25 c12 18 22 26 34 30 Z" fill="#0d0504"/>
-      </g>
-    </svg>
-    <span class="v2g-ember v2g-e1"></span>
-    <span class="v2g-ember v2g-e2"></span>
-    <span class="v2g-ember v2g-e3"></span>
-    <span class="v2g-ember v2g-e4"></span>
-    <span class="v2g-ember v2g-e5"></span>
-    <span class="v2g-ember v2g-e6"></span>
-    <div class="v2e-grain"></div>
-  </div>
-  <div class="hero-content v2g-content">
-    <p class="hero-tag" data-i18n="heroTag">글로벌 인디게임 퍼블리셔</p>
-    <h1 class="hero-title" data-i18n="heroTitle">RED&nbsp;BRICK&nbsp;HOUSE</h1>
-    <p class="hero-sub" data-i18n="heroSub">레드브릭하우스는 단순 퍼블리셔가 아닙니다.<br>인디 개발자들의 든든한 동반자입니다.</p>
-    <div class="hero-actions">
-      <a href="#about" class="btn btn-ghost" data-i18n="heroBtn2">우리의 이야기</a>
-      <a href="#contact" class="btn btn-primary" data-i18n="heroBtn1">문의하기</a>
+<!-- Hero (v2 N: 강점 전면) -->
+<section class="hero hero-v2n" id="hero">
+  <div class="v2n-bg" aria-hidden="true"></div>
+  <div class="v2n-grain" aria-hidden="true"></div>
+  <div class="v2n-inner container">
+    <div class="v2n-copy">
+      <p class="v2n-kicker"><span class="v2n-mark" aria-hidden="true"></span>국내 1호 인디게임 전문 퍼블리셔</p>
+      <h1 class="v2n-headline" data-i18n="heroTitle">RED&nbsp;BRICK&nbsp;HOUSE</h1>
+      <p class="v2n-sub" data-i18n="heroSub">레드브릭하우스는 단순 퍼블리셔가 아닙니다.<br>인디 개발자들의 든든한 동반자입니다.</p>
+      <ul class="v2n-creds">
+        <li><span class="v2n-cbullet" aria-hidden="true"></span>『산나비』 『고양이와 스프』를 발굴한 <b>네오위즈 출신 팀</b></li>
+        <li><span class="v2n-cbullet" aria-hidden="true"></span><b>위메이드맥스 · 카카오벤처스</b> 등 투자 유치</li>
+      </ul>
+      <div class="v2n-actions">
+        <a href="#contact" class="btn btn-primary v2n-cta" data-i18n="heroBtn1">문의하기</a>
+        <a href="#about" class="btn btn-ghost v2n-ghost" data-i18n="heroBtn2">우리의 이야기</a>
+      </div>
+    </div>
+    <div class="v2n-slate">
+      <div class="v2n-slate-head"><span class="v2n-slate-title" data-i18n="portLabel">레드브릭하우스의 게임</span></div>
+      <a class="v2n-game" href="https://store.steampowered.com/app/3438920/" target="_blank" rel="noopener">
+        <span class="v2n-thumb"><img src="/img/void-diver.jpg" alt="" style="object-position:64% center"></span>
+        <span class="v2n-gmeta"><b>VOID DIVER</b><i>#Extraction #DungeonCrawler #Multiplayer</i></span>
+        <span class="v2n-status v2n-live">Steam</span>
+      </a>
+      <div class="v2n-game v2n-soon">
+        <span class="v2n-thumb"><img src="/img/project-b.png" alt=""></span>
+        <span class="v2n-gmeta"><b>PROJECT B</b><i>#OnlineCoOp #Roguelite #ActionShooter</i></span>
+        <span class="v2n-status" data-i18n="portUpcoming">Upcoming</span>
+      </div>
+      <div class="v2n-game v2n-soon">
+        <span class="v2n-thumb"><img src="/img/project-o.png" alt=""></span>
+        <span class="v2n-gmeta"><b>PROJECT O</b><i>#2DPlatformer #DarkFantasy #Action</i></span>
+        <span class="v2n-status" data-i18n="portUpcoming">Upcoming</span>
+      </div>
     </div>
   </div>
-  <div class="hero-scroll">
-    <span data-i18n="heroScroll">스크롤</span>
-    <div class="scroll-line"></div>
+  <div class="v2n-press">
+    <span class="v2n-press-label">언론이 주목한 레드브릭하우스</span>
+    <span class="v2n-press-list"><span>뉴스1</span><span>이투데이</span><span>전자신문</span><span>인벤</span><span>테크M</span><span>데일리게임</span></span>
   </div>
+  <div class="v2n-seam" aria-hidden="true"></div>
 </section>
 
 <!-- About -->
@@ -471,50 +454,7 @@
 <script src="/script.js?v=20260818-1"></script>
 <div class="v2-switch" aria-label="시안 전환">
   <span><a href="/v2/" class="v2-home">시안 v2</a></span>
-  <a href="/v2/a.html">A</a><a href="/v2/b.html">B</a><a href="/v2/c.html">C</a><a href="/v2/d.html">D</a><a href="/v2/e.html">E</a><a href="/v2/f.html">F</a><a href="/v2/g.html" class="on">G</a><a href="/v2/h.html">H</a><a href="/v2/i.html">I</a><a href="/v2/j.html">J</a><a href="/v2/k.html">K</a><a href="/v2/l.html">L</a><a href="/v2/m.html">M</a><a href="/v2/n.html">N</a>
+  <a href="/v2/a.html">A</a><a href="/v2/b.html">B</a><a href="/v2/c.html">C</a><a href="/v2/d.html">D</a><a href="/v2/e.html">E</a><a href="/v2/f.html">F</a><a href="/v2/g.html">G</a><a href="/v2/h.html">H</a><a href="/v2/i.html">I</a><a href="/v2/j.html">J</a><a href="/v2/k.html">K</a><a href="/v2/l.html">L</a><a href="/v2/m.html">M</a><a href="/v2/n.html" class="on">N</a>
 </div>
-<script>
-(function(){
-  var g=document.getElementById('v2gStars');
-  if(g){
-    var NS='http://www.w3.org/2000/svg';
-    for(var i=0;i<46;i++){
-      var c=document.createElementNS(NS,'circle');
-      var y=Math.random();
-      c.setAttribute('cx',(Math.random()*1440).toFixed(1));
-      c.setAttribute('cy',(y*y*240).toFixed(1));
-      c.setAttribute('r',(0.5+Math.random()*0.8).toFixed(2));
-      c.setAttribute('fill','#ffe6c8');
-      c.setAttribute('opacity',(0.1+Math.random()*0.4).toFixed(2));
-      if(Math.random()<0.25){c.setAttribute('class','tw');c.style.animationDelay=(Math.random()*4).toFixed(2)+'s';}
-      g.appendChild(c);
-    }
-  }
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  if(window.matchMedia('(pointer: coarse)').matches)return;
-  var layers=[
-    {el:document.getElementById('v2gSun'),f:5},
-    {el:document.getElementById('v2gL1'),f:9},
-    {el:document.getElementById('v2gL2'),f:14},
-    {el:document.getElementById('v2gL3'),f:20},
-    {el:document.getElementById('v2gL4'),f:28}
-  ];
-  var tx=0,ty=0,cx=0,cy=0,raf=null;
-  function tick(){
-    cx+=(tx-cx)*0.07;cy+=(ty-cy)*0.07;
-    for(var i=0;i<layers.length;i++){
-      var l=layers[i];
-      if(l.el)l.el.style.transform='translate('+(cx*l.f).toFixed(2)+'px,'+(cy*l.f*0.5).toFixed(2)+'px)';
-    }
-    if(Math.abs(tx-cx)>0.001||Math.abs(ty-cy)>0.001)raf=requestAnimationFrame(tick);
-    else raf=null;
-  }
-  window.addEventListener('mousemove',function(e){
-    tx=(e.clientX/window.innerWidth-0.5)*-1;
-    ty=(e.clientY/window.innerHeight-0.5)*-1;
-    if(!raf)raf=requestAnimationFrame(tick);
-  },{passive:true});
-})();
-</script>
 </body>
 </html>
