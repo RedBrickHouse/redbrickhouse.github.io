@@ -56,7 +56,7 @@ const translations = {
     modalSend: "Send",
     modalSending: "Sending...",
     modalSuccess: "Your message has been sent. We'll get back to you soon.",
-    modalFail: "Something went wrong. Please email angela@redbrickhouse.gg directly.",
+    modalFail: "Something went wrong. Please email contact@redbrickhouse.gg directly.",
     modalRequired: "Please fill in the required fields.",
     footerCopy: "&copy; 2026 RED&nbsp;BRICK&nbsp;HOUSE. All rights reserved."
   },
@@ -117,7 +117,7 @@ const translations = {
     modalSend: "보내기",
     modalSending: "전송 중...",
     modalSuccess: "문의가 접수되었습니다. 빠르게 답변드리겠습니다.",
-    modalFail: "전송에 실패했습니다. angela@redbrickhouse.gg로 직접 메일 주세요.",
+    modalFail: "전송에 실패했습니다. contact@redbrickhouse.gg로 직접 메일 주세요.",
     modalRequired: "필수 항목을 입력해주세요.",
     footerCopy: "&copy; 2026 RED&nbsp;BRICK&nbsp;HOUSE. All rights reserved."
   },
@@ -178,7 +178,7 @@ const translations = {
     modalSend: "发送",
     modalSending: "发送中...",
     modalSuccess: "您的信息已发送，我们会尽快回复。",
-    modalFail: "发送失败，请直接发送邮件至 angela@redbrickhouse.gg。",
+    modalFail: "发送失败，请直接发送邮件至 contact@redbrickhouse.gg。",
     modalRequired: "请填写必填项。",
     footerCopy: "&copy; 2026 RED&nbsp;BRICK&nbsp;HOUSE. All rights reserved."
   }
