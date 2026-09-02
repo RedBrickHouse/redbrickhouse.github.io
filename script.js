@@ -261,15 +261,20 @@ inquiryForm.addEventListener('submit', (e) => {
   requestAnimationFrame(tick);
 })();
 
-// Hero background video
+// Hero background video: the clip is fetched in <head> (window.__heroClip) and played
+// from memory once fully downloaded, so playback never stalls on the network.
+// Until then the poster (first frame) is shown. Reduced-motion users keep the poster.
 const heroVideo = document.querySelector('.hero-bg-video');
-if (heroVideo) {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    heroVideo.removeAttribute('autoplay');
-    heroVideo.pause();
-  } else {
-    heroVideo.muted = true;
+const heroClip = window.__heroClip;
+if (heroVideo && heroClip && !heroClip.still) {
+  heroVideo.muted = true;
+  heroVideo.loop = true;
+  heroVideo.playsInline = true;
+  const startHero = (src) => {
+    heroVideo.src = src;
     const playAttempt = heroVideo.play();
     if (playAttempt) playAttempt.catch(() => {});
-  }
+  };
+  if (heroClip.blob) heroClip.blob.then(startHero, () => startHero(heroClip.url));
+  else startHero(heroClip.url);
 }

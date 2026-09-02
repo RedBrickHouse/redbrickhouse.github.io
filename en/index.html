@@ -29,7 +29,23 @@
 <meta content="https://redbrickhouse.gg/img/og-image.png?v=20260713" name="twitter:image"/>
 <link crossorigin="" href="https://cdn.jsdelivr.net" rel="preconnect"/>
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet"/>
-<link href="/style.css?v=20260827-1" rel="stylesheet"/>
+<link href="/style.css?v=20260902-3" rel="stylesheet"/>
+<script>
+(function () {
+  var m = '/img/hero-bic2026.mp4?v=20260902-3', w = '/img/hero-bic2026.webm?v=20260902-3';
+  var probe = document.createElement('video');
+  var url = probe.canPlayType('video/mp4; codecs="avc1.640028"') ? m : (probe.canPlayType('video/webm; codecs="vp9"') ? w : m);
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var blob = null;
+  if (!still && window.fetch && window.URL && URL.createObjectURL) {
+    blob = fetch(url, { cache: 'force-cache', priority: 'high' })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.blob(); })
+      .then(function (b) { return URL.createObjectURL(b); });
+    blob.catch(function () {});
+  }
+  window.__heroClip = { url: url, blob: blob, still: still };
+})();
+</script>
 <link href="/favicon.ico" rel="icon" sizes="any"/>
 <link href="/img/favicon-32.png?v=20260713" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/img/favicon-48.png?v=20260713" rel="icon" sizes="48x48" type="image/png"/>
@@ -90,21 +106,18 @@
 </div>
 </nav>
 <!-- Hero -->
-<section class="hero hero-v2d" id="hero">
-<div class="v2d-inner container">
-<div class="v2d-copy">
+<section class="hero hero-video" id="hero">
+<div class="hero-bg">
+<video aria-hidden="true" class="hero-bg-video" loop="" muted="" playsinline="" poster="/img/hero-bic2026.jpg?v=20260902-3" preload="none" tabindex="-1"></video>
+<div class="hero-overlay"></div>
+</div>
+<div class="hero-content">
 <p class="hero-tag" data-i18n="heroTag">GLOBAL INDIE GAME PUBLISHER</p>
-<h1 class="hero-title v2d-title" data-i18n="heroTitle">RED BRICK HOUSE</h1>
-<p class="hero-sub v2d-sub" data-i18n="heroSub">RED BRICK HOUSE is more than a publisher.<br/>We are a trusted partner for indie developers.</p>
-<div class="hero-actions v2d-actions">
+<h1 class="hero-title" data-i18n="heroTitle">RED BRICK HOUSE</h1>
+<p class="hero-sub" data-i18n="heroSub">RED BRICK HOUSE is more than a publisher.<br/>We are a trusted partner for indie developers.</p>
+<div class="hero-actions">
 <a class="btn btn-ghost" data-i18n="heroBtn2" href="#about">Our Story</a>
 <a class="btn btn-primary" data-i18n="heroBtn1" href="#contact">Contact Us</a>
-</div>
-</div>
-<div aria-hidden="true" class="v2d-art">
-<div class="v2d-card v2d-c2"><img alt="" src="/img/project-b.png"/><span class="v2d-chip">PROJECT B</span></div>
-<div class="v2d-card v2d-c3"><img alt="" src="/img/project-o.png"/><span class="v2d-chip">PROJECT O</span></div>
-<div class="v2d-card v2d-c1"><img alt="" src="/img/void-diver.jpg"/><span class="v2d-chip">VOID DIVER</span></div>
 </div>
 </div>
 <div class="hero-scroll">
@@ -388,6 +401,6 @@
 </div>
 </div>
 <script src="/i18n.js?v=20260818-1"></script>
-<script src="/script.js?v=20260818-1"></script>
+<script src="/script.js?v=20260902-3"></script>
 </body>
 </html>
