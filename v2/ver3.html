@@ -19,6 +19,17 @@
 <style>
 /* === v2 draft: BIC 2026 booth video hero (버전3) === */
 .hero-vid { background: #15100e; color: #fff; }
+.hero-vid .hero-vid-media { width: 100%; height: 100%; object-fit: cover; object-position: 50% center; display: block; background: #15100e; }
+@media (max-width: 768px) and (orientation: portrait) {
+  .hero-vid .hero-bg { overflow: hidden; }
+  .hero-vid .hero-vid-media {
+    position: absolute; top: 50%; left: 50%;
+    width: 100%; height: auto; aspect-ratio: 16 / 9;
+    transform: translate(-50%, -50%);
+    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000 18%, #000 82%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000 18%, #000 82%, rgba(0,0,0,0) 100%);
+  }
+}
 .hero-vid .hero-overlay {
   background:
     radial-gradient(ellipse 70% 60% at 50% 48%, rgba(21,16,14,0) 0%, rgba(21,16,14,0.42) 100%),
@@ -45,6 +56,30 @@
 .v2-switch a:hover{background:rgba(255,255,255,0.12);color:#fff;}
 .v2-switch a.on{background:#c0392b;border-color:#c0392b;color:#fff;}
 </style>
+<script>
+(function () {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var MP4 = '/img/hero-ver3.mp4?v=20260902-2', WEBM = '/img/hero-ver3.webm?v=20260902-2';
+  var probe = document.createElement('video');
+  var url = probe.canPlayType('video/mp4; codecs="avc1.640028"') ? MP4
+          : (probe.canPlayType('video/webm; codecs="vp9"') ? WEBM : MP4);
+  var blobP = null;
+  if (window.fetch && window.URL && URL.createObjectURL) {
+    blobP = fetch(url, { cache: 'force-cache', priority: 'high' })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.blob(); })
+      .then(function (b) { return URL.createObjectURL(b); });
+    blobP.catch(function () {});
+  }
+  function attach() {
+    var v = document.querySelector('.hero-vid-media');
+    if (!v) return;
+    v.muted = true; v.loop = true; v.playsInline = true;
+    function start(src) { v.src = src; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+    if (blobP) blobP.then(start, function () { start(url); }); else start(url);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', attach); else attach();
+})();
+</script>
 </head>
 <body>
 
@@ -75,11 +110,7 @@
 <!-- Hero (draft: BIC 2026 booth video, 버전3) -->
 <section class="hero hero-vid" id="hero">
   <div class="hero-bg">
-    <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" poster="/img/hero-ver3.jpg?v=20260902-1" aria-hidden="true" tabindex="-1">
-      <source src="/img/hero-ver3.webm?v=20260902-1" type="video/webm">
-      <source src="/img/hero-ver3.mp4?v=20260902-1" type="video/mp4">
-      <img src="/img/hero-ver3.jpg?v=20260902-1" alt="" class="hero-bg-img">
-    </video>
+    <video class="hero-vid-media" muted loop playsinline preload="none" poster="/img/hero-ver3.jpg?v=20260902-2" aria-hidden="true" tabindex="-1"></video>
     <div class="hero-overlay"></div>
   </div>
   <div class="hero-content">
