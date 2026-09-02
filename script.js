@@ -104,7 +104,7 @@ inquiryForm.addEventListener('submit', (e) => {
   inquiryStatus.textContent = tr('modalSending');
   inquiryStatus.className = 'modal-status';
   inquiryStatus.hidden = false;
-  fetch('https://formsubmit.co/ajax/contact@redbrickhouse.gg', {
+  fetch('https://formsubmit.co/ajax/angela@redbrickhouse.gg', {
     method: 'POST',
     headers: { 'Accept': 'application/json' },
     body: fd
