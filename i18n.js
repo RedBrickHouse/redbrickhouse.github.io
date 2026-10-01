@@ -42,6 +42,8 @@ const translations = {
     newsA6Press: "DAILYGAME",
     newsA6Title: "[BIC 2026] RED&nbsp;BRICK&nbsp;HOUSE: “A True Partner Through Uncertain Times”",
     newsA7Press: "4GAMER",
+    newsLangKo: "Korean-language article",
+    newsLangJa: "Japanese-language article",
     newsA7Title: "[Interview] “If You're Making a Great Indie Game, We Will Find You”... The Philosophy of RED&nbsp;BRICK&nbsp;HOUSE, Korea's First Indie-Only Publisher Founded by Three Neowiz Alumni",
     contactLabel: "GET IN TOUCH", contactTitle: "Tell Us Your Story",
     contactDesc: "Whether you're a solo developer with a prototype or a studio that has worked together for years, reach out anytime.",
@@ -104,6 +106,8 @@ const translations = {
     newsA6Press: "데일리게임",
     newsA6Title: "[BIC 2026] 레드브릭하우스 “불확실할 때 함께할 진짜 파트너 될 것”",
     newsA7Press: "4Gamer",
+    newsLangKo: "원문 한국어 기사",
+    newsLangJa: "원문 일본어 기사",
     newsA7Title: "[인터뷰] “재미있는 인디게임을 만들고 있다면 우리가 반드시 찾아낸다”... 네오위즈 출신 3인이 세운 한국 최초 인디게임 전문 퍼블리셔 '레드브릭하우스'의 철학",
     contactLabel: "문의하기", contactTitle: "이야기를 들려주세요",
     contactDesc: "프로토타입을 가진 1인 개발자든, 오랜기간 팀웍을 맞춰온 스튜디오든, 언제든지 연락주세요.",
@@ -166,6 +170,8 @@ const translations = {
     newsA6Press: "DAILYGAME",
     newsA6Title: "[BIC 2026] RED&nbsp;BRICK&nbsp;HOUSE：“在不确定的时代做真正的伙伴”",
     newsA7Press: "4GAMER",
+    newsLangKo: "韩语原文报道",
+    newsLangJa: "日语原文报道",
     newsA7Title: "[专访] “只要你在做有趣的独立游戏，我们一定会找到你”... 三位 Neowiz 出身者创立的韩国首家独立游戏专门发行商 RED&nbsp;BRICK&nbsp;HOUSE 的理念",
     contactLabel: "联系我们", contactTitle: "期待您的来信",
     contactDesc: "无论您是拥有原型的独立开发者，还是长期磨合的团队工作室，随时欢迎联系我们。",
@@ -205,6 +211,10 @@ function setLang(lang) {
   document.querySelectorAll('[data-i18n-ph]').forEach(el => {
     const key = el.getAttribute('data-i18n-ph');
     if (t[key] !== undefined) el.placeholder = t[key];
+  });
+  document.querySelectorAll('[data-i18n-title]').forEach(el => {
+    const key = el.getAttribute('data-i18n-title');
+    if (t[key] !== undefined) el.title = t[key];
   });
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);

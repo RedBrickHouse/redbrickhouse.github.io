@@ -93,6 +93,10 @@ def build_lang(html, tr, lang):
         val = d.get(el["data-i18n-ph"])
         if val is not None:
             el["placeholder"] = val
+    for el in soup.select("[data-i18n-title]"):
+        val = d.get(el["data-i18n-title"])
+        if val is not None:
+            el["title"] = val
 
     # Title + meta.
     title = d.get("docTitle", "")

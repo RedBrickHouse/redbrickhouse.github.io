@@ -522,6 +522,10 @@ html:lang(ko) { word-break: keep-all; }
 }
 .news-press { font-weight: 700; color: #c0392b; letter-spacing: 0.5px; }
 .news-date { padding-left: 10px; border-left: 1px solid #d9ccc1; }
+.news-lang {
+  font-size: 11px; font-weight: 700; line-height: 1.4; letter-spacing: 0.6px;
+  color: #8a847e; border: 1px solid #d9ccc1; border-radius: 4px; padding: 1px 6px;
+}
 .news-headline {
   font-size: 16px; font-weight: 600; line-height: 1.5;
   color: #1a1a1a; text-wrap: pretty; transition: color 0.2s;
